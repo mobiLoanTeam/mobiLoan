@@ -1,0 +1,16 @@
+/**
+ * JHipster JDL model for myGateway
+ */
+
+application {
+  config {
+    baseName mobiLoan_gateway,
+    packageName com.capdev.gateway,
+    applicationType gateway,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    devDatabaseType mysql,
+    serviceDiscoveryType eureka,
+    serverPort 8080
+  }
+}
