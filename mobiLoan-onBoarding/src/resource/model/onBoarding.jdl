@@ -1,0 +1,41 @@
+/**
+ * JHipster JDL model for myMicroservice
+ */
+application {
+  config {
+    packageName com.capdev.onboarding
+    baseName onBoarding
+    applicationType microservice
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    devDatabaseType mysql,
+    serviceDiscoveryType eureka,
+    serverPort 8081
+  }
+  entities CustomerOnboarding
+}
+
+
+
+entity CustomerOnboarding {
+	
+	clientUserName String required
+    clientPassword String required
+    mmSubscriberID String required
+    serviceName String required
+    receiptNo String required
+    firstName String required
+    middleName String 
+    lastName String required
+    requestRefID String
+    mobileNumber String
+    timeStamp String
+    dateOfBirth LocalDate
+    idType String required
+    idNumber Integer required
+    effecitveDate LocalDate
+    expiryDate LocalDate
+}
+
+
+service CustomerOnboarding with serviceClass
