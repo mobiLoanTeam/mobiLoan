@@ -1,0 +1,22 @@
+/**
+ * JHipster JDL model for myMicroservice
+ */
+application {
+  config {
+    packageName com.capdev.middleware
+    baseName middleware
+    applicationType microservice
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    devDatabaseType mysql,
+    serviceDiscoveryType eureka,
+    serverPort 8060
+  }
+  
+   entities Service   
+  }
+  
+  entity Service {
+	serviceName String
+    servicetype String
+}
