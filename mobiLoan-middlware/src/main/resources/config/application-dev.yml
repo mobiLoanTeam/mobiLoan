@@ -19,12 +19,12 @@ logging:
     io.github.jhipster: DEBUG
     com.capdev.middleware: DEBUG
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
 
 spring:
   profiles:
@@ -89,7 +89,7 @@ spring:
     enabled: false
     locator:
       discovery:
-        enabled: true
+        enabled: false
 
 server:
   port: 8060

@@ -19,6 +19,7 @@
 
     <!-- jhipster-needle-distribution-management -->
 
+
     <properties>
         <!-- Build properties -->
         <maven.version>3.3.9</maven.version>
@@ -360,6 +361,16 @@
             <artifactId>metrics-core</artifactId>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
+        <dependency>
+        	<groupId>com.capdev</groupId>
+        	<artifactId>smg-connectors</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+        	<groupId>com.capdev</groupId>
+        	<artifactId>mobiLoan-commons</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

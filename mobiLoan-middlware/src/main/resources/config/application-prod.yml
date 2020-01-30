@@ -19,12 +19,12 @@ logging:
     io.github.jhipster: INFO
     com.capdev.middleware: INFO
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
 
 management:
   metrics:
@@ -89,7 +89,7 @@ spring:
     enabled: false
     locator:
       discovery:
-        enabled: true
+        enabled: false
 
 # ===================================================================
 # To enable TLS in production, generate a certificate using:
