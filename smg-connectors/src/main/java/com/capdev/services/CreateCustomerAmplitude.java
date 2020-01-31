@@ -1,64 +1,76 @@
 package com.capdev.services;
 
-import java.rmi.RemoteException;
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Locale;
+import java.util.HashMap;
+import java.util.Map;
 
-import javax.xml.rpc.ServiceException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+import com.capdev.service.IService;
+import com.capdev.service.payload.ServiceRequest;
+import com.capdev.service.payload.ServiceResponse;
+import com.capdev.service.payload.ServiceResponseHeader;
+import com.soprabanking.amplitude.createcustomer.CreateCustomer;
+import com.soprabanking.amplitude.createcustomer.CreateCustomerPortType;
+import com.soprabanking.amplitude.createcustomer.CreateCustomerRequest;
+import com.soprabanking.amplitude.createcustomer.CreateCustomerRequestFlow;
+import com.soprabanking.amplitude.createcustomer.CreateCustomerResponseFlow;
+import com.soprabanking.amplitude.createcustomer.ErrorResponseFlow_Exception;
+import com.soprabanking.amplitude.createcustomer.RequestHeader;
 
-import org.apache.axis.AxisFault;
+public class CreateCustomerAmplitude implements IService {
 
-import com.soprabanking.amplitude.CreateCustomerBindingStub;
-import com.soprabanking.amplitude.CreateCustomerLocator;
-import com.soprabanking.amplitude.CreateCustomerRequest;
-import com.soprabanking.amplitude.CreateCustomerRequestFlow;
-import com.soprabanking.amplitude.CreateCustomerResponseFlow;
-import com.soprabanking.amplitude.CustomerType;
-import com.soprabanking.amplitude.RequestHeader;
+	public static final String DATE_FORMAT_AMPLITUDE = "yyyy-MM-dd'T'hh:mm:ss";
 
-public class CreateCustomer {
-	
-	
-	
-	public Object  call(CreateCustomerRequest createCustomerRequest) {
-		CreateCustomerResponseFlow responseFlow = null;
-		
-		CreateCustomerRequestFlow requestFolow = new CreateCustomerRequestFlow();
-		RequestHeader header = new RequestHeader();
-		header.setRequestId("requestId");
-		header.setServiceName("serviceName");
-		header.setTimestamp(Calendar.getInstance(Locale.getDefault()));
-		header.setUserCode("userCode");
-		
-		createCustomerRequest.setCustomerType(CustomerType.value1);
-		createCustomerRequest.setTitleCode("titleCode");
-	
-		requestFolow.setRequestHeader(header);
-		requestFolow.setCreateCustomerRequest(createCustomerRequest);
-		
-		
+	public ServiceResponse callSoap(ServiceRequest req) {
+		ServiceResponse serviceResponse = new ServiceResponse();
+		ServiceResponseHeader headerResponse = new ServiceResponseHeader();
 		try {
-			CreateCustomerLocator service = new CreateCustomerLocator();
-			responseFlow = service.getcreateCustomerPortType().createCustomer(requestFolow);
-			return responseFlow.getCreateCustomerResponse();
-		} catch (AxisFault e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ServiceException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return responseFlow.getCreateCustomerResponse();
 			
-		
+			CreateCustomerRequestFlow requestFolow = new CreateCustomerRequestFlow();
+			CreateCustomerRequest createCustomerRequest = new CreateCustomerRequest();
+			CreateCustomerResponseFlow response = null;
+			RequestHeader header = new RequestHeader();
+			header.setRequestId("requestId");
+			header.setServiceName("serviceName");
+
+			SimpleDateFormat format = new SimpleDateFormat(DATE_FORMAT_AMPLITUDE);
+			String date = format.format(new Date());
+			XMLGregorianCalendar xmlDate = DatatypeFactory.newInstance().newXMLGregorianCalendar(date);
+			header.setTimestamp(xmlDate);
+
+			header.setUserCode("userCode");
+
+			createCustomerRequest.setCustomerType("1");
+			createCustomerRequest.setTitleCode("titleCode");
+
+			requestFolow.setRequestHeader(header);
+			requestFolow.setCreateCustomerRequest(createCustomerRequest);
+
+			CreateCustomer service = new CreateCustomer();
+			CreateCustomerPortType port = service.getCreateCustomerPortType();
+			response = (CreateCustomerResponseFlow) port.createCustomer(requestFolow);
+			System.out.println(response.getCreateCustomerResponse().getCustomerCode());
+			headerResponse.setCode(new Long(200));
+			serviceResponse.setHeader(headerResponse);
+			Map<String, Object> body = new HashMap<String, Object>();
+			body.put("customerCode", response.getCreateCustomerResponse().getCustomerCode());
+			serviceResponse.setBody(body);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+			headerResponse.setCode(new Long(400));
+			headerResponse.setMessage(e.getMessage());
+			serviceResponse.setHeader(headerResponse);
+		}
+		return serviceResponse;
 	}
-	
-	
+
+	public ServiceResponse callRest(ServiceRequest req) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
