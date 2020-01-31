@@ -1,187 +1,111 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerJointAccountInformations.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerJointAccountInformations complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerJointAccountInformations">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="coHolderInformations" type="{http://soprabanking.com/amplitude}customerCoHolderInformations"/>
+ *         &lt;element name="linkTyp" type="{http://soprabanking.com/amplitude}linkTyp"/>
+ *         &lt;element name="toBePrintedInTheAddress" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerJointAccountInformations", propOrder = {
+    "coHolderInformations",
+    "linkTyp",
+    "toBePrintedInTheAddress"
+})
+public class CustomerJointAccountInformations {
 
-package com.soprabanking.amplitude;
-
-public class CustomerJointAccountInformations  implements java.io.Serializable {
-    private com.soprabanking.amplitude.CustomerCoHolderInformations coHolderInformations;
-
-    private com.soprabanking.amplitude.LinkTyp linkTyp;
-
-    private boolean toBePrintedInTheAddress;
-
-    public CustomerJointAccountInformations() {
-    }
-
-    public CustomerJointAccountInformations(
-           com.soprabanking.amplitude.CustomerCoHolderInformations coHolderInformations,
-           com.soprabanking.amplitude.LinkTyp linkTyp,
-           boolean toBePrintedInTheAddress) {
-           this.coHolderInformations = coHolderInformations;
-           this.linkTyp = linkTyp;
-           this.toBePrintedInTheAddress = toBePrintedInTheAddress;
-    }
-
+    @XmlElement(required = true)
+    protected CustomerCoHolderInformations coHolderInformations;
+    @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
+    protected LinkTyp linkTyp;
+    protected boolean toBePrintedInTheAddress;
 
     /**
-     * Gets the coHolderInformations value for this CustomerJointAccountInformations.
+     * Obtient la valeur de la propriété coHolderInformations.
      * 
-     * @return coHolderInformations
+     * @return
+     *     possible object is
+     *     {@link CustomerCoHolderInformations }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerCoHolderInformations getCoHolderInformations() {
+    public CustomerCoHolderInformations getCoHolderInformations() {
         return coHolderInformations;
     }
 
-
     /**
-     * Sets the coHolderInformations value for this CustomerJointAccountInformations.
+     * Définit la valeur de la propriété coHolderInformations.
      * 
-     * @param coHolderInformations
+     * @param value
+     *     allowed object is
+     *     {@link CustomerCoHolderInformations }
+     *     
      */
-    public void setCoHolderInformations(com.soprabanking.amplitude.CustomerCoHolderInformations coHolderInformations) {
-        this.coHolderInformations = coHolderInformations;
+    public void setCoHolderInformations(CustomerCoHolderInformations value) {
+        this.coHolderInformations = value;
     }
 
-
     /**
-     * Gets the linkTyp value for this CustomerJointAccountInformations.
+     * Obtient la valeur de la propriété linkTyp.
      * 
-     * @return linkTyp
+     * @return
+     *     possible object is
+     *     {@link LinkTyp }
+     *     
      */
-    public com.soprabanking.amplitude.LinkTyp getLinkTyp() {
+    public LinkTyp getLinkTyp() {
         return linkTyp;
     }
 
-
     /**
-     * Sets the linkTyp value for this CustomerJointAccountInformations.
+     * Définit la valeur de la propriété linkTyp.
      * 
-     * @param linkTyp
+     * @param value
+     *     allowed object is
+     *     {@link LinkTyp }
+     *     
      */
-    public void setLinkTyp(com.soprabanking.amplitude.LinkTyp linkTyp) {
-        this.linkTyp = linkTyp;
+    public void setLinkTyp(LinkTyp value) {
+        this.linkTyp = value;
     }
 
-
     /**
-     * Gets the toBePrintedInTheAddress value for this CustomerJointAccountInformations.
+     * Obtient la valeur de la propriété toBePrintedInTheAddress.
      * 
-     * @return toBePrintedInTheAddress
      */
     public boolean isToBePrintedInTheAddress() {
         return toBePrintedInTheAddress;
     }
 
-
     /**
-     * Sets the toBePrintedInTheAddress value for this CustomerJointAccountInformations.
+     * Définit la valeur de la propriété toBePrintedInTheAddress.
      * 
-     * @param toBePrintedInTheAddress
      */
-    public void setToBePrintedInTheAddress(boolean toBePrintedInTheAddress) {
-        this.toBePrintedInTheAddress = toBePrintedInTheAddress;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerJointAccountInformations)) return false;
-        CustomerJointAccountInformations other = (CustomerJointAccountInformations) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.coHolderInformations==null && other.getCoHolderInformations()==null) || 
-             (this.coHolderInformations!=null &&
-              this.coHolderInformations.equals(other.getCoHolderInformations()))) &&
-            ((this.linkTyp==null && other.getLinkTyp()==null) || 
-             (this.linkTyp!=null &&
-              this.linkTyp.equals(other.getLinkTyp()))) &&
-            this.toBePrintedInTheAddress == other.isToBePrintedInTheAddress();
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCoHolderInformations() != null) {
-            _hashCode += getCoHolderInformations().hashCode();
-        }
-        if (getLinkTyp() != null) {
-            _hashCode += getLinkTyp().hashCode();
-        }
-        _hashCode += (isToBePrintedInTheAddress() ? Boolean.TRUE : Boolean.FALSE).hashCode();
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerJointAccountInformations.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerJointAccountInformations"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("coHolderInformations");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "coHolderInformations"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCoHolderInformations"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("linkTyp");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "linkTyp"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "linkTyp"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("toBePrintedInTheAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "toBePrintedInTheAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setToBePrintedInTheAddress(boolean value) {
+        this.toBePrintedInTheAddress = value;
     }
 
 }

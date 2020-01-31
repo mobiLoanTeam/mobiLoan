@@ -1,155 +1,93 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * GetStatusResponse.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour getStatusResponse complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="getStatusResponse">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="timeStamp" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="serviceName" type="{http://soprabanking.com/amplitude}charMax50"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "getStatusResponse", propOrder = {
+    "timeStamp",
+    "serviceName"
+})
+public class GetStatusResponse {
 
-package com.soprabanking.amplitude;
-
-public class GetStatusResponse  implements java.io.Serializable {
-    private java.util.Calendar timeStamp;
-
-    private java.lang.String serviceName;
-
-    public GetStatusResponse() {
-    }
-
-    public GetStatusResponse(
-           java.util.Calendar timeStamp,
-           java.lang.String serviceName) {
-           this.timeStamp = timeStamp;
-           this.serviceName = serviceName;
-    }
-
+    @XmlElement(required = true)
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar timeStamp;
+    @XmlElement(required = true)
+    protected String serviceName;
 
     /**
-     * Gets the timeStamp value for this GetStatusResponse.
+     * Obtient la valeur de la propriété timeStamp.
      * 
-     * @return timeStamp
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Calendar getTimeStamp() {
+    public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
     }
 
-
     /**
-     * Sets the timeStamp value for this GetStatusResponse.
+     * Définit la valeur de la propriété timeStamp.
      * 
-     * @param timeStamp
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setTimeStamp(java.util.Calendar timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setTimeStamp(XMLGregorianCalendar value) {
+        this.timeStamp = value;
     }
 
-
     /**
-     * Gets the serviceName value for this GetStatusResponse.
+     * Obtient la valeur de la propriété serviceName.
      * 
-     * @return serviceName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getServiceName() {
+    public String getServiceName() {
         return serviceName;
     }
 
-
     /**
-     * Sets the serviceName value for this GetStatusResponse.
+     * Définit la valeur de la propriété serviceName.
      * 
-     * @param serviceName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setServiceName(java.lang.String serviceName) {
-        this.serviceName = serviceName;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof GetStatusResponse)) return false;
-        GetStatusResponse other = (GetStatusResponse) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.timeStamp==null && other.getTimeStamp()==null) || 
-             (this.timeStamp!=null &&
-              this.timeStamp.equals(other.getTimeStamp()))) &&
-            ((this.serviceName==null && other.getServiceName()==null) || 
-             (this.serviceName!=null &&
-              this.serviceName.equals(other.getServiceName())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getTimeStamp() != null) {
-            _hashCode += getTimeStamp().hashCode();
-        }
-        if (getServiceName() != null) {
-            _hashCode += getServiceName().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(GetStatusResponse.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "getStatusResponse"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("timeStamp");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "timeStamp"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("serviceName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "serviceName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setServiceName(String value) {
+        this.serviceName = value;
     }
 
 }

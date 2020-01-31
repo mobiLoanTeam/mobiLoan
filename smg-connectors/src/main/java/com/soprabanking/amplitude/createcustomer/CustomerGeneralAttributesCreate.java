@@ -1,508 +1,333 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * CustomerGeneralAttributesCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerGeneralAttributesCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerGeneralAttributesCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="branchCode" type="{http://soprabanking.com/amplitude}branchCode" minOccurs="0"/>
+ *         &lt;element name="customerOfficer" type="{http://soprabanking.com/amplitude}customerOfficerCode" minOccurs="0"/>
+ *         &lt;element name="qualityCode" type="{http://soprabanking.com/amplitude}customerQualityCode" minOccurs="0"/>
+ *         &lt;element name="taxableCustomer" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="internalCategoryCode" type="{http://soprabanking.com/amplitude}internalCategoryCode" minOccurs="0"/>
+ *         &lt;element name="segment" type="{http://soprabanking.com/amplitude}segmentCode" minOccurs="0"/>
+ *         &lt;element name="statisticNumber" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="sponsorCustomerCode" type="{http://soprabanking.com/amplitude}charMax15" minOccurs="0"/>
+ *         &lt;element name="freeAttributes" type="{http://soprabanking.com/amplitude}customerFreeAttributesCreate" minOccurs="0"/>
+ *         &lt;element name="specificFreeAttributes" type="{http://soprabanking.com/amplitude}customerFreeAttributesCreate" minOccurs="0"/>
+ *         &lt;element name="centralBankRiskEffectiveDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerGeneralAttributesCreate", propOrder = {
+    "branchCode",
+    "customerOfficer",
+    "qualityCode",
+    "taxableCustomer",
+    "internalCategoryCode",
+    "segment",
+    "statisticNumber",
+    "sponsorCustomerCode",
+    "freeAttributes",
+    "specificFreeAttributes",
+    "centralBankRiskEffectiveDate"
+})
+public class CustomerGeneralAttributesCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerGeneralAttributesCreate  implements java.io.Serializable {
-    private java.lang.String branchCode;
-
-    private java.lang.String customerOfficer;
-
-    private java.lang.String qualityCode;
-
-    private java.lang.Boolean taxableCustomer;
-
-    private java.lang.String internalCategoryCode;
-
-    private java.lang.String segment;
-
-    private java.lang.String statisticNumber;
-
-    private java.lang.String sponsorCustomerCode;
-
-    private com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] freeAttributes;
-
-    private com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] specificFreeAttributes;
-
-    private java.util.Date centralBankRiskEffectiveDate;
-
-    public CustomerGeneralAttributesCreate() {
-    }
-
-    public CustomerGeneralAttributesCreate(
-           java.lang.String branchCode,
-           java.lang.String customerOfficer,
-           java.lang.String qualityCode,
-           java.lang.Boolean taxableCustomer,
-           java.lang.String internalCategoryCode,
-           java.lang.String segment,
-           java.lang.String statisticNumber,
-           java.lang.String sponsorCustomerCode,
-           com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] freeAttributes,
-           com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] specificFreeAttributes,
-           java.util.Date centralBankRiskEffectiveDate) {
-           this.branchCode = branchCode;
-           this.customerOfficer = customerOfficer;
-           this.qualityCode = qualityCode;
-           this.taxableCustomer = taxableCustomer;
-           this.internalCategoryCode = internalCategoryCode;
-           this.segment = segment;
-           this.statisticNumber = statisticNumber;
-           this.sponsorCustomerCode = sponsorCustomerCode;
-           this.freeAttributes = freeAttributes;
-           this.specificFreeAttributes = specificFreeAttributes;
-           this.centralBankRiskEffectiveDate = centralBankRiskEffectiveDate;
-    }
-
+    protected String branchCode;
+    protected String customerOfficer;
+    protected String qualityCode;
+    protected Boolean taxableCustomer;
+    protected String internalCategoryCode;
+    protected String segment;
+    protected String statisticNumber;
+    protected String sponsorCustomerCode;
+    protected CustomerFreeAttributesCreate freeAttributes;
+    protected CustomerFreeAttributesCreate specificFreeAttributes;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar centralBankRiskEffectiveDate;
 
     /**
-     * Gets the branchCode value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété branchCode.
      * 
-     * @return branchCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBranchCode() {
+    public String getBranchCode() {
         return branchCode;
     }
 
-
     /**
-     * Sets the branchCode value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété branchCode.
      * 
-     * @param branchCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBranchCode(java.lang.String branchCode) {
-        this.branchCode = branchCode;
+    public void setBranchCode(String value) {
+        this.branchCode = value;
     }
 
-
     /**
-     * Gets the customerOfficer value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété customerOfficer.
      * 
-     * @return customerOfficer
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerOfficer() {
+    public String getCustomerOfficer() {
         return customerOfficer;
     }
 
-
     /**
-     * Sets the customerOfficer value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété customerOfficer.
      * 
-     * @param customerOfficer
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerOfficer(java.lang.String customerOfficer) {
-        this.customerOfficer = customerOfficer;
+    public void setCustomerOfficer(String value) {
+        this.customerOfficer = value;
     }
 
-
     /**
-     * Gets the qualityCode value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété qualityCode.
      * 
-     * @return qualityCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getQualityCode() {
+    public String getQualityCode() {
         return qualityCode;
     }
 
-
     /**
-     * Sets the qualityCode value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété qualityCode.
      * 
-     * @param qualityCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setQualityCode(java.lang.String qualityCode) {
-        this.qualityCode = qualityCode;
+    public void setQualityCode(String value) {
+        this.qualityCode = value;
     }
 
-
     /**
-     * Gets the taxableCustomer value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété taxableCustomer.
      * 
-     * @return taxableCustomer
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getTaxableCustomer() {
+    public Boolean isTaxableCustomer() {
         return taxableCustomer;
     }
 
-
     /**
-     * Sets the taxableCustomer value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété taxableCustomer.
      * 
-     * @param taxableCustomer
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setTaxableCustomer(java.lang.Boolean taxableCustomer) {
-        this.taxableCustomer = taxableCustomer;
+    public void setTaxableCustomer(Boolean value) {
+        this.taxableCustomer = value;
     }
 
-
     /**
-     * Gets the internalCategoryCode value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété internalCategoryCode.
      * 
-     * @return internalCategoryCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getInternalCategoryCode() {
+    public String getInternalCategoryCode() {
         return internalCategoryCode;
     }
 
-
     /**
-     * Sets the internalCategoryCode value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété internalCategoryCode.
      * 
-     * @param internalCategoryCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setInternalCategoryCode(java.lang.String internalCategoryCode) {
-        this.internalCategoryCode = internalCategoryCode;
+    public void setInternalCategoryCode(String value) {
+        this.internalCategoryCode = value;
     }
 
-
     /**
-     * Gets the segment value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété segment.
      * 
-     * @return segment
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSegment() {
+    public String getSegment() {
         return segment;
     }
 
-
     /**
-     * Sets the segment value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété segment.
      * 
-     * @param segment
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSegment(java.lang.String segment) {
-        this.segment = segment;
+    public void setSegment(String value) {
+        this.segment = value;
     }
 
-
     /**
-     * Gets the statisticNumber value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété statisticNumber.
      * 
-     * @return statisticNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatisticNumber() {
+    public String getStatisticNumber() {
         return statisticNumber;
     }
 
-
     /**
-     * Sets the statisticNumber value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété statisticNumber.
      * 
-     * @param statisticNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatisticNumber(java.lang.String statisticNumber) {
-        this.statisticNumber = statisticNumber;
+    public void setStatisticNumber(String value) {
+        this.statisticNumber = value;
     }
 
-
     /**
-     * Gets the sponsorCustomerCode value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété sponsorCustomerCode.
      * 
-     * @return sponsorCustomerCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSponsorCustomerCode() {
+    public String getSponsorCustomerCode() {
         return sponsorCustomerCode;
     }
 
-
     /**
-     * Sets the sponsorCustomerCode value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété sponsorCustomerCode.
      * 
-     * @param sponsorCustomerCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSponsorCustomerCode(java.lang.String sponsorCustomerCode) {
-        this.sponsorCustomerCode = sponsorCustomerCode;
+    public void setSponsorCustomerCode(String value) {
+        this.sponsorCustomerCode = value;
     }
 
-
     /**
-     * Gets the freeAttributes value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété freeAttributes.
      * 
-     * @return freeAttributes
+     * @return
+     *     possible object is
+     *     {@link CustomerFreeAttributesCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] getFreeAttributes() {
+    public CustomerFreeAttributesCreate getFreeAttributes() {
         return freeAttributes;
     }
 
-
     /**
-     * Sets the freeAttributes value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété freeAttributes.
      * 
-     * @param freeAttributes
+     * @param value
+     *     allowed object is
+     *     {@link CustomerFreeAttributesCreate }
+     *     
      */
-    public void setFreeAttributes(com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] freeAttributes) {
-        this.freeAttributes = freeAttributes;
+    public void setFreeAttributes(CustomerFreeAttributesCreate value) {
+        this.freeAttributes = value;
     }
 
-
     /**
-     * Gets the specificFreeAttributes value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété specificFreeAttributes.
      * 
-     * @return specificFreeAttributes
+     * @return
+     *     possible object is
+     *     {@link CustomerFreeAttributesCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] getSpecificFreeAttributes() {
+    public CustomerFreeAttributesCreate getSpecificFreeAttributes() {
         return specificFreeAttributes;
     }
 
-
     /**
-     * Sets the specificFreeAttributes value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété specificFreeAttributes.
      * 
-     * @param specificFreeAttributes
+     * @param value
+     *     allowed object is
+     *     {@link CustomerFreeAttributesCreate }
+     *     
      */
-    public void setSpecificFreeAttributes(com.soprabanking.amplitude.CreateCustomerFreeAttributeRequest[] specificFreeAttributes) {
-        this.specificFreeAttributes = specificFreeAttributes;
+    public void setSpecificFreeAttributes(CustomerFreeAttributesCreate value) {
+        this.specificFreeAttributes = value;
     }
 
-
     /**
-     * Gets the centralBankRiskEffectiveDate value for this CustomerGeneralAttributesCreate.
+     * Obtient la valeur de la propriété centralBankRiskEffectiveDate.
      * 
-     * @return centralBankRiskEffectiveDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getCentralBankRiskEffectiveDate() {
+    public XMLGregorianCalendar getCentralBankRiskEffectiveDate() {
         return centralBankRiskEffectiveDate;
     }
 
-
     /**
-     * Sets the centralBankRiskEffectiveDate value for this CustomerGeneralAttributesCreate.
+     * Définit la valeur de la propriété centralBankRiskEffectiveDate.
      * 
-     * @param centralBankRiskEffectiveDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setCentralBankRiskEffectiveDate(java.util.Date centralBankRiskEffectiveDate) {
-        this.centralBankRiskEffectiveDate = centralBankRiskEffectiveDate;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerGeneralAttributesCreate)) return false;
-        CustomerGeneralAttributesCreate other = (CustomerGeneralAttributesCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.branchCode==null && other.getBranchCode()==null) || 
-             (this.branchCode!=null &&
-              this.branchCode.equals(other.getBranchCode()))) &&
-            ((this.customerOfficer==null && other.getCustomerOfficer()==null) || 
-             (this.customerOfficer!=null &&
-              this.customerOfficer.equals(other.getCustomerOfficer()))) &&
-            ((this.qualityCode==null && other.getQualityCode()==null) || 
-             (this.qualityCode!=null &&
-              this.qualityCode.equals(other.getQualityCode()))) &&
-            ((this.taxableCustomer==null && other.getTaxableCustomer()==null) || 
-             (this.taxableCustomer!=null &&
-              this.taxableCustomer.equals(other.getTaxableCustomer()))) &&
-            ((this.internalCategoryCode==null && other.getInternalCategoryCode()==null) || 
-             (this.internalCategoryCode!=null &&
-              this.internalCategoryCode.equals(other.getInternalCategoryCode()))) &&
-            ((this.segment==null && other.getSegment()==null) || 
-             (this.segment!=null &&
-              this.segment.equals(other.getSegment()))) &&
-            ((this.statisticNumber==null && other.getStatisticNumber()==null) || 
-             (this.statisticNumber!=null &&
-              this.statisticNumber.equals(other.getStatisticNumber()))) &&
-            ((this.sponsorCustomerCode==null && other.getSponsorCustomerCode()==null) || 
-             (this.sponsorCustomerCode!=null &&
-              this.sponsorCustomerCode.equals(other.getSponsorCustomerCode()))) &&
-            ((this.freeAttributes==null && other.getFreeAttributes()==null) || 
-             (this.freeAttributes!=null &&
-              java.util.Arrays.equals(this.freeAttributes, other.getFreeAttributes()))) &&
-            ((this.specificFreeAttributes==null && other.getSpecificFreeAttributes()==null) || 
-             (this.specificFreeAttributes!=null &&
-              java.util.Arrays.equals(this.specificFreeAttributes, other.getSpecificFreeAttributes()))) &&
-            ((this.centralBankRiskEffectiveDate==null && other.getCentralBankRiskEffectiveDate()==null) || 
-             (this.centralBankRiskEffectiveDate!=null &&
-              this.centralBankRiskEffectiveDate.equals(other.getCentralBankRiskEffectiveDate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getBranchCode() != null) {
-            _hashCode += getBranchCode().hashCode();
-        }
-        if (getCustomerOfficer() != null) {
-            _hashCode += getCustomerOfficer().hashCode();
-        }
-        if (getQualityCode() != null) {
-            _hashCode += getQualityCode().hashCode();
-        }
-        if (getTaxableCustomer() != null) {
-            _hashCode += getTaxableCustomer().hashCode();
-        }
-        if (getInternalCategoryCode() != null) {
-            _hashCode += getInternalCategoryCode().hashCode();
-        }
-        if (getSegment() != null) {
-            _hashCode += getSegment().hashCode();
-        }
-        if (getStatisticNumber() != null) {
-            _hashCode += getStatisticNumber().hashCode();
-        }
-        if (getSponsorCustomerCode() != null) {
-            _hashCode += getSponsorCustomerCode().hashCode();
-        }
-        if (getFreeAttributes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFreeAttributes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFreeAttributes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getSpecificFreeAttributes() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSpecificFreeAttributes());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSpecificFreeAttributes(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getCentralBankRiskEffectiveDate() != null) {
-            _hashCode += getCentralBankRiskEffectiveDate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerGeneralAttributesCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerGeneralAttributesCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("branchCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "branchCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerOfficer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerOfficer"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("qualityCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "qualityCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("taxableCustomer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "taxableCustomer"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("internalCategoryCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "internalCategoryCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("segment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "segment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statisticNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "statisticNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("sponsorCustomerCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "sponsorCustomerCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("freeAttributes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "freeAttributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerFreeAttributeRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "freeAttribute"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("specificFreeAttributes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "specificFreeAttributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerFreeAttributeRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "freeAttribute"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("centralBankRiskEffectiveDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "centralBankRiskEffectiveDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setCentralBankRiskEffectiveDate(XMLGregorianCalendar value) {
+        this.centralBankRiskEffectiveDate = value;
     }
 
 }

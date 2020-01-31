@@ -1,229 +1,146 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerLeaderInformations.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerLeaderInformations complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerLeaderInformations">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="leaderCode" type="{http://soprabanking.com/amplitude}leaderCode"/>
+ *         &lt;element name="leaderType" type="{http://soprabanking.com/amplitude}customerOrThirdPartyType"/>
+ *         &lt;element name="leaderPosition" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="typeOfCorporateExecutiveDuty" type="{http://soprabanking.com/amplitude}char3" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerLeaderInformations", propOrder = {
+    "leaderCode",
+    "leaderType",
+    "leaderPosition",
+    "typeOfCorporateExecutiveDuty"
+})
+public class CustomerLeaderInformations {
 
-package com.soprabanking.amplitude;
-
-public class CustomerLeaderInformations  implements java.io.Serializable {
-    private java.lang.String leaderCode;
-
-    private com.soprabanking.amplitude.CustomerOrThirdPartyType leaderType;
-
-    private java.lang.String leaderPosition;
-
-    private java.lang.String typeOfCorporateExecutiveDuty;
-
-    public CustomerLeaderInformations() {
-    }
-
-    public CustomerLeaderInformations(
-           java.lang.String leaderCode,
-           com.soprabanking.amplitude.CustomerOrThirdPartyType leaderType,
-           java.lang.String leaderPosition,
-           java.lang.String typeOfCorporateExecutiveDuty) {
-           this.leaderCode = leaderCode;
-           this.leaderType = leaderType;
-           this.leaderPosition = leaderPosition;
-           this.typeOfCorporateExecutiveDuty = typeOfCorporateExecutiveDuty;
-    }
-
+    @XmlElement(required = true)
+    protected String leaderCode;
+    @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
+    protected CustomerOrThirdPartyType leaderType;
+    protected String leaderPosition;
+    protected String typeOfCorporateExecutiveDuty;
 
     /**
-     * Gets the leaderCode value for this CustomerLeaderInformations.
+     * Obtient la valeur de la propriété leaderCode.
      * 
-     * @return leaderCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLeaderCode() {
+    public String getLeaderCode() {
         return leaderCode;
     }
 
-
     /**
-     * Sets the leaderCode value for this CustomerLeaderInformations.
+     * Définit la valeur de la propriété leaderCode.
      * 
-     * @param leaderCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLeaderCode(java.lang.String leaderCode) {
-        this.leaderCode = leaderCode;
+    public void setLeaderCode(String value) {
+        this.leaderCode = value;
     }
 
-
     /**
-     * Gets the leaderType value for this CustomerLeaderInformations.
+     * Obtient la valeur de la propriété leaderType.
      * 
-     * @return leaderType
+     * @return
+     *     possible object is
+     *     {@link CustomerOrThirdPartyType }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerOrThirdPartyType getLeaderType() {
+    public CustomerOrThirdPartyType getLeaderType() {
         return leaderType;
     }
 
-
     /**
-     * Sets the leaderType value for this CustomerLeaderInformations.
+     * Définit la valeur de la propriété leaderType.
      * 
-     * @param leaderType
+     * @param value
+     *     allowed object is
+     *     {@link CustomerOrThirdPartyType }
+     *     
      */
-    public void setLeaderType(com.soprabanking.amplitude.CustomerOrThirdPartyType leaderType) {
-        this.leaderType = leaderType;
+    public void setLeaderType(CustomerOrThirdPartyType value) {
+        this.leaderType = value;
     }
 
-
     /**
-     * Gets the leaderPosition value for this CustomerLeaderInformations.
+     * Obtient la valeur de la propriété leaderPosition.
      * 
-     * @return leaderPosition
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLeaderPosition() {
+    public String getLeaderPosition() {
         return leaderPosition;
     }
 
-
     /**
-     * Sets the leaderPosition value for this CustomerLeaderInformations.
+     * Définit la valeur de la propriété leaderPosition.
      * 
-     * @param leaderPosition
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLeaderPosition(java.lang.String leaderPosition) {
-        this.leaderPosition = leaderPosition;
+    public void setLeaderPosition(String value) {
+        this.leaderPosition = value;
     }
 
-
     /**
-     * Gets the typeOfCorporateExecutiveDuty value for this CustomerLeaderInformations.
+     * Obtient la valeur de la propriété typeOfCorporateExecutiveDuty.
      * 
-     * @return typeOfCorporateExecutiveDuty
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTypeOfCorporateExecutiveDuty() {
+    public String getTypeOfCorporateExecutiveDuty() {
         return typeOfCorporateExecutiveDuty;
     }
 
-
     /**
-     * Sets the typeOfCorporateExecutiveDuty value for this CustomerLeaderInformations.
+     * Définit la valeur de la propriété typeOfCorporateExecutiveDuty.
      * 
-     * @param typeOfCorporateExecutiveDuty
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTypeOfCorporateExecutiveDuty(java.lang.String typeOfCorporateExecutiveDuty) {
-        this.typeOfCorporateExecutiveDuty = typeOfCorporateExecutiveDuty;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerLeaderInformations)) return false;
-        CustomerLeaderInformations other = (CustomerLeaderInformations) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.leaderCode==null && other.getLeaderCode()==null) || 
-             (this.leaderCode!=null &&
-              this.leaderCode.equals(other.getLeaderCode()))) &&
-            ((this.leaderType==null && other.getLeaderType()==null) || 
-             (this.leaderType!=null &&
-              this.leaderType.equals(other.getLeaderType()))) &&
-            ((this.leaderPosition==null && other.getLeaderPosition()==null) || 
-             (this.leaderPosition!=null &&
-              this.leaderPosition.equals(other.getLeaderPosition()))) &&
-            ((this.typeOfCorporateExecutiveDuty==null && other.getTypeOfCorporateExecutiveDuty()==null) || 
-             (this.typeOfCorporateExecutiveDuty!=null &&
-              this.typeOfCorporateExecutiveDuty.equals(other.getTypeOfCorporateExecutiveDuty())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getLeaderCode() != null) {
-            _hashCode += getLeaderCode().hashCode();
-        }
-        if (getLeaderType() != null) {
-            _hashCode += getLeaderType().hashCode();
-        }
-        if (getLeaderPosition() != null) {
-            _hashCode += getLeaderPosition().hashCode();
-        }
-        if (getTypeOfCorporateExecutiveDuty() != null) {
-            _hashCode += getTypeOfCorporateExecutiveDuty().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerLeaderInformations.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerLeaderInformations"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("leaderCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "leaderCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("leaderType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "leaderType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerOrThirdPartyType"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("leaderPosition");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "leaderPosition"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("typeOfCorporateExecutiveDuty");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "typeOfCorporateExecutiveDuty"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTypeOfCorporateExecutiveDuty(String value) {
+        this.typeOfCorporateExecutiveDuty = value;
     }
 
 }

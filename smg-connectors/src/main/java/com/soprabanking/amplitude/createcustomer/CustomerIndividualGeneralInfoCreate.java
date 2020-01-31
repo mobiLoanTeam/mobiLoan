@@ -1,379 +1,252 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * CustomerIndividualGeneralInfoCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerIndividualGeneralInfoCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerIndividualGeneralInfoCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="firstname" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="middlename" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="thirdname" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="familyStatusCode" type="{http://soprabanking.com/amplitude}familyStatusCode" minOccurs="0"/>
+ *         &lt;element name="marriageSettlementCode" type="{http://soprabanking.com/amplitude}marriageSettlementCode" minOccurs="0"/>
+ *         &lt;element name="holderLegalCapacity" type="{http://soprabanking.com/amplitude}legalCapacityCode" minOccurs="0"/>
+ *         &lt;element name="applicationDateOfLegalCapacity" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="realEstateSituationCode" type="{http://soprabanking.com/amplitude}customerRealEstateSituationCode" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerIndividualGeneralInfoCreate", propOrder = {
+    "firstname",
+    "middlename",
+    "thirdname",
+    "familyStatusCode",
+    "marriageSettlementCode",
+    "holderLegalCapacity",
+    "applicationDateOfLegalCapacity",
+    "realEstateSituationCode"
+})
+public class CustomerIndividualGeneralInfoCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerIndividualGeneralInfoCreate  implements java.io.Serializable {
-    private java.lang.String firstname;
-
-    private java.lang.String middlename;
-
-    private java.lang.String thirdname;
-
-    private java.lang.String familyStatusCode;
-
-    private java.lang.String marriageSettlementCode;
-
-    private java.lang.String holderLegalCapacity;
-
-    private java.util.Date applicationDateOfLegalCapacity;
-
-    private java.lang.String realEstateSituationCode;
-
-    public CustomerIndividualGeneralInfoCreate() {
-    }
-
-    public CustomerIndividualGeneralInfoCreate(
-           java.lang.String firstname,
-           java.lang.String middlename,
-           java.lang.String thirdname,
-           java.lang.String familyStatusCode,
-           java.lang.String marriageSettlementCode,
-           java.lang.String holderLegalCapacity,
-           java.util.Date applicationDateOfLegalCapacity,
-           java.lang.String realEstateSituationCode) {
-           this.firstname = firstname;
-           this.middlename = middlename;
-           this.thirdname = thirdname;
-           this.familyStatusCode = familyStatusCode;
-           this.marriageSettlementCode = marriageSettlementCode;
-           this.holderLegalCapacity = holderLegalCapacity;
-           this.applicationDateOfLegalCapacity = applicationDateOfLegalCapacity;
-           this.realEstateSituationCode = realEstateSituationCode;
-    }
-
+    protected String firstname;
+    protected String middlename;
+    protected String thirdname;
+    protected String familyStatusCode;
+    protected String marriageSettlementCode;
+    protected String holderLegalCapacity;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar applicationDateOfLegalCapacity;
+    protected String realEstateSituationCode;
 
     /**
-     * Gets the firstname value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété firstname.
      * 
-     * @return firstname
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFirstname() {
+    public String getFirstname() {
         return firstname;
     }
 
-
     /**
-     * Sets the firstname value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété firstname.
      * 
-     * @param firstname
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstname(java.lang.String firstname) {
-        this.firstname = firstname;
+    public void setFirstname(String value) {
+        this.firstname = value;
     }
 
-
     /**
-     * Gets the middlename value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété middlename.
      * 
-     * @return middlename
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMiddlename() {
+    public String getMiddlename() {
         return middlename;
     }
 
-
     /**
-     * Sets the middlename value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété middlename.
      * 
-     * @param middlename
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMiddlename(java.lang.String middlename) {
-        this.middlename = middlename;
+    public void setMiddlename(String value) {
+        this.middlename = value;
     }
 
-
     /**
-     * Gets the thirdname value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété thirdname.
      * 
-     * @return thirdname
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getThirdname() {
+    public String getThirdname() {
         return thirdname;
     }
 
-
     /**
-     * Sets the thirdname value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété thirdname.
      * 
-     * @param thirdname
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setThirdname(java.lang.String thirdname) {
-        this.thirdname = thirdname;
+    public void setThirdname(String value) {
+        this.thirdname = value;
     }
 
-
     /**
-     * Gets the familyStatusCode value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété familyStatusCode.
      * 
-     * @return familyStatusCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFamilyStatusCode() {
+    public String getFamilyStatusCode() {
         return familyStatusCode;
     }
 
-
     /**
-     * Sets the familyStatusCode value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété familyStatusCode.
      * 
-     * @param familyStatusCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFamilyStatusCode(java.lang.String familyStatusCode) {
-        this.familyStatusCode = familyStatusCode;
+    public void setFamilyStatusCode(String value) {
+        this.familyStatusCode = value;
     }
 
-
     /**
-     * Gets the marriageSettlementCode value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété marriageSettlementCode.
      * 
-     * @return marriageSettlementCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMarriageSettlementCode() {
+    public String getMarriageSettlementCode() {
         return marriageSettlementCode;
     }
 
-
     /**
-     * Sets the marriageSettlementCode value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété marriageSettlementCode.
      * 
-     * @param marriageSettlementCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMarriageSettlementCode(java.lang.String marriageSettlementCode) {
-        this.marriageSettlementCode = marriageSettlementCode;
+    public void setMarriageSettlementCode(String value) {
+        this.marriageSettlementCode = value;
     }
 
-
     /**
-     * Gets the holderLegalCapacity value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété holderLegalCapacity.
      * 
-     * @return holderLegalCapacity
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getHolderLegalCapacity() {
+    public String getHolderLegalCapacity() {
         return holderLegalCapacity;
     }
 
-
     /**
-     * Sets the holderLegalCapacity value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété holderLegalCapacity.
      * 
-     * @param holderLegalCapacity
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHolderLegalCapacity(java.lang.String holderLegalCapacity) {
-        this.holderLegalCapacity = holderLegalCapacity;
+    public void setHolderLegalCapacity(String value) {
+        this.holderLegalCapacity = value;
     }
 
-
     /**
-     * Gets the applicationDateOfLegalCapacity value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété applicationDateOfLegalCapacity.
      * 
-     * @return applicationDateOfLegalCapacity
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getApplicationDateOfLegalCapacity() {
+    public XMLGregorianCalendar getApplicationDateOfLegalCapacity() {
         return applicationDateOfLegalCapacity;
     }
 
-
     /**
-     * Sets the applicationDateOfLegalCapacity value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété applicationDateOfLegalCapacity.
      * 
-     * @param applicationDateOfLegalCapacity
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setApplicationDateOfLegalCapacity(java.util.Date applicationDateOfLegalCapacity) {
-        this.applicationDateOfLegalCapacity = applicationDateOfLegalCapacity;
+    public void setApplicationDateOfLegalCapacity(XMLGregorianCalendar value) {
+        this.applicationDateOfLegalCapacity = value;
     }
 
-
     /**
-     * Gets the realEstateSituationCode value for this CustomerIndividualGeneralInfoCreate.
+     * Obtient la valeur de la propriété realEstateSituationCode.
      * 
-     * @return realEstateSituationCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getRealEstateSituationCode() {
+    public String getRealEstateSituationCode() {
         return realEstateSituationCode;
     }
 
-
     /**
-     * Sets the realEstateSituationCode value for this CustomerIndividualGeneralInfoCreate.
+     * Définit la valeur de la propriété realEstateSituationCode.
      * 
-     * @param realEstateSituationCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setRealEstateSituationCode(java.lang.String realEstateSituationCode) {
-        this.realEstateSituationCode = realEstateSituationCode;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerIndividualGeneralInfoCreate)) return false;
-        CustomerIndividualGeneralInfoCreate other = (CustomerIndividualGeneralInfoCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.firstname==null && other.getFirstname()==null) || 
-             (this.firstname!=null &&
-              this.firstname.equals(other.getFirstname()))) &&
-            ((this.middlename==null && other.getMiddlename()==null) || 
-             (this.middlename!=null &&
-              this.middlename.equals(other.getMiddlename()))) &&
-            ((this.thirdname==null && other.getThirdname()==null) || 
-             (this.thirdname!=null &&
-              this.thirdname.equals(other.getThirdname()))) &&
-            ((this.familyStatusCode==null && other.getFamilyStatusCode()==null) || 
-             (this.familyStatusCode!=null &&
-              this.familyStatusCode.equals(other.getFamilyStatusCode()))) &&
-            ((this.marriageSettlementCode==null && other.getMarriageSettlementCode()==null) || 
-             (this.marriageSettlementCode!=null &&
-              this.marriageSettlementCode.equals(other.getMarriageSettlementCode()))) &&
-            ((this.holderLegalCapacity==null && other.getHolderLegalCapacity()==null) || 
-             (this.holderLegalCapacity!=null &&
-              this.holderLegalCapacity.equals(other.getHolderLegalCapacity()))) &&
-            ((this.applicationDateOfLegalCapacity==null && other.getApplicationDateOfLegalCapacity()==null) || 
-             (this.applicationDateOfLegalCapacity!=null &&
-              this.applicationDateOfLegalCapacity.equals(other.getApplicationDateOfLegalCapacity()))) &&
-            ((this.realEstateSituationCode==null && other.getRealEstateSituationCode()==null) || 
-             (this.realEstateSituationCode!=null &&
-              this.realEstateSituationCode.equals(other.getRealEstateSituationCode())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getFirstname() != null) {
-            _hashCode += getFirstname().hashCode();
-        }
-        if (getMiddlename() != null) {
-            _hashCode += getMiddlename().hashCode();
-        }
-        if (getThirdname() != null) {
-            _hashCode += getThirdname().hashCode();
-        }
-        if (getFamilyStatusCode() != null) {
-            _hashCode += getFamilyStatusCode().hashCode();
-        }
-        if (getMarriageSettlementCode() != null) {
-            _hashCode += getMarriageSettlementCode().hashCode();
-        }
-        if (getHolderLegalCapacity() != null) {
-            _hashCode += getHolderLegalCapacity().hashCode();
-        }
-        if (getApplicationDateOfLegalCapacity() != null) {
-            _hashCode += getApplicationDateOfLegalCapacity().hashCode();
-        }
-        if (getRealEstateSituationCode() != null) {
-            _hashCode += getRealEstateSituationCode().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerIndividualGeneralInfoCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerIndividualGeneralInfoCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("firstname");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "firstname"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("middlename");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "middlename"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("thirdname");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "thirdname"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("familyStatusCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "familyStatusCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("marriageSettlementCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "marriageSettlementCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("holderLegalCapacity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "holderLegalCapacity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("applicationDateOfLegalCapacity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "applicationDateOfLegalCapacity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("realEstateSituationCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "realEstateSituationCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setRealEstateSituationCode(String value) {
+        this.realEstateSituationCode = value;
     }
 
 }

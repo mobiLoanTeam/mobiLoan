@@ -1,194 +1,115 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ModifyCustomerBudget.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour modifyCustomerBudget complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="modifyCustomerBudget">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customerCode" type="{http://soprabanking.com/amplitude}customerCode" minOccurs="0"/>
+ *         &lt;element name="budgetReferenceYear" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="averageTaxRate" type="{http://soprabanking.com/amplitude}decimal15_7" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "modifyCustomerBudget", propOrder = {
+    "customerCode",
+    "budgetReferenceYear",
+    "averageTaxRate"
+})
+public class ModifyCustomerBudget {
 
-package com.soprabanking.amplitude;
-
-public class ModifyCustomerBudget  implements java.io.Serializable {
-    private java.lang.String customerCode;
-
-    private java.lang.Integer budgetReferenceYear;
-
-    private java.math.BigDecimal averageTaxRate;
-
-    public ModifyCustomerBudget() {
-    }
-
-    public ModifyCustomerBudget(
-           java.lang.String customerCode,
-           java.lang.Integer budgetReferenceYear,
-           java.math.BigDecimal averageTaxRate) {
-           this.customerCode = customerCode;
-           this.budgetReferenceYear = budgetReferenceYear;
-           this.averageTaxRate = averageTaxRate;
-    }
-
+    protected String customerCode;
+    protected Integer budgetReferenceYear;
+    protected BigDecimal averageTaxRate;
 
     /**
-     * Gets the customerCode value for this ModifyCustomerBudget.
+     * Obtient la valeur de la propriété customerCode.
      * 
-     * @return customerCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerCode() {
+    public String getCustomerCode() {
         return customerCode;
     }
 
-
     /**
-     * Sets the customerCode value for this ModifyCustomerBudget.
+     * Définit la valeur de la propriété customerCode.
      * 
-     * @param customerCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerCode(java.lang.String customerCode) {
-        this.customerCode = customerCode;
+    public void setCustomerCode(String value) {
+        this.customerCode = value;
     }
 
-
     /**
-     * Gets the budgetReferenceYear value for this ModifyCustomerBudget.
+     * Obtient la valeur de la propriété budgetReferenceYear.
      * 
-     * @return budgetReferenceYear
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
      */
-    public java.lang.Integer getBudgetReferenceYear() {
+    public Integer getBudgetReferenceYear() {
         return budgetReferenceYear;
     }
 
-
     /**
-     * Sets the budgetReferenceYear value for this ModifyCustomerBudget.
+     * Définit la valeur de la propriété budgetReferenceYear.
      * 
-     * @param budgetReferenceYear
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
      */
-    public void setBudgetReferenceYear(java.lang.Integer budgetReferenceYear) {
-        this.budgetReferenceYear = budgetReferenceYear;
+    public void setBudgetReferenceYear(Integer value) {
+        this.budgetReferenceYear = value;
     }
 
-
     /**
-     * Gets the averageTaxRate value for this ModifyCustomerBudget.
+     * Obtient la valeur de la propriété averageTaxRate.
      * 
-     * @return averageTaxRate
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
-    public java.math.BigDecimal getAverageTaxRate() {
+    public BigDecimal getAverageTaxRate() {
         return averageTaxRate;
     }
 
-
     /**
-     * Sets the averageTaxRate value for this ModifyCustomerBudget.
+     * Définit la valeur de la propriété averageTaxRate.
      * 
-     * @param averageTaxRate
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
-    public void setAverageTaxRate(java.math.BigDecimal averageTaxRate) {
-        this.averageTaxRate = averageTaxRate;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModifyCustomerBudget)) return false;
-        ModifyCustomerBudget other = (ModifyCustomerBudget) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customerCode==null && other.getCustomerCode()==null) || 
-             (this.customerCode!=null &&
-              this.customerCode.equals(other.getCustomerCode()))) &&
-            ((this.budgetReferenceYear==null && other.getBudgetReferenceYear()==null) || 
-             (this.budgetReferenceYear!=null &&
-              this.budgetReferenceYear.equals(other.getBudgetReferenceYear()))) &&
-            ((this.averageTaxRate==null && other.getAverageTaxRate()==null) || 
-             (this.averageTaxRate!=null &&
-              this.averageTaxRate.equals(other.getAverageTaxRate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomerCode() != null) {
-            _hashCode += getCustomerCode().hashCode();
-        }
-        if (getBudgetReferenceYear() != null) {
-            _hashCode += getBudgetReferenceYear().hashCode();
-        }
-        if (getAverageTaxRate() != null) {
-            _hashCode += getAverageTaxRate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModifyCustomerBudget.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerBudget"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("budgetReferenceYear");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "budgetReferenceYear"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("averageTaxRate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "averageTaxRate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setAverageTaxRate(BigDecimal value) {
+        this.averageTaxRate = value;
     }
 
 }

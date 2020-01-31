@@ -1,305 +1,198 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * CustomerCorporateGeneralInfoCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerCorporateGeneralInfoCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerCorporateGeneralInfoCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="tradeNameToDeclare" type="{http://soprabanking.com/amplitude}charMax65" minOccurs="0"/>
+ *         &lt;element name="secondTradeNameToDeclare" type="{http://soprabanking.com/amplitude}charMax65" minOccurs="0"/>
+ *         &lt;element name="companyCreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="legalFormCode" type="{http://soprabanking.com/amplitude}legalFormCode" minOccurs="0"/>
+ *         &lt;element name="statutoryAuditor1" type="{http://soprabanking.com/amplitude}charMax36" minOccurs="0"/>
+ *         &lt;element name="statutoryAuditor2" type="{http://soprabanking.com/amplitude}charMax36" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerCorporateGeneralInfoCreate", propOrder = {
+    "tradeNameToDeclare",
+    "secondTradeNameToDeclare",
+    "companyCreationDate",
+    "legalFormCode",
+    "statutoryAuditor1",
+    "statutoryAuditor2"
+})
+public class CustomerCorporateGeneralInfoCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerCorporateGeneralInfoCreate  implements java.io.Serializable {
-    private java.lang.String tradeNameToDeclare;
-
-    private java.lang.String secondTradeNameToDeclare;
-
-    private java.util.Date companyCreationDate;
-
-    private java.lang.String legalFormCode;
-
-    private java.lang.String statutoryAuditor1;
-
-    private java.lang.String statutoryAuditor2;
-
-    public CustomerCorporateGeneralInfoCreate() {
-    }
-
-    public CustomerCorporateGeneralInfoCreate(
-           java.lang.String tradeNameToDeclare,
-           java.lang.String secondTradeNameToDeclare,
-           java.util.Date companyCreationDate,
-           java.lang.String legalFormCode,
-           java.lang.String statutoryAuditor1,
-           java.lang.String statutoryAuditor2) {
-           this.tradeNameToDeclare = tradeNameToDeclare;
-           this.secondTradeNameToDeclare = secondTradeNameToDeclare;
-           this.companyCreationDate = companyCreationDate;
-           this.legalFormCode = legalFormCode;
-           this.statutoryAuditor1 = statutoryAuditor1;
-           this.statutoryAuditor2 = statutoryAuditor2;
-    }
-
+    protected String tradeNameToDeclare;
+    protected String secondTradeNameToDeclare;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar companyCreationDate;
+    protected String legalFormCode;
+    protected String statutoryAuditor1;
+    protected String statutoryAuditor2;
 
     /**
-     * Gets the tradeNameToDeclare value for this CustomerCorporateGeneralInfoCreate.
+     * Obtient la valeur de la propriété tradeNameToDeclare.
      * 
-     * @return tradeNameToDeclare
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTradeNameToDeclare() {
+    public String getTradeNameToDeclare() {
         return tradeNameToDeclare;
     }
 
-
     /**
-     * Sets the tradeNameToDeclare value for this CustomerCorporateGeneralInfoCreate.
+     * Définit la valeur de la propriété tradeNameToDeclare.
      * 
-     * @param tradeNameToDeclare
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTradeNameToDeclare(java.lang.String tradeNameToDeclare) {
-        this.tradeNameToDeclare = tradeNameToDeclare;
+    public void setTradeNameToDeclare(String value) {
+        this.tradeNameToDeclare = value;
     }
 
-
     /**
-     * Gets the secondTradeNameToDeclare value for this CustomerCorporateGeneralInfoCreate.
+     * Obtient la valeur de la propriété secondTradeNameToDeclare.
      * 
-     * @return secondTradeNameToDeclare
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSecondTradeNameToDeclare() {
+    public String getSecondTradeNameToDeclare() {
         return secondTradeNameToDeclare;
     }
 
-
     /**
-     * Sets the secondTradeNameToDeclare value for this CustomerCorporateGeneralInfoCreate.
+     * Définit la valeur de la propriété secondTradeNameToDeclare.
      * 
-     * @param secondTradeNameToDeclare
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSecondTradeNameToDeclare(java.lang.String secondTradeNameToDeclare) {
-        this.secondTradeNameToDeclare = secondTradeNameToDeclare;
+    public void setSecondTradeNameToDeclare(String value) {
+        this.secondTradeNameToDeclare = value;
     }
 
-
     /**
-     * Gets the companyCreationDate value for this CustomerCorporateGeneralInfoCreate.
+     * Obtient la valeur de la propriété companyCreationDate.
      * 
-     * @return companyCreationDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getCompanyCreationDate() {
+    public XMLGregorianCalendar getCompanyCreationDate() {
         return companyCreationDate;
     }
 
-
     /**
-     * Sets the companyCreationDate value for this CustomerCorporateGeneralInfoCreate.
+     * Définit la valeur de la propriété companyCreationDate.
      * 
-     * @param companyCreationDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setCompanyCreationDate(java.util.Date companyCreationDate) {
-        this.companyCreationDate = companyCreationDate;
+    public void setCompanyCreationDate(XMLGregorianCalendar value) {
+        this.companyCreationDate = value;
     }
 
-
     /**
-     * Gets the legalFormCode value for this CustomerCorporateGeneralInfoCreate.
+     * Obtient la valeur de la propriété legalFormCode.
      * 
-     * @return legalFormCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLegalFormCode() {
+    public String getLegalFormCode() {
         return legalFormCode;
     }
 
-
     /**
-     * Sets the legalFormCode value for this CustomerCorporateGeneralInfoCreate.
+     * Définit la valeur de la propriété legalFormCode.
      * 
-     * @param legalFormCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLegalFormCode(java.lang.String legalFormCode) {
-        this.legalFormCode = legalFormCode;
+    public void setLegalFormCode(String value) {
+        this.legalFormCode = value;
     }
 
-
     /**
-     * Gets the statutoryAuditor1 value for this CustomerCorporateGeneralInfoCreate.
+     * Obtient la valeur de la propriété statutoryAuditor1.
      * 
-     * @return statutoryAuditor1
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatutoryAuditor1() {
+    public String getStatutoryAuditor1() {
         return statutoryAuditor1;
     }
 
-
     /**
-     * Sets the statutoryAuditor1 value for this CustomerCorporateGeneralInfoCreate.
+     * Définit la valeur de la propriété statutoryAuditor1.
      * 
-     * @param statutoryAuditor1
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatutoryAuditor1(java.lang.String statutoryAuditor1) {
-        this.statutoryAuditor1 = statutoryAuditor1;
+    public void setStatutoryAuditor1(String value) {
+        this.statutoryAuditor1 = value;
     }
 
-
     /**
-     * Gets the statutoryAuditor2 value for this CustomerCorporateGeneralInfoCreate.
+     * Obtient la valeur de la propriété statutoryAuditor2.
      * 
-     * @return statutoryAuditor2
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getStatutoryAuditor2() {
+    public String getStatutoryAuditor2() {
         return statutoryAuditor2;
     }
 
-
     /**
-     * Sets the statutoryAuditor2 value for this CustomerCorporateGeneralInfoCreate.
+     * Définit la valeur de la propriété statutoryAuditor2.
      * 
-     * @param statutoryAuditor2
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setStatutoryAuditor2(java.lang.String statutoryAuditor2) {
-        this.statutoryAuditor2 = statutoryAuditor2;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerCorporateGeneralInfoCreate)) return false;
-        CustomerCorporateGeneralInfoCreate other = (CustomerCorporateGeneralInfoCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.tradeNameToDeclare==null && other.getTradeNameToDeclare()==null) || 
-             (this.tradeNameToDeclare!=null &&
-              this.tradeNameToDeclare.equals(other.getTradeNameToDeclare()))) &&
-            ((this.secondTradeNameToDeclare==null && other.getSecondTradeNameToDeclare()==null) || 
-             (this.secondTradeNameToDeclare!=null &&
-              this.secondTradeNameToDeclare.equals(other.getSecondTradeNameToDeclare()))) &&
-            ((this.companyCreationDate==null && other.getCompanyCreationDate()==null) || 
-             (this.companyCreationDate!=null &&
-              this.companyCreationDate.equals(other.getCompanyCreationDate()))) &&
-            ((this.legalFormCode==null && other.getLegalFormCode()==null) || 
-             (this.legalFormCode!=null &&
-              this.legalFormCode.equals(other.getLegalFormCode()))) &&
-            ((this.statutoryAuditor1==null && other.getStatutoryAuditor1()==null) || 
-             (this.statutoryAuditor1!=null &&
-              this.statutoryAuditor1.equals(other.getStatutoryAuditor1()))) &&
-            ((this.statutoryAuditor2==null && other.getStatutoryAuditor2()==null) || 
-             (this.statutoryAuditor2!=null &&
-              this.statutoryAuditor2.equals(other.getStatutoryAuditor2())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getTradeNameToDeclare() != null) {
-            _hashCode += getTradeNameToDeclare().hashCode();
-        }
-        if (getSecondTradeNameToDeclare() != null) {
-            _hashCode += getSecondTradeNameToDeclare().hashCode();
-        }
-        if (getCompanyCreationDate() != null) {
-            _hashCode += getCompanyCreationDate().hashCode();
-        }
-        if (getLegalFormCode() != null) {
-            _hashCode += getLegalFormCode().hashCode();
-        }
-        if (getStatutoryAuditor1() != null) {
-            _hashCode += getStatutoryAuditor1().hashCode();
-        }
-        if (getStatutoryAuditor2() != null) {
-            _hashCode += getStatutoryAuditor2().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerCorporateGeneralInfoCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCorporateGeneralInfoCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("tradeNameToDeclare");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "tradeNameToDeclare"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("secondTradeNameToDeclare");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "secondTradeNameToDeclare"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("companyCreationDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "companyCreationDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("legalFormCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "legalFormCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statutoryAuditor1");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "statutoryAuditor1"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("statutoryAuditor2");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "statutoryAuditor2"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setStatutoryAuditor2(String value) {
+        this.statutoryAuditor2 = value;
     }
 
 }

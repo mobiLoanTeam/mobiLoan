@@ -1,342 +1,225 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * CustomerBirthCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerBirthCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerBirthCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="holderSex" type="{http://soprabanking.com/amplitude}sex" minOccurs="0"/>
+ *         &lt;element name="maidenName" type="{http://soprabanking.com/amplitude}charMax36" minOccurs="0"/>
+ *         &lt;element name="birthDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="birthCity" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="birthCounty" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="birthRegion" type="{http://soprabanking.com/amplitude}charMax50" minOccurs="0"/>
+ *         &lt;element name="birthCountry" type="{http://soprabanking.com/amplitude}countryCode" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerBirthCreate", propOrder = {
+    "holderSex",
+    "maidenName",
+    "birthDate",
+    "birthCity",
+    "birthCounty",
+    "birthRegion",
+    "birthCountry"
+})
+public class CustomerBirthCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerBirthCreate  implements java.io.Serializable {
-    private com.soprabanking.amplitude.Sex holderSex;
-
-    private java.lang.String maidenName;
-
-    private java.util.Date birthDate;
-
-    private java.lang.String birthCity;
-
-    private java.lang.String birthCounty;
-
-    private java.lang.String birthRegion;
-
-    private java.lang.String birthCountry;
-
-    public CustomerBirthCreate() {
-    }
-
-    public CustomerBirthCreate(
-           com.soprabanking.amplitude.Sex holderSex,
-           java.lang.String maidenName,
-           java.util.Date birthDate,
-           java.lang.String birthCity,
-           java.lang.String birthCounty,
-           java.lang.String birthRegion,
-           java.lang.String birthCountry) {
-           this.holderSex = holderSex;
-           this.maidenName = maidenName;
-           this.birthDate = birthDate;
-           this.birthCity = birthCity;
-           this.birthCounty = birthCounty;
-           this.birthRegion = birthRegion;
-           this.birthCountry = birthCountry;
-    }
-
+    protected String holderSex;
+    protected String maidenName;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar birthDate;
+    protected String birthCity;
+    protected String birthCounty;
+    protected String birthRegion;
+    protected String birthCountry;
 
     /**
-     * Gets the holderSex value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété holderSex.
      * 
-     * @return holderSex
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.soprabanking.amplitude.Sex getHolderSex() {
+    public String getHolderSex() {
         return holderSex;
     }
 
-
     /**
-     * Sets the holderSex value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété holderSex.
      * 
-     * @param holderSex
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setHolderSex(com.soprabanking.amplitude.Sex holderSex) {
-        this.holderSex = holderSex;
+    public void setHolderSex(String value) {
+        this.holderSex = value;
     }
 
-
     /**
-     * Gets the maidenName value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété maidenName.
      * 
-     * @return maidenName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getMaidenName() {
+    public String getMaidenName() {
         return maidenName;
     }
 
-
     /**
-     * Sets the maidenName value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété maidenName.
      * 
-     * @param maidenName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setMaidenName(java.lang.String maidenName) {
-        this.maidenName = maidenName;
+    public void setMaidenName(String value) {
+        this.maidenName = value;
     }
 
-
     /**
-     * Gets the birthDate value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété birthDate.
      * 
-     * @return birthDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getBirthDate() {
+    public XMLGregorianCalendar getBirthDate() {
         return birthDate;
     }
 
-
     /**
-     * Sets the birthDate value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété birthDate.
      * 
-     * @param birthDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setBirthDate(java.util.Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(XMLGregorianCalendar value) {
+        this.birthDate = value;
     }
 
-
     /**
-     * Gets the birthCity value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété birthCity.
      * 
-     * @return birthCity
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBirthCity() {
+    public String getBirthCity() {
         return birthCity;
     }
 
-
     /**
-     * Sets the birthCity value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété birthCity.
      * 
-     * @param birthCity
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBirthCity(java.lang.String birthCity) {
-        this.birthCity = birthCity;
+    public void setBirthCity(String value) {
+        this.birthCity = value;
     }
 
-
     /**
-     * Gets the birthCounty value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété birthCounty.
      * 
-     * @return birthCounty
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBirthCounty() {
+    public String getBirthCounty() {
         return birthCounty;
     }
 
-
     /**
-     * Sets the birthCounty value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété birthCounty.
      * 
-     * @param birthCounty
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBirthCounty(java.lang.String birthCounty) {
-        this.birthCounty = birthCounty;
+    public void setBirthCounty(String value) {
+        this.birthCounty = value;
     }
 
-
     /**
-     * Gets the birthRegion value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété birthRegion.
      * 
-     * @return birthRegion
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBirthRegion() {
+    public String getBirthRegion() {
         return birthRegion;
     }
 
-
     /**
-     * Sets the birthRegion value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété birthRegion.
      * 
-     * @param birthRegion
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBirthRegion(java.lang.String birthRegion) {
-        this.birthRegion = birthRegion;
+    public void setBirthRegion(String value) {
+        this.birthRegion = value;
     }
 
-
     /**
-     * Gets the birthCountry value for this CustomerBirthCreate.
+     * Obtient la valeur de la propriété birthCountry.
      * 
-     * @return birthCountry
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBirthCountry() {
+    public String getBirthCountry() {
         return birthCountry;
     }
 
-
     /**
-     * Sets the birthCountry value for this CustomerBirthCreate.
+     * Définit la valeur de la propriété birthCountry.
      * 
-     * @param birthCountry
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBirthCountry(java.lang.String birthCountry) {
-        this.birthCountry = birthCountry;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerBirthCreate)) return false;
-        CustomerBirthCreate other = (CustomerBirthCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.holderSex==null && other.getHolderSex()==null) || 
-             (this.holderSex!=null &&
-              this.holderSex.equals(other.getHolderSex()))) &&
-            ((this.maidenName==null && other.getMaidenName()==null) || 
-             (this.maidenName!=null &&
-              this.maidenName.equals(other.getMaidenName()))) &&
-            ((this.birthDate==null && other.getBirthDate()==null) || 
-             (this.birthDate!=null &&
-              this.birthDate.equals(other.getBirthDate()))) &&
-            ((this.birthCity==null && other.getBirthCity()==null) || 
-             (this.birthCity!=null &&
-              this.birthCity.equals(other.getBirthCity()))) &&
-            ((this.birthCounty==null && other.getBirthCounty()==null) || 
-             (this.birthCounty!=null &&
-              this.birthCounty.equals(other.getBirthCounty()))) &&
-            ((this.birthRegion==null && other.getBirthRegion()==null) || 
-             (this.birthRegion!=null &&
-              this.birthRegion.equals(other.getBirthRegion()))) &&
-            ((this.birthCountry==null && other.getBirthCountry()==null) || 
-             (this.birthCountry!=null &&
-              this.birthCountry.equals(other.getBirthCountry())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getHolderSex() != null) {
-            _hashCode += getHolderSex().hashCode();
-        }
-        if (getMaidenName() != null) {
-            _hashCode += getMaidenName().hashCode();
-        }
-        if (getBirthDate() != null) {
-            _hashCode += getBirthDate().hashCode();
-        }
-        if (getBirthCity() != null) {
-            _hashCode += getBirthCity().hashCode();
-        }
-        if (getBirthCounty() != null) {
-            _hashCode += getBirthCounty().hashCode();
-        }
-        if (getBirthRegion() != null) {
-            _hashCode += getBirthRegion().hashCode();
-        }
-        if (getBirthCountry() != null) {
-            _hashCode += getBirthCountry().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerBirthCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerBirthCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("holderSex");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "holderSex"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "sex"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("maidenName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "maidenName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("birthDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "birthDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("birthCity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "birthCity"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("birthCounty");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "birthCounty"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("birthRegion");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "birthRegion"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("birthCountry");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "birthCountry"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setBirthCountry(String value) {
+        this.birthCountry = value;
     }
 
 }

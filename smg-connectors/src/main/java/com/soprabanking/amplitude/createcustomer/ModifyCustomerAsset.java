@@ -1,305 +1,199 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * ModifyCustomerAsset.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour modifyCustomerAsset complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="modifyCustomerAsset">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="assetCode" type="{http://soprabanking.com/amplitude}assetCode" minOccurs="0"/>
+ *         &lt;element name="estimation" type="{http://soprabanking.com/amplitude}decimal19_4" minOccurs="0"/>
+ *         &lt;element name="remainingCapital" type="{http://soprabanking.com/amplitude}decimal19_4" minOccurs="0"/>
+ *         &lt;element name="currency" type="{http://soprabanking.com/amplitude}currencyCode" minOccurs="0"/>
+ *         &lt;element name="competition" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="maturityDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "modifyCustomerAsset", propOrder = {
+    "assetCode",
+    "estimation",
+    "remainingCapital",
+    "currency",
+    "competition",
+    "maturityDate"
+})
+public class ModifyCustomerAsset {
 
-package com.soprabanking.amplitude;
-
-public class ModifyCustomerAsset  implements java.io.Serializable {
-    private java.lang.String assetCode;
-
-    private java.math.BigDecimal estimation;
-
-    private java.math.BigDecimal remainingCapital;
-
-    private java.lang.String currency;
-
-    private java.lang.Boolean competition;
-
-    private java.util.Date maturityDate;
-
-    public ModifyCustomerAsset() {
-    }
-
-    public ModifyCustomerAsset(
-           java.lang.String assetCode,
-           java.math.BigDecimal estimation,
-           java.math.BigDecimal remainingCapital,
-           java.lang.String currency,
-           java.lang.Boolean competition,
-           java.util.Date maturityDate) {
-           this.assetCode = assetCode;
-           this.estimation = estimation;
-           this.remainingCapital = remainingCapital;
-           this.currency = currency;
-           this.competition = competition;
-           this.maturityDate = maturityDate;
-    }
-
+    protected String assetCode;
+    protected BigDecimal estimation;
+    protected BigDecimal remainingCapital;
+    protected String currency;
+    protected Boolean competition;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar maturityDate;
 
     /**
-     * Gets the assetCode value for this ModifyCustomerAsset.
+     * Obtient la valeur de la propriété assetCode.
      * 
-     * @return assetCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAssetCode() {
+    public String getAssetCode() {
         return assetCode;
     }
 
-
     /**
-     * Sets the assetCode value for this ModifyCustomerAsset.
+     * Définit la valeur de la propriété assetCode.
      * 
-     * @param assetCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAssetCode(java.lang.String assetCode) {
-        this.assetCode = assetCode;
+    public void setAssetCode(String value) {
+        this.assetCode = value;
     }
 
-
     /**
-     * Gets the estimation value for this ModifyCustomerAsset.
+     * Obtient la valeur de la propriété estimation.
      * 
-     * @return estimation
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
-    public java.math.BigDecimal getEstimation() {
+    public BigDecimal getEstimation() {
         return estimation;
     }
 
-
     /**
-     * Sets the estimation value for this ModifyCustomerAsset.
+     * Définit la valeur de la propriété estimation.
      * 
-     * @param estimation
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
-    public void setEstimation(java.math.BigDecimal estimation) {
-        this.estimation = estimation;
+    public void setEstimation(BigDecimal value) {
+        this.estimation = value;
     }
 
-
     /**
-     * Gets the remainingCapital value for this ModifyCustomerAsset.
+     * Obtient la valeur de la propriété remainingCapital.
      * 
-     * @return remainingCapital
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
-    public java.math.BigDecimal getRemainingCapital() {
+    public BigDecimal getRemainingCapital() {
         return remainingCapital;
     }
 
-
     /**
-     * Sets the remainingCapital value for this ModifyCustomerAsset.
+     * Définit la valeur de la propriété remainingCapital.
      * 
-     * @param remainingCapital
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
-    public void setRemainingCapital(java.math.BigDecimal remainingCapital) {
-        this.remainingCapital = remainingCapital;
+    public void setRemainingCapital(BigDecimal value) {
+        this.remainingCapital = value;
     }
 
-
     /**
-     * Gets the currency value for this ModifyCustomerAsset.
+     * Obtient la valeur de la propriété currency.
      * 
-     * @return currency
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCurrency() {
+    public String getCurrency() {
         return currency;
     }
 
-
     /**
-     * Sets the currency value for this ModifyCustomerAsset.
+     * Définit la valeur de la propriété currency.
      * 
-     * @param currency
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCurrency(java.lang.String currency) {
-        this.currency = currency;
+    public void setCurrency(String value) {
+        this.currency = value;
     }
 
-
     /**
-     * Gets the competition value for this ModifyCustomerAsset.
+     * Obtient la valeur de la propriété competition.
      * 
-     * @return competition
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public java.lang.Boolean getCompetition() {
+    public Boolean isCompetition() {
         return competition;
     }
 
-
     /**
-     * Sets the competition value for this ModifyCustomerAsset.
+     * Définit la valeur de la propriété competition.
      * 
-     * @param competition
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setCompetition(java.lang.Boolean competition) {
-        this.competition = competition;
+    public void setCompetition(Boolean value) {
+        this.competition = value;
     }
 
-
     /**
-     * Gets the maturityDate value for this ModifyCustomerAsset.
+     * Obtient la valeur de la propriété maturityDate.
      * 
-     * @return maturityDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getMaturityDate() {
+    public XMLGregorianCalendar getMaturityDate() {
         return maturityDate;
     }
 
-
     /**
-     * Sets the maturityDate value for this ModifyCustomerAsset.
+     * Définit la valeur de la propriété maturityDate.
      * 
-     * @param maturityDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setMaturityDate(java.util.Date maturityDate) {
-        this.maturityDate = maturityDate;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModifyCustomerAsset)) return false;
-        ModifyCustomerAsset other = (ModifyCustomerAsset) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.assetCode==null && other.getAssetCode()==null) || 
-             (this.assetCode!=null &&
-              this.assetCode.equals(other.getAssetCode()))) &&
-            ((this.estimation==null && other.getEstimation()==null) || 
-             (this.estimation!=null &&
-              this.estimation.equals(other.getEstimation()))) &&
-            ((this.remainingCapital==null && other.getRemainingCapital()==null) || 
-             (this.remainingCapital!=null &&
-              this.remainingCapital.equals(other.getRemainingCapital()))) &&
-            ((this.currency==null && other.getCurrency()==null) || 
-             (this.currency!=null &&
-              this.currency.equals(other.getCurrency()))) &&
-            ((this.competition==null && other.getCompetition()==null) || 
-             (this.competition!=null &&
-              this.competition.equals(other.getCompetition()))) &&
-            ((this.maturityDate==null && other.getMaturityDate()==null) || 
-             (this.maturityDate!=null &&
-              this.maturityDate.equals(other.getMaturityDate())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAssetCode() != null) {
-            _hashCode += getAssetCode().hashCode();
-        }
-        if (getEstimation() != null) {
-            _hashCode += getEstimation().hashCode();
-        }
-        if (getRemainingCapital() != null) {
-            _hashCode += getRemainingCapital().hashCode();
-        }
-        if (getCurrency() != null) {
-            _hashCode += getCurrency().hashCode();
-        }
-        if (getCompetition() != null) {
-            _hashCode += getCompetition().hashCode();
-        }
-        if (getMaturityDate() != null) {
-            _hashCode += getMaturityDate().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModifyCustomerAsset.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerAsset"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assetCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "assetCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("estimation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "estimation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("remainingCapital");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "remainingCapital"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("currency");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "currency"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("competition");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "competition"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("maturityDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "maturityDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setMaturityDate(XMLGregorianCalendar value) {
+        this.maturityDate = value;
     }
 
 }

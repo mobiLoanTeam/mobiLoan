@@ -1,192 +1,117 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CreateCustomerPhoneNumberRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour createCustomerPhoneNumberRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="createCustomerPhoneNumberRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="identifier" type="{http://soprabanking.com/amplitude}phoneNumberCreateIdentifier"/>
+ *         &lt;element name="phoneNumber" type="{http://soprabanking.com/amplitude}charMax20"/>
+ *         &lt;element name="format" type="{http://soprabanking.com/amplitude}char3" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "createCustomerPhoneNumberRequest", propOrder = {
+    "identifier",
+    "phoneNumber",
+    "format"
+})
+public class CreateCustomerPhoneNumberRequest {
 
-package com.soprabanking.amplitude;
-
-public class CreateCustomerPhoneNumberRequest  implements java.io.Serializable {
-    private com.soprabanking.amplitude.PhoneNumberCreateIdentifier identifier;
-
-    private java.lang.String phoneNumber;
-
-    private java.lang.String format;
-
-    public CreateCustomerPhoneNumberRequest() {
-    }
-
-    public CreateCustomerPhoneNumberRequest(
-           com.soprabanking.amplitude.PhoneNumberCreateIdentifier identifier,
-           java.lang.String phoneNumber,
-           java.lang.String format) {
-           this.identifier = identifier;
-           this.phoneNumber = phoneNumber;
-           this.format = format;
-    }
-
+    @XmlElement(required = true)
+    protected PhoneNumberCreateIdentifier identifier;
+    @XmlElement(required = true)
+    protected String phoneNumber;
+    protected String format;
 
     /**
-     * Gets the identifier value for this CreateCustomerPhoneNumberRequest.
+     * Obtient la valeur de la propriété identifier.
      * 
-     * @return identifier
+     * @return
+     *     possible object is
+     *     {@link PhoneNumberCreateIdentifier }
+     *     
      */
-    public com.soprabanking.amplitude.PhoneNumberCreateIdentifier getIdentifier() {
+    public PhoneNumberCreateIdentifier getIdentifier() {
         return identifier;
     }
 
-
     /**
-     * Sets the identifier value for this CreateCustomerPhoneNumberRequest.
+     * Définit la valeur de la propriété identifier.
      * 
-     * @param identifier
+     * @param value
+     *     allowed object is
+     *     {@link PhoneNumberCreateIdentifier }
+     *     
      */
-    public void setIdentifier(com.soprabanking.amplitude.PhoneNumberCreateIdentifier identifier) {
-        this.identifier = identifier;
+    public void setIdentifier(PhoneNumberCreateIdentifier value) {
+        this.identifier = value;
     }
 
-
     /**
-     * Gets the phoneNumber value for this CreateCustomerPhoneNumberRequest.
+     * Obtient la valeur de la propriété phoneNumber.
      * 
-     * @return phoneNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-
     /**
-     * Sets the phoneNumber value for this CreateCustomerPhoneNumberRequest.
+     * Définit la valeur de la propriété phoneNumber.
      * 
-     * @param phoneNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPhoneNumber(java.lang.String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String value) {
+        this.phoneNumber = value;
     }
 
-
     /**
-     * Gets the format value for this CreateCustomerPhoneNumberRequest.
+     * Obtient la valeur de la propriété format.
      * 
-     * @return format
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFormat() {
+    public String getFormat() {
         return format;
     }
 
-
     /**
-     * Sets the format value for this CreateCustomerPhoneNumberRequest.
+     * Définit la valeur de la propriété format.
      * 
-     * @param format
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFormat(java.lang.String format) {
-        this.format = format;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CreateCustomerPhoneNumberRequest)) return false;
-        CreateCustomerPhoneNumberRequest other = (CreateCustomerPhoneNumberRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.identifier==null && other.getIdentifier()==null) || 
-             (this.identifier!=null &&
-              this.identifier.equals(other.getIdentifier()))) &&
-            ((this.phoneNumber==null && other.getPhoneNumber()==null) || 
-             (this.phoneNumber!=null &&
-              this.phoneNumber.equals(other.getPhoneNumber()))) &&
-            ((this.format==null && other.getFormat()==null) || 
-             (this.format!=null &&
-              this.format.equals(other.getFormat())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getIdentifier() != null) {
-            _hashCode += getIdentifier().hashCode();
-        }
-        if (getPhoneNumber() != null) {
-            _hashCode += getPhoneNumber().hashCode();
-        }
-        if (getFormat() != null) {
-            _hashCode += getFormat().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CreateCustomerPhoneNumberRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerPhoneNumberRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("identifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "identifier"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "phoneNumberCreateIdentifier"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("phoneNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "phoneNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("format");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "format"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setFormat(String value) {
+        this.format = value;
     }
 
 }

@@ -1,194 +1,114 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ErrorInformation.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour errorInformation complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="errorInformation">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="errorCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="convertedCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="errorMessage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "errorInformation", propOrder = {
+    "errorCode",
+    "convertedCode",
+    "errorMessage"
+})
+public class ErrorInformation {
 
-package com.soprabanking.amplitude;
-
-public class ErrorInformation  implements java.io.Serializable {
-    private java.lang.String errorCode;
-
-    private java.lang.String convertedCode;
-
-    private java.lang.String errorMessage;
-
-    public ErrorInformation() {
-    }
-
-    public ErrorInformation(
-           java.lang.String errorCode,
-           java.lang.String convertedCode,
-           java.lang.String errorMessage) {
-           this.errorCode = errorCode;
-           this.convertedCode = convertedCode;
-           this.errorMessage = errorMessage;
-    }
-
+    protected String errorCode;
+    protected String convertedCode;
+    protected String errorMessage;
 
     /**
-     * Gets the errorCode value for this ErrorInformation.
+     * Obtient la valeur de la propriété errorCode.
      * 
-     * @return errorCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorCode() {
+    public String getErrorCode() {
         return errorCode;
     }
 
-
     /**
-     * Sets the errorCode value for this ErrorInformation.
+     * Définit la valeur de la propriété errorCode.
      * 
-     * @param errorCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorCode(java.lang.String errorCode) {
-        this.errorCode = errorCode;
+    public void setErrorCode(String value) {
+        this.errorCode = value;
     }
 
-
     /**
-     * Gets the convertedCode value for this ErrorInformation.
+     * Obtient la valeur de la propriété convertedCode.
      * 
-     * @return convertedCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getConvertedCode() {
+    public String getConvertedCode() {
         return convertedCode;
     }
 
-
     /**
-     * Sets the convertedCode value for this ErrorInformation.
+     * Définit la valeur de la propriété convertedCode.
      * 
-     * @param convertedCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setConvertedCode(java.lang.String convertedCode) {
-        this.convertedCode = convertedCode;
+    public void setConvertedCode(String value) {
+        this.convertedCode = value;
     }
 
-
     /**
-     * Gets the errorMessage value for this ErrorInformation.
+     * Obtient la valeur de la propriété errorMessage.
      * 
-     * @return errorMessage
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getErrorMessage() {
+    public String getErrorMessage() {
         return errorMessage;
     }
 
-
     /**
-     * Sets the errorMessage value for this ErrorInformation.
+     * Définit la valeur de la propriété errorMessage.
      * 
-     * @param errorMessage
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setErrorMessage(java.lang.String errorMessage) {
-        this.errorMessage = errorMessage;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ErrorInformation)) return false;
-        ErrorInformation other = (ErrorInformation) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.errorCode==null && other.getErrorCode()==null) || 
-             (this.errorCode!=null &&
-              this.errorCode.equals(other.getErrorCode()))) &&
-            ((this.convertedCode==null && other.getConvertedCode()==null) || 
-             (this.convertedCode!=null &&
-              this.convertedCode.equals(other.getConvertedCode()))) &&
-            ((this.errorMessage==null && other.getErrorMessage()==null) || 
-             (this.errorMessage!=null &&
-              this.errorMessage.equals(other.getErrorMessage())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getErrorCode() != null) {
-            _hashCode += getErrorCode().hashCode();
-        }
-        if (getConvertedCode() != null) {
-            _hashCode += getConvertedCode().hashCode();
-        }
-        if (getErrorMessage() != null) {
-            _hashCode += getErrorMessage().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ErrorInformation.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "errorInformation"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "errorCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("convertedCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "convertedCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "errorMessage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setErrorMessage(String value) {
+        this.errorMessage = value;
     }
 
 }

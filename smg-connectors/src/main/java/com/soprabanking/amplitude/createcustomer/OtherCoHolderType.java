@@ -1,194 +1,114 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * OtherCoHolderType.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour otherCoHolderType complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="otherCoHolderType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="name" type="{http://soprabanking.com/amplitude}charMax36" minOccurs="0"/>
+ *         &lt;element name="firstName" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="titleCode" type="{http://soprabanking.com/amplitude}char2" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "otherCoHolderType", propOrder = {
+    "name",
+    "firstName",
+    "titleCode"
+})
+public class OtherCoHolderType {
 
-package com.soprabanking.amplitude;
-
-public class OtherCoHolderType  implements java.io.Serializable {
-    private java.lang.String name;
-
-    private java.lang.String firstName;
-
-    private java.lang.String titleCode;
-
-    public OtherCoHolderType() {
-    }
-
-    public OtherCoHolderType(
-           java.lang.String name,
-           java.lang.String firstName,
-           java.lang.String titleCode) {
-           this.name = name;
-           this.firstName = firstName;
-           this.titleCode = titleCode;
-    }
-
+    protected String name;
+    protected String firstName;
+    protected String titleCode;
 
     /**
-     * Gets the name value for this OtherCoHolderType.
+     * Obtient la valeur de la propriété name.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this OtherCoHolderType.
+     * Définit la valeur de la propriété name.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the firstName value for this OtherCoHolderType.
+     * Obtient la valeur de la propriété firstName.
      * 
-     * @return firstName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-
     /**
-     * Sets the firstName value for this OtherCoHolderType.
+     * Définit la valeur de la propriété firstName.
      * 
-     * @param firstName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstName(java.lang.String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String value) {
+        this.firstName = value;
     }
 
-
     /**
-     * Gets the titleCode value for this OtherCoHolderType.
+     * Obtient la valeur de la propriété titleCode.
      * 
-     * @return titleCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTitleCode() {
+    public String getTitleCode() {
         return titleCode;
     }
 
-
     /**
-     * Sets the titleCode value for this OtherCoHolderType.
+     * Définit la valeur de la propriété titleCode.
      * 
-     * @param titleCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTitleCode(java.lang.String titleCode) {
-        this.titleCode = titleCode;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof OtherCoHolderType)) return false;
-        OtherCoHolderType other = (OtherCoHolderType) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.firstName==null && other.getFirstName()==null) || 
-             (this.firstName!=null &&
-              this.firstName.equals(other.getFirstName()))) &&
-            ((this.titleCode==null && other.getTitleCode()==null) || 
-             (this.titleCode!=null &&
-              this.titleCode.equals(other.getTitleCode())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getFirstName() != null) {
-            _hashCode += getFirstName().hashCode();
-        }
-        if (getTitleCode() != null) {
-            _hashCode += getTitleCode().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(OtherCoHolderType.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "otherCoHolderType"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("firstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "firstName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("titleCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "titleCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setTitleCode(String value) {
+        this.titleCode = value;
     }
 
 }

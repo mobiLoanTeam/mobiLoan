@@ -1,351 +1,222 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerCorporateSpecInfoCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerCorporateSpecInfoCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerCorporateSpecInfoCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="corporateGeneralInfo" type="{http://soprabanking.com/amplitude}customerCorporateGeneralInfoCreate" minOccurs="0"/>
+ *         &lt;element name="corporateId" type="{http://soprabanking.com/amplitude}customerCorporateId" minOccurs="0"/>
+ *         &lt;element name="legalInformation" type="{http://soprabanking.com/amplitude}customerLegalInformationCreate" minOccurs="0"/>
+ *         &lt;element name="groupAndJob" type="{http://soprabanking.com/amplitude}customerGroupAndJobCreate" minOccurs="0"/>
+ *         &lt;element name="leadersList" type="{http://soprabanking.com/amplitude}modifyCustomerLeadersRequest" minOccurs="0"/>
+ *         &lt;element name="shareholdersList" type="{http://soprabanking.com/amplitude}customerShareholdersCreate" minOccurs="0"/>
+ *         &lt;element name="financialDataList" type="{http://soprabanking.com/amplitude}modifyCustomerFinancialDataRequest" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerCorporateSpecInfoCreate", propOrder = {
+    "corporateGeneralInfo",
+    "corporateId",
+    "legalInformation",
+    "groupAndJob",
+    "leadersList",
+    "shareholdersList",
+    "financialDataList"
+})
+public class CustomerCorporateSpecInfoCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerCorporateSpecInfoCreate  implements java.io.Serializable {
-    private com.soprabanking.amplitude.CustomerCorporateGeneralInfoCreate corporateGeneralInfo;
-
-    private com.soprabanking.amplitude.CustomerCorporateId corporateId;
-
-    private com.soprabanking.amplitude.CustomerLegalInformationCreate legalInformation;
-
-    private com.soprabanking.amplitude.CustomerGroupAndJobCreate groupAndJob;
-
-    private com.soprabanking.amplitude.ModifyCustomerLeadersRequest leadersList;
-
-    private com.soprabanking.amplitude.CreateCustomerShareholderRequest[] shareholdersList;
-
-    private com.soprabanking.amplitude.ModifyCustomerFinancialDataRequest financialDataList;
-
-    public CustomerCorporateSpecInfoCreate() {
-    }
-
-    public CustomerCorporateSpecInfoCreate(
-           com.soprabanking.amplitude.CustomerCorporateGeneralInfoCreate corporateGeneralInfo,
-           com.soprabanking.amplitude.CustomerCorporateId corporateId,
-           com.soprabanking.amplitude.CustomerLegalInformationCreate legalInformation,
-           com.soprabanking.amplitude.CustomerGroupAndJobCreate groupAndJob,
-           com.soprabanking.amplitude.ModifyCustomerLeadersRequest leadersList,
-           com.soprabanking.amplitude.CreateCustomerShareholderRequest[] shareholdersList,
-           com.soprabanking.amplitude.ModifyCustomerFinancialDataRequest financialDataList) {
-           this.corporateGeneralInfo = corporateGeneralInfo;
-           this.corporateId = corporateId;
-           this.legalInformation = legalInformation;
-           this.groupAndJob = groupAndJob;
-           this.leadersList = leadersList;
-           this.shareholdersList = shareholdersList;
-           this.financialDataList = financialDataList;
-    }
-
+    protected CustomerCorporateGeneralInfoCreate corporateGeneralInfo;
+    protected CustomerCorporateId corporateId;
+    protected CustomerLegalInformationCreate legalInformation;
+    protected CustomerGroupAndJobCreate groupAndJob;
+    protected ModifyCustomerLeadersRequest leadersList;
+    protected CustomerShareholdersCreate shareholdersList;
+    protected ModifyCustomerFinancialDataRequest financialDataList;
 
     /**
-     * Gets the corporateGeneralInfo value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété corporateGeneralInfo.
      * 
-     * @return corporateGeneralInfo
+     * @return
+     *     possible object is
+     *     {@link CustomerCorporateGeneralInfoCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerCorporateGeneralInfoCreate getCorporateGeneralInfo() {
+    public CustomerCorporateGeneralInfoCreate getCorporateGeneralInfo() {
         return corporateGeneralInfo;
     }
 
-
     /**
-     * Sets the corporateGeneralInfo value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété corporateGeneralInfo.
      * 
-     * @param corporateGeneralInfo
+     * @param value
+     *     allowed object is
+     *     {@link CustomerCorporateGeneralInfoCreate }
+     *     
      */
-    public void setCorporateGeneralInfo(com.soprabanking.amplitude.CustomerCorporateGeneralInfoCreate corporateGeneralInfo) {
-        this.corporateGeneralInfo = corporateGeneralInfo;
+    public void setCorporateGeneralInfo(CustomerCorporateGeneralInfoCreate value) {
+        this.corporateGeneralInfo = value;
     }
 
-
     /**
-     * Gets the corporateId value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété corporateId.
      * 
-     * @return corporateId
+     * @return
+     *     possible object is
+     *     {@link CustomerCorporateId }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerCorporateId getCorporateId() {
+    public CustomerCorporateId getCorporateId() {
         return corporateId;
     }
 
-
     /**
-     * Sets the corporateId value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété corporateId.
      * 
-     * @param corporateId
+     * @param value
+     *     allowed object is
+     *     {@link CustomerCorporateId }
+     *     
      */
-    public void setCorporateId(com.soprabanking.amplitude.CustomerCorporateId corporateId) {
-        this.corporateId = corporateId;
+    public void setCorporateId(CustomerCorporateId value) {
+        this.corporateId = value;
     }
 
-
     /**
-     * Gets the legalInformation value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété legalInformation.
      * 
-     * @return legalInformation
+     * @return
+     *     possible object is
+     *     {@link CustomerLegalInformationCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerLegalInformationCreate getLegalInformation() {
+    public CustomerLegalInformationCreate getLegalInformation() {
         return legalInformation;
     }
 
-
     /**
-     * Sets the legalInformation value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété legalInformation.
      * 
-     * @param legalInformation
+     * @param value
+     *     allowed object is
+     *     {@link CustomerLegalInformationCreate }
+     *     
      */
-    public void setLegalInformation(com.soprabanking.amplitude.CustomerLegalInformationCreate legalInformation) {
-        this.legalInformation = legalInformation;
+    public void setLegalInformation(CustomerLegalInformationCreate value) {
+        this.legalInformation = value;
     }
 
-
     /**
-     * Gets the groupAndJob value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété groupAndJob.
      * 
-     * @return groupAndJob
+     * @return
+     *     possible object is
+     *     {@link CustomerGroupAndJobCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerGroupAndJobCreate getGroupAndJob() {
+    public CustomerGroupAndJobCreate getGroupAndJob() {
         return groupAndJob;
     }
 
-
     /**
-     * Sets the groupAndJob value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété groupAndJob.
      * 
-     * @param groupAndJob
+     * @param value
+     *     allowed object is
+     *     {@link CustomerGroupAndJobCreate }
+     *     
      */
-    public void setGroupAndJob(com.soprabanking.amplitude.CustomerGroupAndJobCreate groupAndJob) {
-        this.groupAndJob = groupAndJob;
+    public void setGroupAndJob(CustomerGroupAndJobCreate value) {
+        this.groupAndJob = value;
     }
 
-
     /**
-     * Gets the leadersList value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété leadersList.
      * 
-     * @return leadersList
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerLeadersRequest }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerLeadersRequest getLeadersList() {
+    public ModifyCustomerLeadersRequest getLeadersList() {
         return leadersList;
     }
 
-
     /**
-     * Sets the leadersList value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété leadersList.
      * 
-     * @param leadersList
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerLeadersRequest }
+     *     
      */
-    public void setLeadersList(com.soprabanking.amplitude.ModifyCustomerLeadersRequest leadersList) {
-        this.leadersList = leadersList;
+    public void setLeadersList(ModifyCustomerLeadersRequest value) {
+        this.leadersList = value;
     }
 
-
     /**
-     * Gets the shareholdersList value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété shareholdersList.
      * 
-     * @return shareholdersList
+     * @return
+     *     possible object is
+     *     {@link CustomerShareholdersCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CreateCustomerShareholderRequest[] getShareholdersList() {
+    public CustomerShareholdersCreate getShareholdersList() {
         return shareholdersList;
     }
 
-
     /**
-     * Sets the shareholdersList value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété shareholdersList.
      * 
-     * @param shareholdersList
+     * @param value
+     *     allowed object is
+     *     {@link CustomerShareholdersCreate }
+     *     
      */
-    public void setShareholdersList(com.soprabanking.amplitude.CreateCustomerShareholderRequest[] shareholdersList) {
-        this.shareholdersList = shareholdersList;
+    public void setShareholdersList(CustomerShareholdersCreate value) {
+        this.shareholdersList = value;
     }
 
-
     /**
-     * Gets the financialDataList value for this CustomerCorporateSpecInfoCreate.
+     * Obtient la valeur de la propriété financialDataList.
      * 
-     * @return financialDataList
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerFinancialDataRequest }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerFinancialDataRequest getFinancialDataList() {
+    public ModifyCustomerFinancialDataRequest getFinancialDataList() {
         return financialDataList;
     }
 
-
     /**
-     * Sets the financialDataList value for this CustomerCorporateSpecInfoCreate.
+     * Définit la valeur de la propriété financialDataList.
      * 
-     * @param financialDataList
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerFinancialDataRequest }
+     *     
      */
-    public void setFinancialDataList(com.soprabanking.amplitude.ModifyCustomerFinancialDataRequest financialDataList) {
-        this.financialDataList = financialDataList;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerCorporateSpecInfoCreate)) return false;
-        CustomerCorporateSpecInfoCreate other = (CustomerCorporateSpecInfoCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.corporateGeneralInfo==null && other.getCorporateGeneralInfo()==null) || 
-             (this.corporateGeneralInfo!=null &&
-              this.corporateGeneralInfo.equals(other.getCorporateGeneralInfo()))) &&
-            ((this.corporateId==null && other.getCorporateId()==null) || 
-             (this.corporateId!=null &&
-              this.corporateId.equals(other.getCorporateId()))) &&
-            ((this.legalInformation==null && other.getLegalInformation()==null) || 
-             (this.legalInformation!=null &&
-              this.legalInformation.equals(other.getLegalInformation()))) &&
-            ((this.groupAndJob==null && other.getGroupAndJob()==null) || 
-             (this.groupAndJob!=null &&
-              this.groupAndJob.equals(other.getGroupAndJob()))) &&
-            ((this.leadersList==null && other.getLeadersList()==null) || 
-             (this.leadersList!=null &&
-              this.leadersList.equals(other.getLeadersList()))) &&
-            ((this.shareholdersList==null && other.getShareholdersList()==null) || 
-             (this.shareholdersList!=null &&
-              java.util.Arrays.equals(this.shareholdersList, other.getShareholdersList()))) &&
-            ((this.financialDataList==null && other.getFinancialDataList()==null) || 
-             (this.financialDataList!=null &&
-              this.financialDataList.equals(other.getFinancialDataList())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCorporateGeneralInfo() != null) {
-            _hashCode += getCorporateGeneralInfo().hashCode();
-        }
-        if (getCorporateId() != null) {
-            _hashCode += getCorporateId().hashCode();
-        }
-        if (getLegalInformation() != null) {
-            _hashCode += getLegalInformation().hashCode();
-        }
-        if (getGroupAndJob() != null) {
-            _hashCode += getGroupAndJob().hashCode();
-        }
-        if (getLeadersList() != null) {
-            _hashCode += getLeadersList().hashCode();
-        }
-        if (getShareholdersList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getShareholdersList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getShareholdersList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getFinancialDataList() != null) {
-            _hashCode += getFinancialDataList().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerCorporateSpecInfoCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCorporateSpecInfoCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("corporateGeneralInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "corporateGeneralInfo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCorporateGeneralInfoCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("corporateId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "corporateId"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCorporateId"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("legalInformation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "legalInformation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerLegalInformationCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("groupAndJob");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "groupAndJob"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerGroupAndJobCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("leadersList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "leadersList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerLeadersRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("shareholdersList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "shareholdersList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerShareholderRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "shareholder"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("financialDataList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "financialDataList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerFinancialDataRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setFinancialDataList(ModifyCustomerFinancialDataRequest value) {
+        this.financialDataList = value;
     }
 
 }

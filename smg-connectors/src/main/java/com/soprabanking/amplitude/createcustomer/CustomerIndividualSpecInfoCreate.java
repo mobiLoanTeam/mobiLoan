@@ -1,453 +1,303 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerIndividualSpecInfoCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerIndividualSpecInfoCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerIndividualSpecInfoCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="individualGeneralInfo" type="{http://soprabanking.com/amplitude}customerIndividualGeneralInfoCreate" minOccurs="0"/>
+ *         &lt;element name="birth" type="{http://soprabanking.com/amplitude}customerBirthCreate" minOccurs="0"/>
+ *         &lt;element name="idPaper" type="{http://soprabanking.com/amplitude}customerIdPaperCreate" minOccurs="0"/>
+ *         &lt;element name="territoriality" type="{http://soprabanking.com/amplitude}customerTerritorialityCreate" minOccurs="0"/>
+ *         &lt;element name="family" type="{http://soprabanking.com/amplitude}customerFamily" minOccurs="0"/>
+ *         &lt;element name="otherAttributes" type="{http://soprabanking.com/amplitude}customerOtherAttributes" minOccurs="0"/>
+ *         &lt;element name="jointAccountsList" type="{http://soprabanking.com/amplitude}modifyCustomerJointAccountsRequest" minOccurs="0"/>
+ *         &lt;element name="childrenList" type="{http://soprabanking.com/amplitude}modifyCustomerChildrenRequest" minOccurs="0"/>
+ *         &lt;element name="customerBudget" type="{http://soprabanking.com/amplitude}modifyCustomerBudgetRequest" minOccurs="0"/>
+ *         &lt;element name="professionAndIncomesList" type="{http://soprabanking.com/amplitude}modifyCustomerProfessionsAndIncomesRequest" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerIndividualSpecInfoCreate", propOrder = {
+    "individualGeneralInfo",
+    "birth",
+    "idPaper",
+    "territoriality",
+    "family",
+    "otherAttributes",
+    "jointAccountsList",
+    "childrenList",
+    "customerBudget",
+    "professionAndIncomesList"
+})
+public class CustomerIndividualSpecInfoCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerIndividualSpecInfoCreate  implements java.io.Serializable {
-    private com.soprabanking.amplitude.CustomerIndividualGeneralInfoCreate individualGeneralInfo;
-
-    private com.soprabanking.amplitude.CustomerBirthCreate birth;
-
-    private com.soprabanking.amplitude.CustomerIdPaperCreate idPaper;
-
-    private com.soprabanking.amplitude.CustomerTerritorialityCreate territoriality;
-
-    private com.soprabanking.amplitude.CustomerFamily family;
-
-    private com.soprabanking.amplitude.CustomerOtherAttributes otherAttributes;
-
-    private com.soprabanking.amplitude.ModifyCustomerJointAccountsRequest jointAccountsList;
-
-    private com.soprabanking.amplitude.ModifyCustomerChildrenRequest childrenList;
-
-    private com.soprabanking.amplitude.ModifyCustomerBudgetRequest customerBudget;
-
-    private com.soprabanking.amplitude.ModifyCustomerProfessionsAndIncomesRequest professionAndIncomesList;
-
-    public CustomerIndividualSpecInfoCreate() {
-    }
-
-    public CustomerIndividualSpecInfoCreate(
-           com.soprabanking.amplitude.CustomerIndividualGeneralInfoCreate individualGeneralInfo,
-           com.soprabanking.amplitude.CustomerBirthCreate birth,
-           com.soprabanking.amplitude.CustomerIdPaperCreate idPaper,
-           com.soprabanking.amplitude.CustomerTerritorialityCreate territoriality,
-           com.soprabanking.amplitude.CustomerFamily family,
-           com.soprabanking.amplitude.CustomerOtherAttributes otherAttributes,
-           com.soprabanking.amplitude.ModifyCustomerJointAccountsRequest jointAccountsList,
-           com.soprabanking.amplitude.ModifyCustomerChildrenRequest childrenList,
-           com.soprabanking.amplitude.ModifyCustomerBudgetRequest customerBudget,
-           com.soprabanking.amplitude.ModifyCustomerProfessionsAndIncomesRequest professionAndIncomesList) {
-           this.individualGeneralInfo = individualGeneralInfo;
-           this.birth = birth;
-           this.idPaper = idPaper;
-           this.territoriality = territoriality;
-           this.family = family;
-           this.otherAttributes = otherAttributes;
-           this.jointAccountsList = jointAccountsList;
-           this.childrenList = childrenList;
-           this.customerBudget = customerBudget;
-           this.professionAndIncomesList = professionAndIncomesList;
-    }
-
+    protected CustomerIndividualGeneralInfoCreate individualGeneralInfo;
+    protected CustomerBirthCreate birth;
+    protected CustomerIdPaperCreate idPaper;
+    protected CustomerTerritorialityCreate territoriality;
+    protected CustomerFamily family;
+    protected CustomerOtherAttributes otherAttributes;
+    protected ModifyCustomerJointAccountsRequest jointAccountsList;
+    protected ModifyCustomerChildrenRequest childrenList;
+    protected ModifyCustomerBudgetRequest customerBudget;
+    protected ModifyCustomerProfessionsAndIncomesRequest professionAndIncomesList;
 
     /**
-     * Gets the individualGeneralInfo value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété individualGeneralInfo.
      * 
-     * @return individualGeneralInfo
+     * @return
+     *     possible object is
+     *     {@link CustomerIndividualGeneralInfoCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerIndividualGeneralInfoCreate getIndividualGeneralInfo() {
+    public CustomerIndividualGeneralInfoCreate getIndividualGeneralInfo() {
         return individualGeneralInfo;
     }
 
-
     /**
-     * Sets the individualGeneralInfo value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété individualGeneralInfo.
      * 
-     * @param individualGeneralInfo
+     * @param value
+     *     allowed object is
+     *     {@link CustomerIndividualGeneralInfoCreate }
+     *     
      */
-    public void setIndividualGeneralInfo(com.soprabanking.amplitude.CustomerIndividualGeneralInfoCreate individualGeneralInfo) {
-        this.individualGeneralInfo = individualGeneralInfo;
+    public void setIndividualGeneralInfo(CustomerIndividualGeneralInfoCreate value) {
+        this.individualGeneralInfo = value;
     }
 
-
     /**
-     * Gets the birth value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété birth.
      * 
-     * @return birth
+     * @return
+     *     possible object is
+     *     {@link CustomerBirthCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerBirthCreate getBirth() {
+    public CustomerBirthCreate getBirth() {
         return birth;
     }
 
-
     /**
-     * Sets the birth value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété birth.
      * 
-     * @param birth
+     * @param value
+     *     allowed object is
+     *     {@link CustomerBirthCreate }
+     *     
      */
-    public void setBirth(com.soprabanking.amplitude.CustomerBirthCreate birth) {
-        this.birth = birth;
+    public void setBirth(CustomerBirthCreate value) {
+        this.birth = value;
     }
 
-
     /**
-     * Gets the idPaper value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété idPaper.
      * 
-     * @return idPaper
+     * @return
+     *     possible object is
+     *     {@link CustomerIdPaperCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerIdPaperCreate getIdPaper() {
+    public CustomerIdPaperCreate getIdPaper() {
         return idPaper;
     }
 
-
     /**
-     * Sets the idPaper value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété idPaper.
      * 
-     * @param idPaper
+     * @param value
+     *     allowed object is
+     *     {@link CustomerIdPaperCreate }
+     *     
      */
-    public void setIdPaper(com.soprabanking.amplitude.CustomerIdPaperCreate idPaper) {
-        this.idPaper = idPaper;
+    public void setIdPaper(CustomerIdPaperCreate value) {
+        this.idPaper = value;
     }
 
-
     /**
-     * Gets the territoriality value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété territoriality.
      * 
-     * @return territoriality
+     * @return
+     *     possible object is
+     *     {@link CustomerTerritorialityCreate }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerTerritorialityCreate getTerritoriality() {
+    public CustomerTerritorialityCreate getTerritoriality() {
         return territoriality;
     }
 
-
     /**
-     * Sets the territoriality value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété territoriality.
      * 
-     * @param territoriality
+     * @param value
+     *     allowed object is
+     *     {@link CustomerTerritorialityCreate }
+     *     
      */
-    public void setTerritoriality(com.soprabanking.amplitude.CustomerTerritorialityCreate territoriality) {
-        this.territoriality = territoriality;
+    public void setTerritoriality(CustomerTerritorialityCreate value) {
+        this.territoriality = value;
     }
 
-
     /**
-     * Gets the family value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété family.
      * 
-     * @return family
+     * @return
+     *     possible object is
+     *     {@link CustomerFamily }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerFamily getFamily() {
+    public CustomerFamily getFamily() {
         return family;
     }
 
-
     /**
-     * Sets the family value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété family.
      * 
-     * @param family
+     * @param value
+     *     allowed object is
+     *     {@link CustomerFamily }
+     *     
      */
-    public void setFamily(com.soprabanking.amplitude.CustomerFamily family) {
-        this.family = family;
+    public void setFamily(CustomerFamily value) {
+        this.family = value;
     }
 
-
     /**
-     * Gets the otherAttributes value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété otherAttributes.
      * 
-     * @return otherAttributes
+     * @return
+     *     possible object is
+     *     {@link CustomerOtherAttributes }
+     *     
      */
-    public com.soprabanking.amplitude.CustomerOtherAttributes getOtherAttributes() {
+    public CustomerOtherAttributes getOtherAttributes() {
         return otherAttributes;
     }
 
-
     /**
-     * Sets the otherAttributes value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété otherAttributes.
      * 
-     * @param otherAttributes
+     * @param value
+     *     allowed object is
+     *     {@link CustomerOtherAttributes }
+     *     
      */
-    public void setOtherAttributes(com.soprabanking.amplitude.CustomerOtherAttributes otherAttributes) {
-        this.otherAttributes = otherAttributes;
+    public void setOtherAttributes(CustomerOtherAttributes value) {
+        this.otherAttributes = value;
     }
 
-
     /**
-     * Gets the jointAccountsList value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété jointAccountsList.
      * 
-     * @return jointAccountsList
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerJointAccountsRequest }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerJointAccountsRequest getJointAccountsList() {
+    public ModifyCustomerJointAccountsRequest getJointAccountsList() {
         return jointAccountsList;
     }
 
-
     /**
-     * Sets the jointAccountsList value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété jointAccountsList.
      * 
-     * @param jointAccountsList
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerJointAccountsRequest }
+     *     
      */
-    public void setJointAccountsList(com.soprabanking.amplitude.ModifyCustomerJointAccountsRequest jointAccountsList) {
-        this.jointAccountsList = jointAccountsList;
+    public void setJointAccountsList(ModifyCustomerJointAccountsRequest value) {
+        this.jointAccountsList = value;
     }
 
-
     /**
-     * Gets the childrenList value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété childrenList.
      * 
-     * @return childrenList
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerChildrenRequest }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerChildrenRequest getChildrenList() {
+    public ModifyCustomerChildrenRequest getChildrenList() {
         return childrenList;
     }
 
-
     /**
-     * Sets the childrenList value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété childrenList.
      * 
-     * @param childrenList
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerChildrenRequest }
+     *     
      */
-    public void setChildrenList(com.soprabanking.amplitude.ModifyCustomerChildrenRequest childrenList) {
-        this.childrenList = childrenList;
+    public void setChildrenList(ModifyCustomerChildrenRequest value) {
+        this.childrenList = value;
     }
 
-
     /**
-     * Gets the customerBudget value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété customerBudget.
      * 
-     * @return customerBudget
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerBudgetRequest }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerBudgetRequest getCustomerBudget() {
+    public ModifyCustomerBudgetRequest getCustomerBudget() {
         return customerBudget;
     }
 
-
     /**
-     * Sets the customerBudget value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété customerBudget.
      * 
-     * @param customerBudget
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerBudgetRequest }
+     *     
      */
-    public void setCustomerBudget(com.soprabanking.amplitude.ModifyCustomerBudgetRequest customerBudget) {
-        this.customerBudget = customerBudget;
+    public void setCustomerBudget(ModifyCustomerBudgetRequest value) {
+        this.customerBudget = value;
     }
 
-
     /**
-     * Gets the professionAndIncomesList value for this CustomerIndividualSpecInfoCreate.
+     * Obtient la valeur de la propriété professionAndIncomesList.
      * 
-     * @return professionAndIncomesList
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerProfessionsAndIncomesRequest }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerProfessionsAndIncomesRequest getProfessionAndIncomesList() {
+    public ModifyCustomerProfessionsAndIncomesRequest getProfessionAndIncomesList() {
         return professionAndIncomesList;
     }
 
-
     /**
-     * Sets the professionAndIncomesList value for this CustomerIndividualSpecInfoCreate.
+     * Définit la valeur de la propriété professionAndIncomesList.
      * 
-     * @param professionAndIncomesList
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerProfessionsAndIncomesRequest }
+     *     
      */
-    public void setProfessionAndIncomesList(com.soprabanking.amplitude.ModifyCustomerProfessionsAndIncomesRequest professionAndIncomesList) {
-        this.professionAndIncomesList = professionAndIncomesList;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerIndividualSpecInfoCreate)) return false;
-        CustomerIndividualSpecInfoCreate other = (CustomerIndividualSpecInfoCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.individualGeneralInfo==null && other.getIndividualGeneralInfo()==null) || 
-             (this.individualGeneralInfo!=null &&
-              this.individualGeneralInfo.equals(other.getIndividualGeneralInfo()))) &&
-            ((this.birth==null && other.getBirth()==null) || 
-             (this.birth!=null &&
-              this.birth.equals(other.getBirth()))) &&
-            ((this.idPaper==null && other.getIdPaper()==null) || 
-             (this.idPaper!=null &&
-              this.idPaper.equals(other.getIdPaper()))) &&
-            ((this.territoriality==null && other.getTerritoriality()==null) || 
-             (this.territoriality!=null &&
-              this.territoriality.equals(other.getTerritoriality()))) &&
-            ((this.family==null && other.getFamily()==null) || 
-             (this.family!=null &&
-              this.family.equals(other.getFamily()))) &&
-            ((this.otherAttributes==null && other.getOtherAttributes()==null) || 
-             (this.otherAttributes!=null &&
-              this.otherAttributes.equals(other.getOtherAttributes()))) &&
-            ((this.jointAccountsList==null && other.getJointAccountsList()==null) || 
-             (this.jointAccountsList!=null &&
-              this.jointAccountsList.equals(other.getJointAccountsList()))) &&
-            ((this.childrenList==null && other.getChildrenList()==null) || 
-             (this.childrenList!=null &&
-              this.childrenList.equals(other.getChildrenList()))) &&
-            ((this.customerBudget==null && other.getCustomerBudget()==null) || 
-             (this.customerBudget!=null &&
-              this.customerBudget.equals(other.getCustomerBudget()))) &&
-            ((this.professionAndIncomesList==null && other.getProfessionAndIncomesList()==null) || 
-             (this.professionAndIncomesList!=null &&
-              this.professionAndIncomesList.equals(other.getProfessionAndIncomesList())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getIndividualGeneralInfo() != null) {
-            _hashCode += getIndividualGeneralInfo().hashCode();
-        }
-        if (getBirth() != null) {
-            _hashCode += getBirth().hashCode();
-        }
-        if (getIdPaper() != null) {
-            _hashCode += getIdPaper().hashCode();
-        }
-        if (getTerritoriality() != null) {
-            _hashCode += getTerritoriality().hashCode();
-        }
-        if (getFamily() != null) {
-            _hashCode += getFamily().hashCode();
-        }
-        if (getOtherAttributes() != null) {
-            _hashCode += getOtherAttributes().hashCode();
-        }
-        if (getJointAccountsList() != null) {
-            _hashCode += getJointAccountsList().hashCode();
-        }
-        if (getChildrenList() != null) {
-            _hashCode += getChildrenList().hashCode();
-        }
-        if (getCustomerBudget() != null) {
-            _hashCode += getCustomerBudget().hashCode();
-        }
-        if (getProfessionAndIncomesList() != null) {
-            _hashCode += getProfessionAndIncomesList().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerIndividualSpecInfoCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerIndividualSpecInfoCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("individualGeneralInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "individualGeneralInfo"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerIndividualGeneralInfoCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("birth");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "birth"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerBirthCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("idPaper");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "idPaper"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerIdPaperCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("territoriality");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "territoriality"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerTerritorialityCreate"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("family");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "family"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerFamily"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("otherAttributes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "otherAttributes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerOtherAttributes"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("jointAccountsList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "jointAccountsList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerJointAccountsRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("childrenList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "childrenList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerChildrenRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerBudget");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerBudget"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerBudgetRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("professionAndIncomesList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "professionAndIncomesList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerProfessionsAndIncomesRequest"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setProfessionAndIncomesList(ModifyCustomerProfessionsAndIncomesRequest value) {
+        this.professionAndIncomesList = value;
     }
 
 }

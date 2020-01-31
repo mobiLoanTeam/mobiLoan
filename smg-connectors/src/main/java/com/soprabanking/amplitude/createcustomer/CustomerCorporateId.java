@@ -1,231 +1,141 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerCorporateId.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerCorporateId complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerCorporateId">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="nationalIdentifier" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="socialIdentityNumber" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="taxIdentityNumber" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="abbreviation" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerCorporateId", propOrder = {
+    "nationalIdentifier",
+    "socialIdentityNumber",
+    "taxIdentityNumber",
+    "abbreviation"
+})
+public class CustomerCorporateId {
 
-package com.soprabanking.amplitude;
-
-public class CustomerCorporateId  implements java.io.Serializable {
-    private java.lang.String nationalIdentifier;
-
-    private java.lang.String socialIdentityNumber;
-
-    private java.lang.String taxIdentityNumber;
-
-    private java.lang.String abbreviation;
-
-    public CustomerCorporateId() {
-    }
-
-    public CustomerCorporateId(
-           java.lang.String nationalIdentifier,
-           java.lang.String socialIdentityNumber,
-           java.lang.String taxIdentityNumber,
-           java.lang.String abbreviation) {
-           this.nationalIdentifier = nationalIdentifier;
-           this.socialIdentityNumber = socialIdentityNumber;
-           this.taxIdentityNumber = taxIdentityNumber;
-           this.abbreviation = abbreviation;
-    }
-
+    protected String nationalIdentifier;
+    protected String socialIdentityNumber;
+    protected String taxIdentityNumber;
+    protected String abbreviation;
 
     /**
-     * Gets the nationalIdentifier value for this CustomerCorporateId.
+     * Obtient la valeur de la propriété nationalIdentifier.
      * 
-     * @return nationalIdentifier
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getNationalIdentifier() {
+    public String getNationalIdentifier() {
         return nationalIdentifier;
     }
 
-
     /**
-     * Sets the nationalIdentifier value for this CustomerCorporateId.
+     * Définit la valeur de la propriété nationalIdentifier.
      * 
-     * @param nationalIdentifier
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setNationalIdentifier(java.lang.String nationalIdentifier) {
-        this.nationalIdentifier = nationalIdentifier;
+    public void setNationalIdentifier(String value) {
+        this.nationalIdentifier = value;
     }
 
-
     /**
-     * Gets the socialIdentityNumber value for this CustomerCorporateId.
+     * Obtient la valeur de la propriété socialIdentityNumber.
      * 
-     * @return socialIdentityNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getSocialIdentityNumber() {
+    public String getSocialIdentityNumber() {
         return socialIdentityNumber;
     }
 
-
     /**
-     * Sets the socialIdentityNumber value for this CustomerCorporateId.
+     * Définit la valeur de la propriété socialIdentityNumber.
      * 
-     * @param socialIdentityNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSocialIdentityNumber(java.lang.String socialIdentityNumber) {
-        this.socialIdentityNumber = socialIdentityNumber;
+    public void setSocialIdentityNumber(String value) {
+        this.socialIdentityNumber = value;
     }
 
-
     /**
-     * Gets the taxIdentityNumber value for this CustomerCorporateId.
+     * Obtient la valeur de la propriété taxIdentityNumber.
      * 
-     * @return taxIdentityNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTaxIdentityNumber() {
+    public String getTaxIdentityNumber() {
         return taxIdentityNumber;
     }
 
-
     /**
-     * Sets the taxIdentityNumber value for this CustomerCorporateId.
+     * Définit la valeur de la propriété taxIdentityNumber.
      * 
-     * @param taxIdentityNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTaxIdentityNumber(java.lang.String taxIdentityNumber) {
-        this.taxIdentityNumber = taxIdentityNumber;
+    public void setTaxIdentityNumber(String value) {
+        this.taxIdentityNumber = value;
     }
 
-
     /**
-     * Gets the abbreviation value for this CustomerCorporateId.
+     * Obtient la valeur de la propriété abbreviation.
      * 
-     * @return abbreviation
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAbbreviation() {
+    public String getAbbreviation() {
         return abbreviation;
     }
 
-
     /**
-     * Sets the abbreviation value for this CustomerCorporateId.
+     * Définit la valeur de la propriété abbreviation.
      * 
-     * @param abbreviation
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAbbreviation(java.lang.String abbreviation) {
-        this.abbreviation = abbreviation;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerCorporateId)) return false;
-        CustomerCorporateId other = (CustomerCorporateId) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.nationalIdentifier==null && other.getNationalIdentifier()==null) || 
-             (this.nationalIdentifier!=null &&
-              this.nationalIdentifier.equals(other.getNationalIdentifier()))) &&
-            ((this.socialIdentityNumber==null && other.getSocialIdentityNumber()==null) || 
-             (this.socialIdentityNumber!=null &&
-              this.socialIdentityNumber.equals(other.getSocialIdentityNumber()))) &&
-            ((this.taxIdentityNumber==null && other.getTaxIdentityNumber()==null) || 
-             (this.taxIdentityNumber!=null &&
-              this.taxIdentityNumber.equals(other.getTaxIdentityNumber()))) &&
-            ((this.abbreviation==null && other.getAbbreviation()==null) || 
-             (this.abbreviation!=null &&
-              this.abbreviation.equals(other.getAbbreviation())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getNationalIdentifier() != null) {
-            _hashCode += getNationalIdentifier().hashCode();
-        }
-        if (getSocialIdentityNumber() != null) {
-            _hashCode += getSocialIdentityNumber().hashCode();
-        }
-        if (getTaxIdentityNumber() != null) {
-            _hashCode += getTaxIdentityNumber().hashCode();
-        }
-        if (getAbbreviation() != null) {
-            _hashCode += getAbbreviation().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerCorporateId.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCorporateId"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nationalIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "nationalIdentifier"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("socialIdentityNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "socialIdentityNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("taxIdentityNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "taxIdentityNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("abbreviation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "abbreviation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setAbbreviation(String value) {
+        this.abbreviation = value;
     }
 
 }

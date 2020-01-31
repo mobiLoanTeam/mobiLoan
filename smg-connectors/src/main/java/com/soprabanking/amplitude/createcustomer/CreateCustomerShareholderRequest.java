@@ -1,193 +1,119 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CreateCustomerShareholderRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour createCustomerShareholderRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="createCustomerShareholderRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="identifier" type="{http://soprabanking.com/amplitude}shareholderCreateIdentifier"/>
+ *         &lt;element name="shares" type="{http://soprabanking.com/amplitude}decimal5_2" minOccurs="0"/>
+ *         &lt;element name="marketType" type="{http://soprabanking.com/amplitude}marketType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "createCustomerShareholderRequest", propOrder = {
+    "identifier",
+    "shares",
+    "marketType"
+})
+public class CreateCustomerShareholderRequest {
 
-package com.soprabanking.amplitude;
-
-public class CreateCustomerShareholderRequest  implements java.io.Serializable {
-    private com.soprabanking.amplitude.ShareholderCreateIdentifier identifier;
-
-    private java.math.BigDecimal shares;
-
-    private com.soprabanking.amplitude.MarketType marketType;
-
-    public CreateCustomerShareholderRequest() {
-    }
-
-    public CreateCustomerShareholderRequest(
-           com.soprabanking.amplitude.ShareholderCreateIdentifier identifier,
-           java.math.BigDecimal shares,
-           com.soprabanking.amplitude.MarketType marketType) {
-           this.identifier = identifier;
-           this.shares = shares;
-           this.marketType = marketType;
-    }
-
+    @XmlElement(required = true)
+    protected ShareholderCreateIdentifier identifier;
+    protected BigDecimal shares;
+    @XmlSchemaType(name = "string")
+    protected MarketType marketType;
 
     /**
-     * Gets the identifier value for this CreateCustomerShareholderRequest.
+     * Obtient la valeur de la propriété identifier.
      * 
-     * @return identifier
+     * @return
+     *     possible object is
+     *     {@link ShareholderCreateIdentifier }
+     *     
      */
-    public com.soprabanking.amplitude.ShareholderCreateIdentifier getIdentifier() {
+    public ShareholderCreateIdentifier getIdentifier() {
         return identifier;
     }
 
-
     /**
-     * Sets the identifier value for this CreateCustomerShareholderRequest.
+     * Définit la valeur de la propriété identifier.
      * 
-     * @param identifier
+     * @param value
+     *     allowed object is
+     *     {@link ShareholderCreateIdentifier }
+     *     
      */
-    public void setIdentifier(com.soprabanking.amplitude.ShareholderCreateIdentifier identifier) {
-        this.identifier = identifier;
+    public void setIdentifier(ShareholderCreateIdentifier value) {
+        this.identifier = value;
     }
 
-
     /**
-     * Gets the shares value for this CreateCustomerShareholderRequest.
+     * Obtient la valeur de la propriété shares.
      * 
-     * @return shares
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
      */
-    public java.math.BigDecimal getShares() {
+    public BigDecimal getShares() {
         return shares;
     }
 
-
     /**
-     * Sets the shares value for this CreateCustomerShareholderRequest.
+     * Définit la valeur de la propriété shares.
      * 
-     * @param shares
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
      */
-    public void setShares(java.math.BigDecimal shares) {
-        this.shares = shares;
+    public void setShares(BigDecimal value) {
+        this.shares = value;
     }
 
-
     /**
-     * Gets the marketType value for this CreateCustomerShareholderRequest.
+     * Obtient la valeur de la propriété marketType.
      * 
-     * @return marketType
+     * @return
+     *     possible object is
+     *     {@link MarketType }
+     *     
      */
-    public com.soprabanking.amplitude.MarketType getMarketType() {
+    public MarketType getMarketType() {
         return marketType;
     }
 
-
     /**
-     * Sets the marketType value for this CreateCustomerShareholderRequest.
+     * Définit la valeur de la propriété marketType.
      * 
-     * @param marketType
+     * @param value
+     *     allowed object is
+     *     {@link MarketType }
+     *     
      */
-    public void setMarketType(com.soprabanking.amplitude.MarketType marketType) {
-        this.marketType = marketType;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CreateCustomerShareholderRequest)) return false;
-        CreateCustomerShareholderRequest other = (CreateCustomerShareholderRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.identifier==null && other.getIdentifier()==null) || 
-             (this.identifier!=null &&
-              this.identifier.equals(other.getIdentifier()))) &&
-            ((this.shares==null && other.getShares()==null) || 
-             (this.shares!=null &&
-              this.shares.equals(other.getShares()))) &&
-            ((this.marketType==null && other.getMarketType()==null) || 
-             (this.marketType!=null &&
-              this.marketType.equals(other.getMarketType())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getIdentifier() != null) {
-            _hashCode += getIdentifier().hashCode();
-        }
-        if (getShares() != null) {
-            _hashCode += getShares().hashCode();
-        }
-        if (getMarketType() != null) {
-            _hashCode += getMarketType().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CreateCustomerShareholderRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerShareholderRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("identifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "identifier"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "shareholderCreateIdentifier"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("shares");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "shares"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("marketType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "marketType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "marketType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setMarketType(MarketType value) {
+        this.marketType = value;
     }
 
 }

@@ -1,342 +1,226 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * CreateCustomerIdPaperRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour createCustomerIdPaperRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="createCustomerIdPaperRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customerCode" type="{http://soprabanking.com/amplitude}customerCode" minOccurs="0"/>
+ *         &lt;element name="idPaperType" type="{http://soprabanking.com/amplitude}idPaperTypeCode" minOccurs="0"/>
+ *         &lt;element name="idPaperNumber" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="deliveryDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="deliveryPlace" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="organisationWhichDeliver" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="validityDateOfIdPaper" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "createCustomerIdPaperRequest", propOrder = {
+    "customerCode",
+    "idPaperType",
+    "idPaperNumber",
+    "deliveryDate",
+    "deliveryPlace",
+    "organisationWhichDeliver",
+    "validityDateOfIdPaper"
+})
+public class CreateCustomerIdPaperRequest {
 
-package com.soprabanking.amplitude;
-
-public class CreateCustomerIdPaperRequest  implements java.io.Serializable {
-    private java.lang.String customerCode;
-
-    private java.lang.String idPaperType;
-
-    private java.lang.String idPaperNumber;
-
-    private java.util.Date deliveryDate;
-
-    private java.lang.String deliveryPlace;
-
-    private java.lang.String organisationWhichDeliver;
-
-    private java.util.Date validityDateOfIdPaper;
-
-    public CreateCustomerIdPaperRequest() {
-    }
-
-    public CreateCustomerIdPaperRequest(
-           java.lang.String customerCode,
-           java.lang.String idPaperType,
-           java.lang.String idPaperNumber,
-           java.util.Date deliveryDate,
-           java.lang.String deliveryPlace,
-           java.lang.String organisationWhichDeliver,
-           java.util.Date validityDateOfIdPaper) {
-           this.customerCode = customerCode;
-           this.idPaperType = idPaperType;
-           this.idPaperNumber = idPaperNumber;
-           this.deliveryDate = deliveryDate;
-           this.deliveryPlace = deliveryPlace;
-           this.organisationWhichDeliver = organisationWhichDeliver;
-           this.validityDateOfIdPaper = validityDateOfIdPaper;
-    }
-
+    protected String customerCode;
+    protected String idPaperType;
+    protected String idPaperNumber;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar deliveryDate;
+    protected String deliveryPlace;
+    protected String organisationWhichDeliver;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar validityDateOfIdPaper;
 
     /**
-     * Gets the customerCode value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété customerCode.
      * 
-     * @return customerCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerCode() {
+    public String getCustomerCode() {
         return customerCode;
     }
 
-
     /**
-     * Sets the customerCode value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété customerCode.
      * 
-     * @param customerCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerCode(java.lang.String customerCode) {
-        this.customerCode = customerCode;
+    public void setCustomerCode(String value) {
+        this.customerCode = value;
     }
 
-
     /**
-     * Gets the idPaperType value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété idPaperType.
      * 
-     * @return idPaperType
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIdPaperType() {
+    public String getIdPaperType() {
         return idPaperType;
     }
 
-
     /**
-     * Sets the idPaperType value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété idPaperType.
      * 
-     * @param idPaperType
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIdPaperType(java.lang.String idPaperType) {
-        this.idPaperType = idPaperType;
+    public void setIdPaperType(String value) {
+        this.idPaperType = value;
     }
 
-
     /**
-     * Gets the idPaperNumber value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété idPaperNumber.
      * 
-     * @return idPaperNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getIdPaperNumber() {
+    public String getIdPaperNumber() {
         return idPaperNumber;
     }
 
-
     /**
-     * Sets the idPaperNumber value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété idPaperNumber.
      * 
-     * @param idPaperNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setIdPaperNumber(java.lang.String idPaperNumber) {
-        this.idPaperNumber = idPaperNumber;
+    public void setIdPaperNumber(String value) {
+        this.idPaperNumber = value;
     }
 
-
     /**
-     * Gets the deliveryDate value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété deliveryDate.
      * 
-     * @return deliveryDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getDeliveryDate() {
+    public XMLGregorianCalendar getDeliveryDate() {
         return deliveryDate;
     }
 
-
     /**
-     * Sets the deliveryDate value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété deliveryDate.
      * 
-     * @param deliveryDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setDeliveryDate(java.util.Date deliveryDate) {
-        this.deliveryDate = deliveryDate;
+    public void setDeliveryDate(XMLGregorianCalendar value) {
+        this.deliveryDate = value;
     }
 
-
     /**
-     * Gets the deliveryPlace value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété deliveryPlace.
      * 
-     * @return deliveryPlace
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDeliveryPlace() {
+    public String getDeliveryPlace() {
         return deliveryPlace;
     }
 
-
     /**
-     * Sets the deliveryPlace value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété deliveryPlace.
      * 
-     * @param deliveryPlace
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDeliveryPlace(java.lang.String deliveryPlace) {
-        this.deliveryPlace = deliveryPlace;
+    public void setDeliveryPlace(String value) {
+        this.deliveryPlace = value;
     }
 
-
     /**
-     * Gets the organisationWhichDeliver value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété organisationWhichDeliver.
      * 
-     * @return organisationWhichDeliver
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getOrganisationWhichDeliver() {
+    public String getOrganisationWhichDeliver() {
         return organisationWhichDeliver;
     }
 
-
     /**
-     * Sets the organisationWhichDeliver value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété organisationWhichDeliver.
      * 
-     * @param organisationWhichDeliver
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setOrganisationWhichDeliver(java.lang.String organisationWhichDeliver) {
-        this.organisationWhichDeliver = organisationWhichDeliver;
+    public void setOrganisationWhichDeliver(String value) {
+        this.organisationWhichDeliver = value;
     }
 
-
     /**
-     * Gets the validityDateOfIdPaper value for this CreateCustomerIdPaperRequest.
+     * Obtient la valeur de la propriété validityDateOfIdPaper.
      * 
-     * @return validityDateOfIdPaper
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getValidityDateOfIdPaper() {
+    public XMLGregorianCalendar getValidityDateOfIdPaper() {
         return validityDateOfIdPaper;
     }
 
-
     /**
-     * Sets the validityDateOfIdPaper value for this CreateCustomerIdPaperRequest.
+     * Définit la valeur de la propriété validityDateOfIdPaper.
      * 
-     * @param validityDateOfIdPaper
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setValidityDateOfIdPaper(java.util.Date validityDateOfIdPaper) {
-        this.validityDateOfIdPaper = validityDateOfIdPaper;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CreateCustomerIdPaperRequest)) return false;
-        CreateCustomerIdPaperRequest other = (CreateCustomerIdPaperRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customerCode==null && other.getCustomerCode()==null) || 
-             (this.customerCode!=null &&
-              this.customerCode.equals(other.getCustomerCode()))) &&
-            ((this.idPaperType==null && other.getIdPaperType()==null) || 
-             (this.idPaperType!=null &&
-              this.idPaperType.equals(other.getIdPaperType()))) &&
-            ((this.idPaperNumber==null && other.getIdPaperNumber()==null) || 
-             (this.idPaperNumber!=null &&
-              this.idPaperNumber.equals(other.getIdPaperNumber()))) &&
-            ((this.deliveryDate==null && other.getDeliveryDate()==null) || 
-             (this.deliveryDate!=null &&
-              this.deliveryDate.equals(other.getDeliveryDate()))) &&
-            ((this.deliveryPlace==null && other.getDeliveryPlace()==null) || 
-             (this.deliveryPlace!=null &&
-              this.deliveryPlace.equals(other.getDeliveryPlace()))) &&
-            ((this.organisationWhichDeliver==null && other.getOrganisationWhichDeliver()==null) || 
-             (this.organisationWhichDeliver!=null &&
-              this.organisationWhichDeliver.equals(other.getOrganisationWhichDeliver()))) &&
-            ((this.validityDateOfIdPaper==null && other.getValidityDateOfIdPaper()==null) || 
-             (this.validityDateOfIdPaper!=null &&
-              this.validityDateOfIdPaper.equals(other.getValidityDateOfIdPaper())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomerCode() != null) {
-            _hashCode += getCustomerCode().hashCode();
-        }
-        if (getIdPaperType() != null) {
-            _hashCode += getIdPaperType().hashCode();
-        }
-        if (getIdPaperNumber() != null) {
-            _hashCode += getIdPaperNumber().hashCode();
-        }
-        if (getDeliveryDate() != null) {
-            _hashCode += getDeliveryDate().hashCode();
-        }
-        if (getDeliveryPlace() != null) {
-            _hashCode += getDeliveryPlace().hashCode();
-        }
-        if (getOrganisationWhichDeliver() != null) {
-            _hashCode += getOrganisationWhichDeliver().hashCode();
-        }
-        if (getValidityDateOfIdPaper() != null) {
-            _hashCode += getValidityDateOfIdPaper().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CreateCustomerIdPaperRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerIdPaperRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("idPaperType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "idPaperType"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("idPaperNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "idPaperNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deliveryDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "deliveryDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deliveryPlace");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "deliveryPlace"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("organisationWhichDeliver");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "organisationWhichDeliver"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("validityDateOfIdPaper");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "validityDateOfIdPaper"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setValidityDateOfIdPaper(XMLGregorianCalendar value) {
+        this.validityDateOfIdPaper = value;
     }
 
 }

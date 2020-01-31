@@ -1,247 +1,150 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ModifyCustomerFinancialDataRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour modifyCustomerFinancialDataRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="modifyCustomerFinancialDataRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customerCode" type="{http://soprabanking.com/amplitude}customerCode" minOccurs="0"/>
+ *         &lt;element name="currency" type="{http://soprabanking.com/amplitude}currencyCode" minOccurs="0"/>
+ *         &lt;element name="expressionUnit" type="{http://soprabanking.com/amplitude}expressionUnit"/>
+ *         &lt;element name="financialData" type="{http://soprabanking.com/amplitude}customerFinancialDataInformations" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "modifyCustomerFinancialDataRequest", propOrder = {
+    "customerCode",
+    "currency",
+    "expressionUnit",
+    "financialData"
+})
+public class ModifyCustomerFinancialDataRequest {
 
-package com.soprabanking.amplitude;
-
-public class ModifyCustomerFinancialDataRequest  implements java.io.Serializable {
-    private java.lang.String customerCode;
-
-    private java.lang.String currency;
-
-    private com.soprabanking.amplitude.ExpressionUnit expressionUnit;
-
-    private com.soprabanking.amplitude.CustomerFinancialDataInformations[] financialData;
-
-    public ModifyCustomerFinancialDataRequest() {
-    }
-
-    public ModifyCustomerFinancialDataRequest(
-           java.lang.String customerCode,
-           java.lang.String currency,
-           com.soprabanking.amplitude.ExpressionUnit expressionUnit,
-           com.soprabanking.amplitude.CustomerFinancialDataInformations[] financialData) {
-           this.customerCode = customerCode;
-           this.currency = currency;
-           this.expressionUnit = expressionUnit;
-           this.financialData = financialData;
-    }
-
+    protected String customerCode;
+    protected String currency;
+    @XmlElement(required = true)
+    protected String expressionUnit;
+    protected List<CustomerFinancialDataInformations> financialData;
 
     /**
-     * Gets the customerCode value for this ModifyCustomerFinancialDataRequest.
+     * Obtient la valeur de la propriété customerCode.
      * 
-     * @return customerCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerCode() {
+    public String getCustomerCode() {
         return customerCode;
     }
 
-
     /**
-     * Sets the customerCode value for this ModifyCustomerFinancialDataRequest.
+     * Définit la valeur de la propriété customerCode.
      * 
-     * @param customerCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerCode(java.lang.String customerCode) {
-        this.customerCode = customerCode;
+    public void setCustomerCode(String value) {
+        this.customerCode = value;
     }
 
-
     /**
-     * Gets the currency value for this ModifyCustomerFinancialDataRequest.
+     * Obtient la valeur de la propriété currency.
      * 
-     * @return currency
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCurrency() {
+    public String getCurrency() {
         return currency;
     }
 
-
     /**
-     * Sets the currency value for this ModifyCustomerFinancialDataRequest.
+     * Définit la valeur de la propriété currency.
      * 
-     * @param currency
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCurrency(java.lang.String currency) {
-        this.currency = currency;
+    public void setCurrency(String value) {
+        this.currency = value;
     }
 
-
     /**
-     * Gets the expressionUnit value for this ModifyCustomerFinancialDataRequest.
+     * Obtient la valeur de la propriété expressionUnit.
      * 
-     * @return expressionUnit
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.soprabanking.amplitude.ExpressionUnit getExpressionUnit() {
+    public String getExpressionUnit() {
         return expressionUnit;
     }
 
-
     /**
-     * Sets the expressionUnit value for this ModifyCustomerFinancialDataRequest.
+     * Définit la valeur de la propriété expressionUnit.
      * 
-     * @param expressionUnit
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setExpressionUnit(com.soprabanking.amplitude.ExpressionUnit expressionUnit) {
-        this.expressionUnit = expressionUnit;
+    public void setExpressionUnit(String value) {
+        this.expressionUnit = value;
     }
 
-
     /**
-     * Gets the financialData value for this ModifyCustomerFinancialDataRequest.
+     * Gets the value of the financialData property.
      * 
-     * @return financialData
-     */
-    public com.soprabanking.amplitude.CustomerFinancialDataInformations[] getFinancialData() {
-        return financialData;
-    }
-
-
-    /**
-     * Sets the financialData value for this ModifyCustomerFinancialDataRequest.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the financialData property.
      * 
-     * @param financialData
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getFinancialData().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CustomerFinancialDataInformations }
+     * 
+     * 
      */
-    public void setFinancialData(com.soprabanking.amplitude.CustomerFinancialDataInformations[] financialData) {
-        this.financialData = financialData;
-    }
-
-    public com.soprabanking.amplitude.CustomerFinancialDataInformations getFinancialData(int i) {
-        return this.financialData[i];
-    }
-
-    public void setFinancialData(int i, com.soprabanking.amplitude.CustomerFinancialDataInformations _value) {
-        this.financialData[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModifyCustomerFinancialDataRequest)) return false;
-        ModifyCustomerFinancialDataRequest other = (ModifyCustomerFinancialDataRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<CustomerFinancialDataInformations> getFinancialData() {
+        if (financialData == null) {
+            financialData = new ArrayList<CustomerFinancialDataInformations>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customerCode==null && other.getCustomerCode()==null) || 
-             (this.customerCode!=null &&
-              this.customerCode.equals(other.getCustomerCode()))) &&
-            ((this.currency==null && other.getCurrency()==null) || 
-             (this.currency!=null &&
-              this.currency.equals(other.getCurrency()))) &&
-            ((this.expressionUnit==null && other.getExpressionUnit()==null) || 
-             (this.expressionUnit!=null &&
-              this.expressionUnit.equals(other.getExpressionUnit()))) &&
-            ((this.financialData==null && other.getFinancialData()==null) || 
-             (this.financialData!=null &&
-              java.util.Arrays.equals(this.financialData, other.getFinancialData())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomerCode() != null) {
-            _hashCode += getCustomerCode().hashCode();
-        }
-        if (getCurrency() != null) {
-            _hashCode += getCurrency().hashCode();
-        }
-        if (getExpressionUnit() != null) {
-            _hashCode += getExpressionUnit().hashCode();
-        }
-        if (getFinancialData() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFinancialData());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFinancialData(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModifyCustomerFinancialDataRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerFinancialDataRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("currency");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "currency"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("expressionUnit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "expressionUnit"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "expressionUnit"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("financialData");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "financialData"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerFinancialDataInformations"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.financialData;
     }
 
 }

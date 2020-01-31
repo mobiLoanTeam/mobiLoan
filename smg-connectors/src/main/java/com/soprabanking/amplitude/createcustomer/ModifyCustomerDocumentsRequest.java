@@ -1,174 +1,94 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ModifyCustomerDocumentsRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour modifyCustomerDocumentsRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="modifyCustomerDocumentsRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customerCode" type="{http://soprabanking.com/amplitude}customerCode" minOccurs="0"/>
+ *         &lt;element name="document" type="{http://soprabanking.com/amplitude}customerDocumentInformations" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "modifyCustomerDocumentsRequest", propOrder = {
+    "customerCode",
+    "document"
+})
+public class ModifyCustomerDocumentsRequest {
 
-package com.soprabanking.amplitude;
-
-public class ModifyCustomerDocumentsRequest  implements java.io.Serializable {
-    private java.lang.String customerCode;
-
-    private com.soprabanking.amplitude.CustomerDocumentInformations[] document;
-
-    public ModifyCustomerDocumentsRequest() {
-    }
-
-    public ModifyCustomerDocumentsRequest(
-           java.lang.String customerCode,
-           com.soprabanking.amplitude.CustomerDocumentInformations[] document) {
-           this.customerCode = customerCode;
-           this.document = document;
-    }
-
+    protected String customerCode;
+    protected List<CustomerDocumentInformations> document;
 
     /**
-     * Gets the customerCode value for this ModifyCustomerDocumentsRequest.
+     * Obtient la valeur de la propriété customerCode.
      * 
-     * @return customerCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerCode() {
+    public String getCustomerCode() {
         return customerCode;
     }
 
-
     /**
-     * Sets the customerCode value for this ModifyCustomerDocumentsRequest.
+     * Définit la valeur de la propriété customerCode.
      * 
-     * @param customerCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerCode(java.lang.String customerCode) {
-        this.customerCode = customerCode;
+    public void setCustomerCode(String value) {
+        this.customerCode = value;
     }
 
-
     /**
-     * Gets the document value for this ModifyCustomerDocumentsRequest.
+     * Gets the value of the document property.
      * 
-     * @return document
-     */
-    public com.soprabanking.amplitude.CustomerDocumentInformations[] getDocument() {
-        return document;
-    }
-
-
-    /**
-     * Sets the document value for this ModifyCustomerDocumentsRequest.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the document property.
      * 
-     * @param document
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getDocument().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CustomerDocumentInformations }
+     * 
+     * 
      */
-    public void setDocument(com.soprabanking.amplitude.CustomerDocumentInformations[] document) {
-        this.document = document;
-    }
-
-    public com.soprabanking.amplitude.CustomerDocumentInformations getDocument(int i) {
-        return this.document[i];
-    }
-
-    public void setDocument(int i, com.soprabanking.amplitude.CustomerDocumentInformations _value) {
-        this.document[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModifyCustomerDocumentsRequest)) return false;
-        ModifyCustomerDocumentsRequest other = (ModifyCustomerDocumentsRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<CustomerDocumentInformations> getDocument() {
+        if (document == null) {
+            document = new ArrayList<CustomerDocumentInformations>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customerCode==null && other.getCustomerCode()==null) || 
-             (this.customerCode!=null &&
-              this.customerCode.equals(other.getCustomerCode()))) &&
-            ((this.document==null && other.getDocument()==null) || 
-             (this.document!=null &&
-              java.util.Arrays.equals(this.document, other.getDocument())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomerCode() != null) {
-            _hashCode += getCustomerCode().hashCode();
-        }
-        if (getDocument() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getDocument());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getDocument(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModifyCustomerDocumentsRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerDocumentsRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("document");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "document"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerDocumentInformations"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.document;
     }
 
 }

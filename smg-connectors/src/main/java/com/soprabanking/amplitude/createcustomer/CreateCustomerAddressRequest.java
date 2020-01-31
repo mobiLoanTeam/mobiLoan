@@ -1,894 +1,635 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
 /**
- * CreateCustomerAddressRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour createCustomerAddressRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="createCustomerAddressRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="identifier" type="{http://soprabanking.com/amplitude}addressCreateIdentifier"/>
+ *         &lt;element name="languageCode" type="{http://soprabanking.com/amplitude}char3"/>
+ *         &lt;element name="addressFormat" type="{http://soprabanking.com/amplitude}charMax2"/>
+ *         &lt;element name="addressLine1" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="addressLine2" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="addressLine3" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="city" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="postalCode" type="{http://soprabanking.com/amplitude}charMax10" minOccurs="0"/>
+ *         &lt;element name="deliveryOffice" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="poBox" type="{http://soprabanking.com/amplitude}charMax10" minOccurs="0"/>
+ *         &lt;element name="postalSector" type="{http://soprabanking.com/amplitude}charMax10" minOccurs="0"/>
+ *         &lt;element name="postalSectorDesignation" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="countryCode" type="{http://soprabanking.com/amplitude}charMax3" minOccurs="0"/>
+ *         &lt;element name="branchCode" type="{http://soprabanking.com/amplitude}char5" minOccurs="0"/>
+ *         &lt;element name="locker" type="{http://soprabanking.com/amplitude}charMax9" minOccurs="0"/>
+ *         &lt;element name="serviceCode" type="{http://soprabanking.com/amplitude}charMax4" minOccurs="0"/>
+ *         &lt;element name="transportTypeCode" type="{http://soprabanking.com/amplitude}charMax3" minOccurs="0"/>
+ *         &lt;element name="emailAddress" type="{http://soprabanking.com/amplitude}charMax50" minOccurs="0"/>
+ *         &lt;element name="provisionalAddressStartDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="provisionalAddressEndDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
+ *         &lt;element name="geographicalDepartment" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="county" type="{http://soprabanking.com/amplitude}charMax50" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "createCustomerAddressRequest", propOrder = {
+    "identifier",
+    "languageCode",
+    "addressFormat",
+    "addressLine1",
+    "addressLine2",
+    "addressLine3",
+    "city",
+    "postalCode",
+    "deliveryOffice",
+    "poBox",
+    "postalSector",
+    "postalSectorDesignation",
+    "countryCode",
+    "branchCode",
+    "locker",
+    "serviceCode",
+    "transportTypeCode",
+    "emailAddress",
+    "provisionalAddressStartDate",
+    "provisionalAddressEndDate",
+    "geographicalDepartment",
+    "county"
+})
+public class CreateCustomerAddressRequest {
 
-package com.soprabanking.amplitude;
-
-public class CreateCustomerAddressRequest  implements java.io.Serializable {
-    private com.soprabanking.amplitude.AddressCreateIdentifier identifier;
-
-    private java.lang.String languageCode;
-
-    private java.lang.String addressFormat;
-
-    private java.lang.String addressLine1;
-
-    private java.lang.String addressLine2;
-
-    private java.lang.String addressLine3;
-
-    private java.lang.String city;
-
-    private java.lang.String postalCode;
-
-    private java.lang.String deliveryOffice;
-
-    private java.lang.String poBox;
-
-    private java.lang.String postalSector;
-
-    private java.lang.String postalSectorDesignation;
-
-    private java.lang.String countryCode;
-
-    private java.lang.String branchCode;
-
-    private java.lang.String locker;
-
-    private java.lang.String serviceCode;
-
-    private java.lang.String transportTypeCode;
-
-    private java.lang.String emailAddress;
-
-    private java.util.Date provisionalAddressStartDate;
-
-    private java.util.Date provisionalAddressEndDate;
-
-    private java.lang.String geographicalDepartment;
-
-    private java.lang.String county;
-
-    public CreateCustomerAddressRequest() {
-    }
-
-    public CreateCustomerAddressRequest(
-           com.soprabanking.amplitude.AddressCreateIdentifier identifier,
-           java.lang.String languageCode,
-           java.lang.String addressFormat,
-           java.lang.String addressLine1,
-           java.lang.String addressLine2,
-           java.lang.String addressLine3,
-           java.lang.String city,
-           java.lang.String postalCode,
-           java.lang.String deliveryOffice,
-           java.lang.String poBox,
-           java.lang.String postalSector,
-           java.lang.String postalSectorDesignation,
-           java.lang.String countryCode,
-           java.lang.String branchCode,
-           java.lang.String locker,
-           java.lang.String serviceCode,
-           java.lang.String transportTypeCode,
-           java.lang.String emailAddress,
-           java.util.Date provisionalAddressStartDate,
-           java.util.Date provisionalAddressEndDate,
-           java.lang.String geographicalDepartment,
-           java.lang.String county) {
-           this.identifier = identifier;
-           this.languageCode = languageCode;
-           this.addressFormat = addressFormat;
-           this.addressLine1 = addressLine1;
-           this.addressLine2 = addressLine2;
-           this.addressLine3 = addressLine3;
-           this.city = city;
-           this.postalCode = postalCode;
-           this.deliveryOffice = deliveryOffice;
-           this.poBox = poBox;
-           this.postalSector = postalSector;
-           this.postalSectorDesignation = postalSectorDesignation;
-           this.countryCode = countryCode;
-           this.branchCode = branchCode;
-           this.locker = locker;
-           this.serviceCode = serviceCode;
-           this.transportTypeCode = transportTypeCode;
-           this.emailAddress = emailAddress;
-           this.provisionalAddressStartDate = provisionalAddressStartDate;
-           this.provisionalAddressEndDate = provisionalAddressEndDate;
-           this.geographicalDepartment = geographicalDepartment;
-           this.county = county;
-    }
-
+    @XmlElement(required = true)
+    protected AddressCreateIdentifier identifier;
+    @XmlElement(required = true)
+    protected String languageCode;
+    @XmlElement(required = true)
+    protected String addressFormat;
+    protected String addressLine1;
+    protected String addressLine2;
+    protected String addressLine3;
+    protected String city;
+    protected String postalCode;
+    protected String deliveryOffice;
+    protected String poBox;
+    protected String postalSector;
+    protected String postalSectorDesignation;
+    protected String countryCode;
+    protected String branchCode;
+    protected String locker;
+    protected String serviceCode;
+    protected String transportTypeCode;
+    protected String emailAddress;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar provisionalAddressStartDate;
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar provisionalAddressEndDate;
+    protected String geographicalDepartment;
+    protected String county;
 
     /**
-     * Gets the identifier value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété identifier.
      * 
-     * @return identifier
+     * @return
+     *     possible object is
+     *     {@link AddressCreateIdentifier }
+     *     
      */
-    public com.soprabanking.amplitude.AddressCreateIdentifier getIdentifier() {
+    public AddressCreateIdentifier getIdentifier() {
         return identifier;
     }
 
-
     /**
-     * Sets the identifier value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété identifier.
      * 
-     * @param identifier
+     * @param value
+     *     allowed object is
+     *     {@link AddressCreateIdentifier }
+     *     
      */
-    public void setIdentifier(com.soprabanking.amplitude.AddressCreateIdentifier identifier) {
-        this.identifier = identifier;
+    public void setIdentifier(AddressCreateIdentifier value) {
+        this.identifier = value;
     }
 
-
     /**
-     * Gets the languageCode value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété languageCode.
      * 
-     * @return languageCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLanguageCode() {
+    public String getLanguageCode() {
         return languageCode;
     }
 
-
     /**
-     * Sets the languageCode value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété languageCode.
      * 
-     * @param languageCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLanguageCode(java.lang.String languageCode) {
-        this.languageCode = languageCode;
+    public void setLanguageCode(String value) {
+        this.languageCode = value;
     }
 
-
     /**
-     * Gets the addressFormat value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété addressFormat.
      * 
-     * @return addressFormat
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAddressFormat() {
+    public String getAddressFormat() {
         return addressFormat;
     }
 
-
     /**
-     * Sets the addressFormat value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété addressFormat.
      * 
-     * @param addressFormat
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAddressFormat(java.lang.String addressFormat) {
-        this.addressFormat = addressFormat;
+    public void setAddressFormat(String value) {
+        this.addressFormat = value;
     }
 
-
     /**
-     * Gets the addressLine1 value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété addressLine1.
      * 
-     * @return addressLine1
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAddressLine1() {
+    public String getAddressLine1() {
         return addressLine1;
     }
 
-
     /**
-     * Sets the addressLine1 value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété addressLine1.
      * 
-     * @param addressLine1
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAddressLine1(java.lang.String addressLine1) {
-        this.addressLine1 = addressLine1;
+    public void setAddressLine1(String value) {
+        this.addressLine1 = value;
     }
 
-
     /**
-     * Gets the addressLine2 value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété addressLine2.
      * 
-     * @return addressLine2
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAddressLine2() {
+    public String getAddressLine2() {
         return addressLine2;
     }
 
-
     /**
-     * Sets the addressLine2 value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété addressLine2.
      * 
-     * @param addressLine2
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAddressLine2(java.lang.String addressLine2) {
-        this.addressLine2 = addressLine2;
+    public void setAddressLine2(String value) {
+        this.addressLine2 = value;
     }
 
-
     /**
-     * Gets the addressLine3 value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété addressLine3.
      * 
-     * @return addressLine3
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getAddressLine3() {
+    public String getAddressLine3() {
         return addressLine3;
     }
 
-
     /**
-     * Sets the addressLine3 value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété addressLine3.
      * 
-     * @param addressLine3
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAddressLine3(java.lang.String addressLine3) {
-        this.addressLine3 = addressLine3;
+    public void setAddressLine3(String value) {
+        this.addressLine3 = value;
     }
 
-
     /**
-     * Gets the city value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété city.
      * 
-     * @return city
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCity() {
+    public String getCity() {
         return city;
     }
 
-
     /**
-     * Sets the city value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété city.
      * 
-     * @param city
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCity(java.lang.String city) {
-        this.city = city;
+    public void setCity(String value) {
+        this.city = value;
     }
 
-
     /**
-     * Gets the postalCode value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété postalCode.
      * 
-     * @return postalCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
-
     /**
-     * Sets the postalCode value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété postalCode.
      * 
-     * @param postalCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPostalCode(java.lang.String postalCode) {
-        this.postalCode = postalCode;
+    public void setPostalCode(String value) {
+        this.postalCode = value;
     }
 
-
     /**
-     * Gets the deliveryOffice value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété deliveryOffice.
      * 
-     * @return deliveryOffice
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getDeliveryOffice() {
+    public String getDeliveryOffice() {
         return deliveryOffice;
     }
 
-
     /**
-     * Sets the deliveryOffice value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété deliveryOffice.
      * 
-     * @param deliveryOffice
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setDeliveryOffice(java.lang.String deliveryOffice) {
-        this.deliveryOffice = deliveryOffice;
+    public void setDeliveryOffice(String value) {
+        this.deliveryOffice = value;
     }
 
-
     /**
-     * Gets the poBox value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété poBox.
      * 
-     * @return poBox
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPoBox() {
+    public String getPoBox() {
         return poBox;
     }
 
-
     /**
-     * Sets the poBox value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété poBox.
      * 
-     * @param poBox
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPoBox(java.lang.String poBox) {
-        this.poBox = poBox;
+    public void setPoBox(String value) {
+        this.poBox = value;
     }
 
-
     /**
-     * Gets the postalSector value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété postalSector.
      * 
-     * @return postalSector
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPostalSector() {
+    public String getPostalSector() {
         return postalSector;
     }
 
-
     /**
-     * Sets the postalSector value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété postalSector.
      * 
-     * @param postalSector
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPostalSector(java.lang.String postalSector) {
-        this.postalSector = postalSector;
+    public void setPostalSector(String value) {
+        this.postalSector = value;
     }
 
-
     /**
-     * Gets the postalSectorDesignation value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété postalSectorDesignation.
      * 
-     * @return postalSectorDesignation
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPostalSectorDesignation() {
+    public String getPostalSectorDesignation() {
         return postalSectorDesignation;
     }
 
-
     /**
-     * Sets the postalSectorDesignation value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété postalSectorDesignation.
      * 
-     * @param postalSectorDesignation
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPostalSectorDesignation(java.lang.String postalSectorDesignation) {
-        this.postalSectorDesignation = postalSectorDesignation;
+    public void setPostalSectorDesignation(String value) {
+        this.postalSectorDesignation = value;
     }
 
-
     /**
-     * Gets the countryCode value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété countryCode.
      * 
-     * @return countryCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCountryCode() {
+    public String getCountryCode() {
         return countryCode;
     }
 
-
     /**
-     * Sets the countryCode value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété countryCode.
      * 
-     * @param countryCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCountryCode(java.lang.String countryCode) {
-        this.countryCode = countryCode;
+    public void setCountryCode(String value) {
+        this.countryCode = value;
     }
 
-
     /**
-     * Gets the branchCode value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété branchCode.
      * 
-     * @return branchCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getBranchCode() {
+    public String getBranchCode() {
         return branchCode;
     }
 
-
     /**
-     * Sets the branchCode value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété branchCode.
      * 
-     * @param branchCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setBranchCode(java.lang.String branchCode) {
-        this.branchCode = branchCode;
+    public void setBranchCode(String value) {
+        this.branchCode = value;
     }
 
-
     /**
-     * Gets the locker value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété locker.
      * 
-     * @return locker
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getLocker() {
+    public String getLocker() {
         return locker;
     }
 
-
     /**
-     * Sets the locker value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété locker.
      * 
-     * @param locker
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setLocker(java.lang.String locker) {
-        this.locker = locker;
+    public void setLocker(String value) {
+        this.locker = value;
     }
 
-
     /**
-     * Gets the serviceCode value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété serviceCode.
      * 
-     * @return serviceCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getServiceCode() {
+    public String getServiceCode() {
         return serviceCode;
     }
 
-
     /**
-     * Sets the serviceCode value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété serviceCode.
      * 
-     * @param serviceCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setServiceCode(java.lang.String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setServiceCode(String value) {
+        this.serviceCode = value;
     }
 
-
     /**
-     * Gets the transportTypeCode value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété transportTypeCode.
      * 
-     * @return transportTypeCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getTransportTypeCode() {
+    public String getTransportTypeCode() {
         return transportTypeCode;
     }
 
-
     /**
-     * Sets the transportTypeCode value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété transportTypeCode.
      * 
-     * @param transportTypeCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setTransportTypeCode(java.lang.String transportTypeCode) {
-        this.transportTypeCode = transportTypeCode;
+    public void setTransportTypeCode(String value) {
+        this.transportTypeCode = value;
     }
 
-
     /**
-     * Gets the emailAddress value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété emailAddress.
      * 
-     * @return emailAddress
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailAddress() {
+    public String getEmailAddress() {
         return emailAddress;
     }
 
-
     /**
-     * Sets the emailAddress value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété emailAddress.
      * 
-     * @param emailAddress
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailAddress(java.lang.String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setEmailAddress(String value) {
+        this.emailAddress = value;
     }
 
-
     /**
-     * Gets the provisionalAddressStartDate value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété provisionalAddressStartDate.
      * 
-     * @return provisionalAddressStartDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getProvisionalAddressStartDate() {
+    public XMLGregorianCalendar getProvisionalAddressStartDate() {
         return provisionalAddressStartDate;
     }
 
-
     /**
-     * Sets the provisionalAddressStartDate value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété provisionalAddressStartDate.
      * 
-     * @param provisionalAddressStartDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setProvisionalAddressStartDate(java.util.Date provisionalAddressStartDate) {
-        this.provisionalAddressStartDate = provisionalAddressStartDate;
+    public void setProvisionalAddressStartDate(XMLGregorianCalendar value) {
+        this.provisionalAddressStartDate = value;
     }
 
-
     /**
-     * Gets the provisionalAddressEndDate value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété provisionalAddressEndDate.
      * 
-     * @return provisionalAddressEndDate
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public java.util.Date getProvisionalAddressEndDate() {
+    public XMLGregorianCalendar getProvisionalAddressEndDate() {
         return provisionalAddressEndDate;
     }
 
-
     /**
-     * Sets the provisionalAddressEndDate value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété provisionalAddressEndDate.
      * 
-     * @param provisionalAddressEndDate
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
      */
-    public void setProvisionalAddressEndDate(java.util.Date provisionalAddressEndDate) {
-        this.provisionalAddressEndDate = provisionalAddressEndDate;
+    public void setProvisionalAddressEndDate(XMLGregorianCalendar value) {
+        this.provisionalAddressEndDate = value;
     }
 
-
     /**
-     * Gets the geographicalDepartment value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété geographicalDepartment.
      * 
-     * @return geographicalDepartment
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getGeographicalDepartment() {
+    public String getGeographicalDepartment() {
         return geographicalDepartment;
     }
 
-
     /**
-     * Sets the geographicalDepartment value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété geographicalDepartment.
      * 
-     * @param geographicalDepartment
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setGeographicalDepartment(java.lang.String geographicalDepartment) {
-        this.geographicalDepartment = geographicalDepartment;
+    public void setGeographicalDepartment(String value) {
+        this.geographicalDepartment = value;
     }
 
-
     /**
-     * Gets the county value for this CreateCustomerAddressRequest.
+     * Obtient la valeur de la propriété county.
      * 
-     * @return county
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCounty() {
+    public String getCounty() {
         return county;
     }
 
-
     /**
-     * Sets the county value for this CreateCustomerAddressRequest.
+     * Définit la valeur de la propriété county.
      * 
-     * @param county
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCounty(java.lang.String county) {
-        this.county = county;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CreateCustomerAddressRequest)) return false;
-        CreateCustomerAddressRequest other = (CreateCustomerAddressRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.identifier==null && other.getIdentifier()==null) || 
-             (this.identifier!=null &&
-              this.identifier.equals(other.getIdentifier()))) &&
-            ((this.languageCode==null && other.getLanguageCode()==null) || 
-             (this.languageCode!=null &&
-              this.languageCode.equals(other.getLanguageCode()))) &&
-            ((this.addressFormat==null && other.getAddressFormat()==null) || 
-             (this.addressFormat!=null &&
-              this.addressFormat.equals(other.getAddressFormat()))) &&
-            ((this.addressLine1==null && other.getAddressLine1()==null) || 
-             (this.addressLine1!=null &&
-              this.addressLine1.equals(other.getAddressLine1()))) &&
-            ((this.addressLine2==null && other.getAddressLine2()==null) || 
-             (this.addressLine2!=null &&
-              this.addressLine2.equals(other.getAddressLine2()))) &&
-            ((this.addressLine3==null && other.getAddressLine3()==null) || 
-             (this.addressLine3!=null &&
-              this.addressLine3.equals(other.getAddressLine3()))) &&
-            ((this.city==null && other.getCity()==null) || 
-             (this.city!=null &&
-              this.city.equals(other.getCity()))) &&
-            ((this.postalCode==null && other.getPostalCode()==null) || 
-             (this.postalCode!=null &&
-              this.postalCode.equals(other.getPostalCode()))) &&
-            ((this.deliveryOffice==null && other.getDeliveryOffice()==null) || 
-             (this.deliveryOffice!=null &&
-              this.deliveryOffice.equals(other.getDeliveryOffice()))) &&
-            ((this.poBox==null && other.getPoBox()==null) || 
-             (this.poBox!=null &&
-              this.poBox.equals(other.getPoBox()))) &&
-            ((this.postalSector==null && other.getPostalSector()==null) || 
-             (this.postalSector!=null &&
-              this.postalSector.equals(other.getPostalSector()))) &&
-            ((this.postalSectorDesignation==null && other.getPostalSectorDesignation()==null) || 
-             (this.postalSectorDesignation!=null &&
-              this.postalSectorDesignation.equals(other.getPostalSectorDesignation()))) &&
-            ((this.countryCode==null && other.getCountryCode()==null) || 
-             (this.countryCode!=null &&
-              this.countryCode.equals(other.getCountryCode()))) &&
-            ((this.branchCode==null && other.getBranchCode()==null) || 
-             (this.branchCode!=null &&
-              this.branchCode.equals(other.getBranchCode()))) &&
-            ((this.locker==null && other.getLocker()==null) || 
-             (this.locker!=null &&
-              this.locker.equals(other.getLocker()))) &&
-            ((this.serviceCode==null && other.getServiceCode()==null) || 
-             (this.serviceCode!=null &&
-              this.serviceCode.equals(other.getServiceCode()))) &&
-            ((this.transportTypeCode==null && other.getTransportTypeCode()==null) || 
-             (this.transportTypeCode!=null &&
-              this.transportTypeCode.equals(other.getTransportTypeCode()))) &&
-            ((this.emailAddress==null && other.getEmailAddress()==null) || 
-             (this.emailAddress!=null &&
-              this.emailAddress.equals(other.getEmailAddress()))) &&
-            ((this.provisionalAddressStartDate==null && other.getProvisionalAddressStartDate()==null) || 
-             (this.provisionalAddressStartDate!=null &&
-              this.provisionalAddressStartDate.equals(other.getProvisionalAddressStartDate()))) &&
-            ((this.provisionalAddressEndDate==null && other.getProvisionalAddressEndDate()==null) || 
-             (this.provisionalAddressEndDate!=null &&
-              this.provisionalAddressEndDate.equals(other.getProvisionalAddressEndDate()))) &&
-            ((this.geographicalDepartment==null && other.getGeographicalDepartment()==null) || 
-             (this.geographicalDepartment!=null &&
-              this.geographicalDepartment.equals(other.getGeographicalDepartment()))) &&
-            ((this.county==null && other.getCounty()==null) || 
-             (this.county!=null &&
-              this.county.equals(other.getCounty())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getIdentifier() != null) {
-            _hashCode += getIdentifier().hashCode();
-        }
-        if (getLanguageCode() != null) {
-            _hashCode += getLanguageCode().hashCode();
-        }
-        if (getAddressFormat() != null) {
-            _hashCode += getAddressFormat().hashCode();
-        }
-        if (getAddressLine1() != null) {
-            _hashCode += getAddressLine1().hashCode();
-        }
-        if (getAddressLine2() != null) {
-            _hashCode += getAddressLine2().hashCode();
-        }
-        if (getAddressLine3() != null) {
-            _hashCode += getAddressLine3().hashCode();
-        }
-        if (getCity() != null) {
-            _hashCode += getCity().hashCode();
-        }
-        if (getPostalCode() != null) {
-            _hashCode += getPostalCode().hashCode();
-        }
-        if (getDeliveryOffice() != null) {
-            _hashCode += getDeliveryOffice().hashCode();
-        }
-        if (getPoBox() != null) {
-            _hashCode += getPoBox().hashCode();
-        }
-        if (getPostalSector() != null) {
-            _hashCode += getPostalSector().hashCode();
-        }
-        if (getPostalSectorDesignation() != null) {
-            _hashCode += getPostalSectorDesignation().hashCode();
-        }
-        if (getCountryCode() != null) {
-            _hashCode += getCountryCode().hashCode();
-        }
-        if (getBranchCode() != null) {
-            _hashCode += getBranchCode().hashCode();
-        }
-        if (getLocker() != null) {
-            _hashCode += getLocker().hashCode();
-        }
-        if (getServiceCode() != null) {
-            _hashCode += getServiceCode().hashCode();
-        }
-        if (getTransportTypeCode() != null) {
-            _hashCode += getTransportTypeCode().hashCode();
-        }
-        if (getEmailAddress() != null) {
-            _hashCode += getEmailAddress().hashCode();
-        }
-        if (getProvisionalAddressStartDate() != null) {
-            _hashCode += getProvisionalAddressStartDate().hashCode();
-        }
-        if (getProvisionalAddressEndDate() != null) {
-            _hashCode += getProvisionalAddressEndDate().hashCode();
-        }
-        if (getGeographicalDepartment() != null) {
-            _hashCode += getGeographicalDepartment().hashCode();
-        }
-        if (getCounty() != null) {
-            _hashCode += getCounty().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CreateCustomerAddressRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerAddressRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("identifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "identifier"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "addressCreateIdentifier"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("languageCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "languageCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("addressFormat");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "addressFormat"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("addressLine1");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "addressLine1"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("addressLine2");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "addressLine2"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("addressLine3");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "addressLine3"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("city");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "city"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postalCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "postalCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deliveryOffice");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "deliveryOffice"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("poBox");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "poBox"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postalSector");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "postalSector"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postalSectorDesignation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "postalSectorDesignation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("countryCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "countryCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("branchCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "branchCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("locker");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "locker"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("serviceCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "serviceCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("transportTypeCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "transportTypeCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "emailAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("provisionalAddressStartDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "provisionalAddressStartDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("provisionalAddressEndDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "provisionalAddressEndDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("geographicalDepartment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "geographicalDepartment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("county");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "county"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setCounty(String value) {
+        this.county = value;
     }
 
 }

@@ -1,231 +1,141 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerContactInformations.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerContactInformations complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerContactInformations">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="name" type="{http://soprabanking.com/amplitude}charMax36" minOccurs="0"/>
+ *         &lt;element name="firstName" type="{http://soprabanking.com/amplitude}charMax30" minOccurs="0"/>
+ *         &lt;element name="phoneNumber" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="emailAddress" type="{http://soprabanking.com/amplitude}charMax50" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerContactInformations", propOrder = {
+    "name",
+    "firstName",
+    "phoneNumber",
+    "emailAddress"
+})
+public class CustomerContactInformations {
 
-package com.soprabanking.amplitude;
-
-public class CustomerContactInformations  implements java.io.Serializable {
-    private java.lang.String name;
-
-    private java.lang.String firstName;
-
-    private java.lang.String phoneNumber;
-
-    private java.lang.String emailAddress;
-
-    public CustomerContactInformations() {
-    }
-
-    public CustomerContactInformations(
-           java.lang.String name,
-           java.lang.String firstName,
-           java.lang.String phoneNumber,
-           java.lang.String emailAddress) {
-           this.name = name;
-           this.firstName = firstName;
-           this.phoneNumber = phoneNumber;
-           this.emailAddress = emailAddress;
-    }
-
+    protected String name;
+    protected String firstName;
+    protected String phoneNumber;
+    protected String emailAddress;
 
     /**
-     * Gets the name value for this CustomerContactInformations.
+     * Obtient la valeur de la propriété name.
      * 
-     * @return name
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getName() {
+    public String getName() {
         return name;
     }
 
-
     /**
-     * Sets the name value for this CustomerContactInformations.
+     * Définit la valeur de la propriété name.
      * 
-     * @param name
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(java.lang.String name) {
-        this.name = name;
+    public void setName(String value) {
+        this.name = value;
     }
 
-
     /**
-     * Gets the firstName value for this CustomerContactInformations.
+     * Obtient la valeur de la propriété firstName.
      * 
-     * @return firstName
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-
     /**
-     * Sets the firstName value for this CustomerContactInformations.
+     * Définit la valeur de la propriété firstName.
      * 
-     * @param firstName
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFirstName(java.lang.String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String value) {
+        this.firstName = value;
     }
 
-
     /**
-     * Gets the phoneNumber value for this CustomerContactInformations.
+     * Obtient la valeur de la propriété phoneNumber.
      * 
-     * @return phoneNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-
     /**
-     * Sets the phoneNumber value for this CustomerContactInformations.
+     * Définit la valeur de la propriété phoneNumber.
      * 
-     * @param phoneNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setPhoneNumber(java.lang.String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String value) {
+        this.phoneNumber = value;
     }
 
-
     /**
-     * Gets the emailAddress value for this CustomerContactInformations.
+     * Obtient la valeur de la propriété emailAddress.
      * 
-     * @return emailAddress
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getEmailAddress() {
+    public String getEmailAddress() {
         return emailAddress;
     }
 
-
     /**
-     * Sets the emailAddress value for this CustomerContactInformations.
+     * Définit la valeur de la propriété emailAddress.
      * 
-     * @param emailAddress
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setEmailAddress(java.lang.String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerContactInformations)) return false;
-        CustomerContactInformations other = (CustomerContactInformations) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.firstName==null && other.getFirstName()==null) || 
-             (this.firstName!=null &&
-              this.firstName.equals(other.getFirstName()))) &&
-            ((this.phoneNumber==null && other.getPhoneNumber()==null) || 
-             (this.phoneNumber!=null &&
-              this.phoneNumber.equals(other.getPhoneNumber()))) &&
-            ((this.emailAddress==null && other.getEmailAddress()==null) || 
-             (this.emailAddress!=null &&
-              this.emailAddress.equals(other.getEmailAddress())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getName() != null) {
-            _hashCode += getName().hashCode();
-        }
-        if (getFirstName() != null) {
-            _hashCode += getFirstName().hashCode();
-        }
-        if (getPhoneNumber() != null) {
-            _hashCode += getPhoneNumber().hashCode();
-        }
-        if (getEmailAddress() != null) {
-            _hashCode += getEmailAddress().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerContactInformations.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerContactInformations"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("name");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "name"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("firstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "firstName"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("phoneNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "phoneNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("emailAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "emailAddress"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setEmailAddress(String value) {
+        this.emailAddress = value;
     }
 
 }

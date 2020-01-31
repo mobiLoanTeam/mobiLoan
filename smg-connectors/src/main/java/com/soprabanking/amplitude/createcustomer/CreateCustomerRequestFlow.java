@@ -1,155 +1,90 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CreateCustomerRequestFlow.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour createCustomerRequestFlow complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="createCustomerRequestFlow">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="requestHeader" type="{http://soprabanking.com/amplitude}requestHeader"/>
+ *         &lt;element name="createCustomerRequest" type="{http://soprabanking.com/amplitude}createCustomerRequest"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "createCustomerRequestFlow", propOrder = {
+    "requestHeader",
+    "createCustomerRequest"
+})
+public class CreateCustomerRequestFlow {
 
-package com.soprabanking.amplitude;
-
-public class CreateCustomerRequestFlow  implements java.io.Serializable {
-    private com.soprabanking.amplitude.RequestHeader requestHeader;
-
-    private com.soprabanking.amplitude.CreateCustomerRequest createCustomerRequest;
-
-    public CreateCustomerRequestFlow() {
-    }
-
-    public CreateCustomerRequestFlow(
-           com.soprabanking.amplitude.RequestHeader requestHeader,
-           com.soprabanking.amplitude.CreateCustomerRequest createCustomerRequest) {
-           this.requestHeader = requestHeader;
-           this.createCustomerRequest = createCustomerRequest;
-    }
-
+    @XmlElement(required = true)
+    protected RequestHeader requestHeader;
+    @XmlElement(required = true)
+    protected CreateCustomerRequest createCustomerRequest;
 
     /**
-     * Gets the requestHeader value for this CreateCustomerRequestFlow.
+     * Obtient la valeur de la propriété requestHeader.
      * 
-     * @return requestHeader
+     * @return
+     *     possible object is
+     *     {@link RequestHeader }
+     *     
      */
-    public com.soprabanking.amplitude.RequestHeader getRequestHeader() {
+    public RequestHeader getRequestHeader() {
         return requestHeader;
     }
 
-
     /**
-     * Sets the requestHeader value for this CreateCustomerRequestFlow.
+     * Définit la valeur de la propriété requestHeader.
      * 
-     * @param requestHeader
+     * @param value
+     *     allowed object is
+     *     {@link RequestHeader }
+     *     
      */
-    public void setRequestHeader(com.soprabanking.amplitude.RequestHeader requestHeader) {
-        this.requestHeader = requestHeader;
+    public void setRequestHeader(RequestHeader value) {
+        this.requestHeader = value;
     }
 
-
     /**
-     * Gets the createCustomerRequest value for this CreateCustomerRequestFlow.
+     * Obtient la valeur de la propriété createCustomerRequest.
      * 
-     * @return createCustomerRequest
+     * @return
+     *     possible object is
+     *     {@link CreateCustomerRequest }
+     *     
      */
-    public com.soprabanking.amplitude.CreateCustomerRequest getCreateCustomerRequest() {
+    public CreateCustomerRequest getCreateCustomerRequest() {
         return createCustomerRequest;
     }
 
-
     /**
-     * Sets the createCustomerRequest value for this CreateCustomerRequestFlow.
+     * Définit la valeur de la propriété createCustomerRequest.
      * 
-     * @param createCustomerRequest
+     * @param value
+     *     allowed object is
+     *     {@link CreateCustomerRequest }
+     *     
      */
-    public void setCreateCustomerRequest(com.soprabanking.amplitude.CreateCustomerRequest createCustomerRequest) {
-        this.createCustomerRequest = createCustomerRequest;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CreateCustomerRequestFlow)) return false;
-        CreateCustomerRequestFlow other = (CreateCustomerRequestFlow) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.requestHeader==null && other.getRequestHeader()==null) || 
-             (this.requestHeader!=null &&
-              this.requestHeader.equals(other.getRequestHeader()))) &&
-            ((this.createCustomerRequest==null && other.getCreateCustomerRequest()==null) || 
-             (this.createCustomerRequest!=null &&
-              this.createCustomerRequest.equals(other.getCreateCustomerRequest())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getRequestHeader() != null) {
-            _hashCode += getRequestHeader().hashCode();
-        }
-        if (getCreateCustomerRequest() != null) {
-            _hashCode += getCreateCustomerRequest().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CreateCustomerRequestFlow.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerRequestFlow"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("requestHeader");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "requestHeader"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "requestHeader"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("createCustomerRequest");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerRequest"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "createCustomerRequest"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setCreateCustomerRequest(CreateCustomerRequest value) {
+        this.createCustomerRequest = value;
     }
 
 }

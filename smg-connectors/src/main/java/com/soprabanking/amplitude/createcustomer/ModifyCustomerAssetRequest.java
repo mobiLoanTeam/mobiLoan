@@ -1,166 +1,87 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ModifyCustomerAssetRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour modifyCustomerAssetRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="modifyCustomerAssetRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="assetHeader" type="{http://soprabanking.com/amplitude}modifyCustomerAssetHeader" minOccurs="0"/>
+ *         &lt;element name="assetsDetail" type="{http://soprabanking.com/amplitude}modifyCustomerAssets" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "modifyCustomerAssetRequest", propOrder = {
+    "assetHeader",
+    "assetsDetail"
+})
+public class ModifyCustomerAssetRequest {
 
-package com.soprabanking.amplitude;
-
-public class ModifyCustomerAssetRequest  implements java.io.Serializable {
-    private com.soprabanking.amplitude.ModifyCustomerAssetHeader assetHeader;
-
-    private com.soprabanking.amplitude.ModifyCustomerAsset[] assetsDetail;
-
-    public ModifyCustomerAssetRequest() {
-    }
-
-    public ModifyCustomerAssetRequest(
-           com.soprabanking.amplitude.ModifyCustomerAssetHeader assetHeader,
-           com.soprabanking.amplitude.ModifyCustomerAsset[] assetsDetail) {
-           this.assetHeader = assetHeader;
-           this.assetsDetail = assetsDetail;
-    }
-
+    protected ModifyCustomerAssetHeader assetHeader;
+    protected ModifyCustomerAssets assetsDetail;
 
     /**
-     * Gets the assetHeader value for this ModifyCustomerAssetRequest.
+     * Obtient la valeur de la propriété assetHeader.
      * 
-     * @return assetHeader
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerAssetHeader }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerAssetHeader getAssetHeader() {
+    public ModifyCustomerAssetHeader getAssetHeader() {
         return assetHeader;
     }
 
-
     /**
-     * Sets the assetHeader value for this ModifyCustomerAssetRequest.
+     * Définit la valeur de la propriété assetHeader.
      * 
-     * @param assetHeader
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerAssetHeader }
+     *     
      */
-    public void setAssetHeader(com.soprabanking.amplitude.ModifyCustomerAssetHeader assetHeader) {
-        this.assetHeader = assetHeader;
+    public void setAssetHeader(ModifyCustomerAssetHeader value) {
+        this.assetHeader = value;
     }
 
-
     /**
-     * Gets the assetsDetail value for this ModifyCustomerAssetRequest.
+     * Obtient la valeur de la propriété assetsDetail.
      * 
-     * @return assetsDetail
+     * @return
+     *     possible object is
+     *     {@link ModifyCustomerAssets }
+     *     
      */
-    public com.soprabanking.amplitude.ModifyCustomerAsset[] getAssetsDetail() {
+    public ModifyCustomerAssets getAssetsDetail() {
         return assetsDetail;
     }
 
-
     /**
-     * Sets the assetsDetail value for this ModifyCustomerAssetRequest.
+     * Définit la valeur de la propriété assetsDetail.
      * 
-     * @param assetsDetail
+     * @param value
+     *     allowed object is
+     *     {@link ModifyCustomerAssets }
+     *     
      */
-    public void setAssetsDetail(com.soprabanking.amplitude.ModifyCustomerAsset[] assetsDetail) {
-        this.assetsDetail = assetsDetail;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModifyCustomerAssetRequest)) return false;
-        ModifyCustomerAssetRequest other = (ModifyCustomerAssetRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.assetHeader==null && other.getAssetHeader()==null) || 
-             (this.assetHeader!=null &&
-              this.assetHeader.equals(other.getAssetHeader()))) &&
-            ((this.assetsDetail==null && other.getAssetsDetail()==null) || 
-             (this.assetsDetail!=null &&
-              java.util.Arrays.equals(this.assetsDetail, other.getAssetsDetail())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getAssetHeader() != null) {
-            _hashCode += getAssetHeader().hashCode();
-        }
-        if (getAssetsDetail() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAssetsDetail());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAssetsDetail(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModifyCustomerAssetRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerAssetRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assetHeader");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "assetHeader"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerAssetHeader"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("assetsDetail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "assetsDetail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerAsset"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "assetDetail"));
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setAssetsDetail(ModifyCustomerAssets value) {
+        this.assetsDetail = value;
     }
 
 }

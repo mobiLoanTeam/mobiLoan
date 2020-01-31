@@ -1,174 +1,94 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ModifyCustomerInternationalOperationsRequest.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour modifyCustomerInternationalOperationsRequest complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="modifyCustomerInternationalOperationsRequest">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customerCode" type="{http://soprabanking.com/amplitude}customerCode" minOccurs="0"/>
+ *         &lt;element name="internationalOperation" type="{http://soprabanking.com/amplitude}customerInternationalOperationInformations" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "modifyCustomerInternationalOperationsRequest", propOrder = {
+    "customerCode",
+    "internationalOperation"
+})
+public class ModifyCustomerInternationalOperationsRequest {
 
-package com.soprabanking.amplitude;
-
-public class ModifyCustomerInternationalOperationsRequest  implements java.io.Serializable {
-    private java.lang.String customerCode;
-
-    private com.soprabanking.amplitude.CustomerInternationalOperationInformations[] internationalOperation;
-
-    public ModifyCustomerInternationalOperationsRequest() {
-    }
-
-    public ModifyCustomerInternationalOperationsRequest(
-           java.lang.String customerCode,
-           com.soprabanking.amplitude.CustomerInternationalOperationInformations[] internationalOperation) {
-           this.customerCode = customerCode;
-           this.internationalOperation = internationalOperation;
-    }
-
+    protected String customerCode;
+    protected List<CustomerInternationalOperationInformations> internationalOperation;
 
     /**
-     * Gets the customerCode value for this ModifyCustomerInternationalOperationsRequest.
+     * Obtient la valeur de la propriété customerCode.
      * 
-     * @return customerCode
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerCode() {
+    public String getCustomerCode() {
         return customerCode;
     }
 
-
     /**
-     * Sets the customerCode value for this ModifyCustomerInternationalOperationsRequest.
+     * Définit la valeur de la propriété customerCode.
      * 
-     * @param customerCode
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerCode(java.lang.String customerCode) {
-        this.customerCode = customerCode;
+    public void setCustomerCode(String value) {
+        this.customerCode = value;
     }
 
-
     /**
-     * Gets the internationalOperation value for this ModifyCustomerInternationalOperationsRequest.
+     * Gets the value of the internationalOperation property.
      * 
-     * @return internationalOperation
-     */
-    public com.soprabanking.amplitude.CustomerInternationalOperationInformations[] getInternationalOperation() {
-        return internationalOperation;
-    }
-
-
-    /**
-     * Sets the internationalOperation value for this ModifyCustomerInternationalOperationsRequest.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the internationalOperation property.
      * 
-     * @param internationalOperation
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getInternationalOperation().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CustomerInternationalOperationInformations }
+     * 
+     * 
      */
-    public void setInternationalOperation(com.soprabanking.amplitude.CustomerInternationalOperationInformations[] internationalOperation) {
-        this.internationalOperation = internationalOperation;
-    }
-
-    public com.soprabanking.amplitude.CustomerInternationalOperationInformations getInternationalOperation(int i) {
-        return this.internationalOperation[i];
-    }
-
-    public void setInternationalOperation(int i, com.soprabanking.amplitude.CustomerInternationalOperationInformations _value) {
-        this.internationalOperation[i] = _value;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ModifyCustomerInternationalOperationsRequest)) return false;
-        ModifyCustomerInternationalOperationsRequest other = (ModifyCustomerInternationalOperationsRequest) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
+    public List<CustomerInternationalOperationInformations> getInternationalOperation() {
+        if (internationalOperation == null) {
+            internationalOperation = new ArrayList<CustomerInternationalOperationInformations>();
         }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customerCode==null && other.getCustomerCode()==null) || 
-             (this.customerCode!=null &&
-              this.customerCode.equals(other.getCustomerCode()))) &&
-            ((this.internationalOperation==null && other.getInternationalOperation()==null) || 
-             (this.internationalOperation!=null &&
-              java.util.Arrays.equals(this.internationalOperation, other.getInternationalOperation())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomerCode() != null) {
-            _hashCode += getCustomerCode().hashCode();
-        }
-        if (getInternationalOperation() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getInternationalOperation());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getInternationalOperation(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ModifyCustomerInternationalOperationsRequest.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "modifyCustomerInternationalOperationsRequest"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("internationalOperation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "internationalOperation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerInternationalOperationInformations"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        return this.internationalOperation;
     }
 
 }

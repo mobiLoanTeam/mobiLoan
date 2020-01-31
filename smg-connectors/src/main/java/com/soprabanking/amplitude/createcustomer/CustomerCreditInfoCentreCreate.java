@@ -1,231 +1,141 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * CustomerCreditInfoCentreCreate.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour customerCreditInfoCentreCreate complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="customerCreditInfoCentreCreate">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="customerRelationshipRisk" type="{http://soprabanking.com/amplitude}customerRelationshipRiskLevelCode" minOccurs="0"/>
+ *         &lt;element name="creditInfoCentreRegistrationNumber" type="{http://soprabanking.com/amplitude}charMax20" minOccurs="0"/>
+ *         &lt;element name="creditInfoCentreCodeToDeclare" type="{http://soprabanking.com/amplitude}creditInfoCentreCodeToDeclare" minOccurs="0"/>
+ *         &lt;element name="creditInfoCentreKey" type="{http://soprabanking.com/amplitude}char1" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "customerCreditInfoCentreCreate", propOrder = {
+    "customerRelationshipRisk",
+    "creditInfoCentreRegistrationNumber",
+    "creditInfoCentreCodeToDeclare",
+    "creditInfoCentreKey"
+})
+public class CustomerCreditInfoCentreCreate {
 
-package com.soprabanking.amplitude;
-
-public class CustomerCreditInfoCentreCreate  implements java.io.Serializable {
-    private java.lang.String customerRelationshipRisk;
-
-    private java.lang.String creditInfoCentreRegistrationNumber;
-
-    private com.soprabanking.amplitude.CreditInfoCentreCodeToDeclare creditInfoCentreCodeToDeclare;
-
-    private java.lang.String creditInfoCentreKey;
-
-    public CustomerCreditInfoCentreCreate() {
-    }
-
-    public CustomerCreditInfoCentreCreate(
-           java.lang.String customerRelationshipRisk,
-           java.lang.String creditInfoCentreRegistrationNumber,
-           com.soprabanking.amplitude.CreditInfoCentreCodeToDeclare creditInfoCentreCodeToDeclare,
-           java.lang.String creditInfoCentreKey) {
-           this.customerRelationshipRisk = customerRelationshipRisk;
-           this.creditInfoCentreRegistrationNumber = creditInfoCentreRegistrationNumber;
-           this.creditInfoCentreCodeToDeclare = creditInfoCentreCodeToDeclare;
-           this.creditInfoCentreKey = creditInfoCentreKey;
-    }
-
+    protected String customerRelationshipRisk;
+    protected String creditInfoCentreRegistrationNumber;
+    protected String creditInfoCentreCodeToDeclare;
+    protected String creditInfoCentreKey;
 
     /**
-     * Gets the customerRelationshipRisk value for this CustomerCreditInfoCentreCreate.
+     * Obtient la valeur de la propriété customerRelationshipRisk.
      * 
-     * @return customerRelationshipRisk
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCustomerRelationshipRisk() {
+    public String getCustomerRelationshipRisk() {
         return customerRelationshipRisk;
     }
 
-
     /**
-     * Sets the customerRelationshipRisk value for this CustomerCreditInfoCentreCreate.
+     * Définit la valeur de la propriété customerRelationshipRisk.
      * 
-     * @param customerRelationshipRisk
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCustomerRelationshipRisk(java.lang.String customerRelationshipRisk) {
-        this.customerRelationshipRisk = customerRelationshipRisk;
+    public void setCustomerRelationshipRisk(String value) {
+        this.customerRelationshipRisk = value;
     }
 
-
     /**
-     * Gets the creditInfoCentreRegistrationNumber value for this CustomerCreditInfoCentreCreate.
+     * Obtient la valeur de la propriété creditInfoCentreRegistrationNumber.
      * 
-     * @return creditInfoCentreRegistrationNumber
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCreditInfoCentreRegistrationNumber() {
+    public String getCreditInfoCentreRegistrationNumber() {
         return creditInfoCentreRegistrationNumber;
     }
 
-
     /**
-     * Sets the creditInfoCentreRegistrationNumber value for this CustomerCreditInfoCentreCreate.
+     * Définit la valeur de la propriété creditInfoCentreRegistrationNumber.
      * 
-     * @param creditInfoCentreRegistrationNumber
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCreditInfoCentreRegistrationNumber(java.lang.String creditInfoCentreRegistrationNumber) {
-        this.creditInfoCentreRegistrationNumber = creditInfoCentreRegistrationNumber;
+    public void setCreditInfoCentreRegistrationNumber(String value) {
+        this.creditInfoCentreRegistrationNumber = value;
     }
 
-
     /**
-     * Gets the creditInfoCentreCodeToDeclare value for this CustomerCreditInfoCentreCreate.
+     * Obtient la valeur de la propriété creditInfoCentreCodeToDeclare.
      * 
-     * @return creditInfoCentreCodeToDeclare
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public com.soprabanking.amplitude.CreditInfoCentreCodeToDeclare getCreditInfoCentreCodeToDeclare() {
+    public String getCreditInfoCentreCodeToDeclare() {
         return creditInfoCentreCodeToDeclare;
     }
 
-
     /**
-     * Sets the creditInfoCentreCodeToDeclare value for this CustomerCreditInfoCentreCreate.
+     * Définit la valeur de la propriété creditInfoCentreCodeToDeclare.
      * 
-     * @param creditInfoCentreCodeToDeclare
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCreditInfoCentreCodeToDeclare(com.soprabanking.amplitude.CreditInfoCentreCodeToDeclare creditInfoCentreCodeToDeclare) {
-        this.creditInfoCentreCodeToDeclare = creditInfoCentreCodeToDeclare;
+    public void setCreditInfoCentreCodeToDeclare(String value) {
+        this.creditInfoCentreCodeToDeclare = value;
     }
 
-
     /**
-     * Gets the creditInfoCentreKey value for this CustomerCreditInfoCentreCreate.
+     * Obtient la valeur de la propriété creditInfoCentreKey.
      * 
-     * @return creditInfoCentreKey
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCreditInfoCentreKey() {
+    public String getCreditInfoCentreKey() {
         return creditInfoCentreKey;
     }
 
-
     /**
-     * Sets the creditInfoCentreKey value for this CustomerCreditInfoCentreCreate.
+     * Définit la valeur de la propriété creditInfoCentreKey.
      * 
-     * @param creditInfoCentreKey
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setCreditInfoCentreKey(java.lang.String creditInfoCentreKey) {
-        this.creditInfoCentreKey = creditInfoCentreKey;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof CustomerCreditInfoCentreCreate)) return false;
-        CustomerCreditInfoCentreCreate other = (CustomerCreditInfoCentreCreate) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.customerRelationshipRisk==null && other.getCustomerRelationshipRisk()==null) || 
-             (this.customerRelationshipRisk!=null &&
-              this.customerRelationshipRisk.equals(other.getCustomerRelationshipRisk()))) &&
-            ((this.creditInfoCentreRegistrationNumber==null && other.getCreditInfoCentreRegistrationNumber()==null) || 
-             (this.creditInfoCentreRegistrationNumber!=null &&
-              this.creditInfoCentreRegistrationNumber.equals(other.getCreditInfoCentreRegistrationNumber()))) &&
-            ((this.creditInfoCentreCodeToDeclare==null && other.getCreditInfoCentreCodeToDeclare()==null) || 
-             (this.creditInfoCentreCodeToDeclare!=null &&
-              this.creditInfoCentreCodeToDeclare.equals(other.getCreditInfoCentreCodeToDeclare()))) &&
-            ((this.creditInfoCentreKey==null && other.getCreditInfoCentreKey()==null) || 
-             (this.creditInfoCentreKey!=null &&
-              this.creditInfoCentreKey.equals(other.getCreditInfoCentreKey())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getCustomerRelationshipRisk() != null) {
-            _hashCode += getCustomerRelationshipRisk().hashCode();
-        }
-        if (getCreditInfoCentreRegistrationNumber() != null) {
-            _hashCode += getCreditInfoCentreRegistrationNumber().hashCode();
-        }
-        if (getCreditInfoCentreCodeToDeclare() != null) {
-            _hashCode += getCreditInfoCentreCodeToDeclare().hashCode();
-        }
-        if (getCreditInfoCentreKey() != null) {
-            _hashCode += getCreditInfoCentreKey().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(CustomerCreditInfoCentreCreate.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerCreditInfoCentreCreate"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("customerRelationshipRisk");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "customerRelationshipRisk"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("creditInfoCentreRegistrationNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "creditInfoCentreRegistrationNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("creditInfoCentreCodeToDeclare");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "creditInfoCentreCodeToDeclare"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "creditInfoCentreCodeToDeclare"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("creditInfoCentreKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "creditInfoCentreKey"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setCreditInfoCentreKey(String value) {
+        this.creditInfoCentreKey = value;
     }
 
 }

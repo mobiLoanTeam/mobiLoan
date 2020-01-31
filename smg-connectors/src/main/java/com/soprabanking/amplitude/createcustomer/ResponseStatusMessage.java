@@ -1,246 +1,153 @@
+
+package com.soprabanking.amplitude.createcustomer;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+
+
 /**
- * ResponseStatusMessage.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ * <p>Classe Java pour responseStatusMessage complex type.
+ * 
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * 
+ * <pre>
+ * &lt;complexType name="responseStatusMessage">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="nature" type="{http://soprabanking.com/amplitude}responseMessageNature"/>
+ *         &lt;element name="code" type="{http://soprabanking.com/amplitude}char6"/>
+ *         &lt;element name="line" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="errorInformation" type="{http://soprabanking.com/amplitude}errorInformation" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "responseStatusMessage", propOrder = {
+    "nature",
+    "code",
+    "line",
+    "errorInformation"
+})
+public class ResponseStatusMessage {
 
-package com.soprabanking.amplitude;
-
-public class ResponseStatusMessage  implements java.io.Serializable {
-    private com.soprabanking.amplitude.ResponseMessageNature nature;
-
-    private java.lang.String code;
-
-    private java.lang.String[] line;
-
-    private com.soprabanking.amplitude.ErrorInformation errorInformation;
-
-    public ResponseStatusMessage() {
-    }
-
-    public ResponseStatusMessage(
-           com.soprabanking.amplitude.ResponseMessageNature nature,
-           java.lang.String code,
-           java.lang.String[] line,
-           com.soprabanking.amplitude.ErrorInformation errorInformation) {
-           this.nature = nature;
-           this.code = code;
-           this.line = line;
-           this.errorInformation = errorInformation;
-    }
-
+    @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
+    protected ResponseMessageNature nature;
+    @XmlElement(required = true)
+    protected String code;
+    protected List<String> line;
+    protected ErrorInformation errorInformation;
 
     /**
-     * Gets the nature value for this ResponseStatusMessage.
+     * Obtient la valeur de la propriété nature.
      * 
-     * @return nature
+     * @return
+     *     possible object is
+     *     {@link ResponseMessageNature }
+     *     
      */
-    public com.soprabanking.amplitude.ResponseMessageNature getNature() {
+    public ResponseMessageNature getNature() {
         return nature;
     }
 
-
     /**
-     * Sets the nature value for this ResponseStatusMessage.
+     * Définit la valeur de la propriété nature.
      * 
-     * @param nature
+     * @param value
+     *     allowed object is
+     *     {@link ResponseMessageNature }
+     *     
      */
-    public void setNature(com.soprabanking.amplitude.ResponseMessageNature nature) {
-        this.nature = nature;
+    public void setNature(ResponseMessageNature value) {
+        this.nature = value;
     }
 
-
     /**
-     * Gets the code value for this ResponseStatusMessage.
+     * Obtient la valeur de la propriété code.
      * 
-     * @return code
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public java.lang.String getCode() {
+    public String getCode() {
         return code;
     }
 
+    /**
+     * Définit la valeur de la propriété code.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCode(String value) {
+        this.code = value;
+    }
 
     /**
-     * Sets the code value for this ResponseStatusMessage.
+     * Gets the value of the line property.
      * 
-     * @param code
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the line property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLine().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link String }
+     * 
+     * 
      */
-    public void setCode(java.lang.String code) {
-        this.code = code;
+    public List<String> getLine() {
+        if (line == null) {
+            line = new ArrayList<String>();
+        }
+        return this.line;
     }
-
 
     /**
-     * Gets the line value for this ResponseStatusMessage.
+     * Obtient la valeur de la propriété errorInformation.
      * 
-     * @return line
+     * @return
+     *     possible object is
+     *     {@link ErrorInformation }
+     *     
      */
-    public java.lang.String[] getLine() {
-        return line;
-    }
-
-
-    /**
-     * Sets the line value for this ResponseStatusMessage.
-     * 
-     * @param line
-     */
-    public void setLine(java.lang.String[] line) {
-        this.line = line;
-    }
-
-    public java.lang.String getLine(int i) {
-        return this.line[i];
-    }
-
-    public void setLine(int i, java.lang.String _value) {
-        this.line[i] = _value;
-    }
-
-
-    /**
-     * Gets the errorInformation value for this ResponseStatusMessage.
-     * 
-     * @return errorInformation
-     */
-    public com.soprabanking.amplitude.ErrorInformation getErrorInformation() {
+    public ErrorInformation getErrorInformation() {
         return errorInformation;
     }
 
-
     /**
-     * Sets the errorInformation value for this ResponseStatusMessage.
+     * Définit la valeur de la propriété errorInformation.
      * 
-     * @param errorInformation
+     * @param value
+     *     allowed object is
+     *     {@link ErrorInformation }
+     *     
      */
-    public void setErrorInformation(com.soprabanking.amplitude.ErrorInformation errorInformation) {
-        this.errorInformation = errorInformation;
-    }
-
-    private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ResponseStatusMessage)) return false;
-        ResponseStatusMessage other = (ResponseStatusMessage) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.nature==null && other.getNature()==null) || 
-             (this.nature!=null &&
-              this.nature.equals(other.getNature()))) &&
-            ((this.code==null && other.getCode()==null) || 
-             (this.code!=null &&
-              this.code.equals(other.getCode()))) &&
-            ((this.line==null && other.getLine()==null) || 
-             (this.line!=null &&
-              java.util.Arrays.equals(this.line, other.getLine()))) &&
-            ((this.errorInformation==null && other.getErrorInformation()==null) || 
-             (this.errorInformation!=null &&
-              this.errorInformation.equals(other.getErrorInformation())));
-        __equalsCalc = null;
-        return _equals;
-    }
-
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getNature() != null) {
-            _hashCode += getNature().hashCode();
-        }
-        if (getCode() != null) {
-            _hashCode += getCode().hashCode();
-        }
-        if (getLine() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getLine());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getLine(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
-        }
-        if (getErrorInformation() != null) {
-            _hashCode += getErrorInformation().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
-    // Type metadata
-    private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ResponseStatusMessage.class, true);
-
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "responseStatusMessage"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("nature");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "nature"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "responseMessageNature"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("code");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "code"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("line");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "line"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        elemField.setMaxOccursUnbounded(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("errorInformation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "errorInformation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://soprabanking.com/amplitude", "errorInformation"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-    }
-
-    /**
-     * Return type metadata object
-     */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
-        return typeDesc;
-    }
-
-    /**
-     * Get Custom Serializer
-     */
-    public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
-    }
-
-    /**
-     * Get Custom Deserializer
-     */
-    public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+    public void setErrorInformation(ErrorInformation value) {
+        this.errorInformation = value;
     }
 
 }
