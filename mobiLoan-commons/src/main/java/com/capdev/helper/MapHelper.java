@@ -41,4 +41,8 @@ public class MapHelper {
 		}
 	}
 	
+	public static Object MapToObject(Map<String,Object> map,Class classe) {
+		return objectMaper.convertValue(map,classe);
+	}
+	
 }
